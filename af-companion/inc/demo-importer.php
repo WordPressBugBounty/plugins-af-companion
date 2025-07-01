@@ -1,74 +1,13 @@
 <?php
-
-function aftc_import_navigation()
-{
-
-
-    $front_page_id = null;
-    $blog_page_id = null;
-
-    $front_page = get_page_by_title('Home');
-
-    if ($front_page) {
-        if (is_array($front_page)) {
-            $first_page = array_shift($front_page);
-            $front_page_id = $first_page->ID;
-        } else {
-            $front_page_id = $front_page->ID;
-        }
-    }
-
-    $blog_page = get_page_by_title('Blog');
-
-    if ($blog_page) {
-        if (is_array($blog_page)) {
-            $first_page = array_shift($blog_page);
-            $blog_page_id = $first_page->ID;
-        } else {
-            $blog_page_id = $blog_page->ID;
-        }
-    }
-
-    if ($front_page_id) {
-        update_option('show_on_front', 'page');
-        update_option('page_on_front', $front_page_id);
-    }
-
-    if($blog_page_id){
-        update_option('page_for_posts', $blog_page_id);
-    }
-
-
-    $registered_menus = get_registered_nav_menus();
-    $nav_menus = get_terms('nav_menu', array('hide_empty' => true));
-
-    $menus = array();
-    foreach ($nav_menus as $menu) {
-        $menus[$menu->name] = $menu->term_id;
-    }
-
-    $new_menu = array();
-    foreach ($registered_menus as $location => $description) {
-        foreach ($menus as $key => $value) {
-            if (strpos($key, 'Social') !== false && strpos($location, 'social') !== false) {
-                $new_menu[$location] = $value;
-            } elseif (strpos($key, 'Social') === false && strpos($location, 'social') === false) {
-                $new_menu[$location] = $value;
-            }
-        }
-    }
-    set_theme_mod('nav_menu_locations', $new_menu);
-}
-
-add_action('af-companion/after_import', 'aftc_import_navigation');
-
 add_filter('af-companion/import_files', 'aftc_get_demo_data_from_gitlab');
 
 if (!function_exists('aftc_get_demo_data_from_gitlab')) :
     function aftc_get_demo_data_from_gitlab() {
 
-        $demo_file_url = "https://raw.githubusercontent.com/afthemes/demo-data/master/";
-        $demo_json_url = $demo_file_url."afthemes_projects.json";
+       // $demo_file_url = "https://raw.githubusercontent.com/afthemes/demo-data/master/";
+       $demo_file_url = "https://raw.githubusercontent.com/afthemes/templatespare-demo-data/master/";
+        //$demo_json_url = $demo_file_url."afthemes_projects.json";
+        $demo_json_url = $demo_file_url."demo-list.json";
         $response = wp_remote_get($demo_json_url);
         $active_theme = get_stylesheet();
         $demodataparse = wp_remote_retrieve_body($response);
@@ -94,6 +33,7 @@ if (!function_exists('aftc_get_demo_data_from_gitlab')) :
                 $current_demo = $demodataparse['data'];
                 $related_free_theme = $demodataparse['free'];
                 $related_pro_theme = $demodataparse['premium'];
+                $is_pro_or_plus_theme = preg_match('/-(pro|plus)$/', $active_theme);
                 if ($demodataparse && $exist_theme) {
                     $dataArray = [];
                     foreach ($demodataparse['demodata'] as $demodata) {
@@ -111,7 +51,7 @@ if (!function_exists('aftc_get_demo_data_from_gitlab')) :
                             'import_customizer_file_url' => $dat,
                             'import_preview_image_url' => $image,
                             'preview_url' => $demodata['preview'],
-                            'upgrade' => false,
+                          'upgrade' => !$is_pro_or_plus_theme && (in_array('pro', $demodata['tags']) || in_array('plus', $demodata['tags'])),
                             'premium' => '',
                             'required_plugins' => (isset($demodata['plugins'])) ? $demodata['plugins']: '',
 
@@ -133,7 +73,7 @@ if (!function_exists('aftc_get_demo_data_from_gitlab')) :
                                 'import_customizer_file_url' => '',
                                 'import_preview_image_url' => $image,
                                 'preview_url' => $demodata['preview'],
-                                'upgrade' => true,
+                              'upgrade' => !$is_pro_or_plus_theme && (in_array('pro', $demodata['tags']) || in_array('plus', $demodata['tags'])),
                                 'premium' => $related_pro_theme,
                                 'required_plugins' => (isset($demodata['plugins'])) ? $demodata['plugins']: '',
                             );
@@ -196,3 +136,68 @@ if (!function_exists('aftc_get_demo_data_from_gitlab')) :
 
     }
 endif;
+
+if(!function_exists('aftc_import_navigation')){
+function aftc_import_navigation()
+{
+
+
+    $front_page_id = null;
+    $blog_page_id = null;
+
+    $front_page = get_page_by_title('Home');
+
+    if ($front_page) {
+        if (is_array($front_page)) {
+            $first_page = array_shift($front_page);
+            $front_page_id = $first_page->ID;
+        } else {
+            $front_page_id = $front_page->ID;
+        }
+    }
+
+    $blog_page = get_page_by_title('Blog');
+
+    if ($blog_page) {
+        if (is_array($blog_page)) {
+            $first_page = array_shift($blog_page);
+            $blog_page_id = $first_page->ID;
+        } else {
+            $blog_page_id = $blog_page->ID;
+        }
+    }
+
+    if ($front_page_id) {
+        update_option('show_on_front', 'page');
+        update_option('page_on_front', $front_page_id);
+    }
+
+    if($blog_page_id){
+        update_option('page_for_posts', $blog_page_id);
+    }
+
+
+    $registered_menus = get_registered_nav_menus();
+    $nav_menus = get_terms('nav_menu', array('hide_empty' => true));
+
+    $menus = array();
+    foreach ($nav_menus as $menu) {
+        $menus[$menu->name] = $menu->term_id;
+    }
+
+    $new_menu = array();
+    foreach ($registered_menus as $location => $description) {
+        foreach ($menus as $key => $value) {
+            if (strpos($key, 'Social') !== false && strpos($location, 'social') !== false) {
+                $new_menu[$location] = $value;
+            } elseif (strpos($key, 'Social') === false && strpos($location, 'social') === false) {
+                $new_menu[$location] = $value;
+            }
+        }
+    }
+    set_theme_mod('nav_menu_locations', $new_menu);
+}
+
+
+}
+add_action('af-companion/after_import', 'aftc_import_navigation');

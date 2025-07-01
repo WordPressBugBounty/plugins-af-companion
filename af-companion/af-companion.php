@@ -3,7 +3,7 @@
     Plugin Name: AF Companion
     Plugin URI: https://wordpress.org/plugins/af-companion/
     Description: Build Stylish WordPress Websites in Minutes – No Coding, Just Click and Go! Starter Sites Importer for WordPress
-    Version: 1.2.11
+    Version: 1.2.12
     Author: AF themes
     Author URI: https://www.afthemes.com
     License: GPL3
@@ -34,7 +34,7 @@ if ( version_compare( phpversion(), '5.3.2', '<' ) ) {
 else {
 
 	// Current version of the plugin.
-	define( 'AFTC_VERSION', '1.2.11' );
+	define( 'AFTC_VERSION', '1.2.12' );
 
 	// Path/URL to root of this plugin, with trailing slash.
 	define( 'AFTC_PATH', plugin_dir_path( __FILE__ ) );
