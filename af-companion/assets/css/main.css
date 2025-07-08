@@ -1,4 +1,7 @@
 /* Overriding WordPress native styles */
+.toplevel_page_af-companion #fs_connect .fs-actions .button.button-primary{
+	display: none!important;
+  }
 
 .aftc {
 	max-width: none;
