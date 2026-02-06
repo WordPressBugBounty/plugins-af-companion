@@ -3,7 +3,7 @@
     Plugin Name: AF Companion
     Plugin URI: https://wordpress.org/plugins/af-companion/
     Description: Build Stylish WordPress Websites in Minutes – No Coding, Just Click and Go! Starter Sites Importer for WordPress
-    Version: 1.2.13
+    Version: 1.2.14
     Author: AF themes
     Author URI: https://www.afthemes.com
     License: GPL3

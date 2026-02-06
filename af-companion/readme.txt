@@ -2,8 +2,8 @@
 Contributors: afthemes
 Tags: one click, import, content, demo, widgets, customizer settings, elementor, gutenberg, starter sites
 Requires at least: 4.0
-Tested up to: 6.8
-Stable tag: 1.2.13
+Tested up to: 6.9
+Stable tag: 1.2.14
 License: GPLv3 or later
 
 == Description ==
