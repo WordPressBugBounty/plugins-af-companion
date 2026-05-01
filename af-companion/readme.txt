@@ -1,74 +1,88 @@
-=== AF Companion - Build Stylish WordPress Websites in Minutes – No Coding, Just Click and Go! Starter Sites Importer for WordPress ===
+=== AF Companion - Build, Speed Up, and Scale Your Professional Magazine ===
 Contributors: afthemes
-Tags: one click, import, content, demo, widgets, customizer settings, elementor, gutenberg, starter sites
-Requires at least: 4.0
+Tags: news, magazine, performance, seo, demo-import
+Requires at least: 5.0
 Tested up to: 6.9
-Stable tag: 1.2.14
+Stable tag: 2.1.0
 License: GPLv3 or later
 
 == Description ==
-= Quickly import live demo content, widgets and settings with one click =
 
-[Starter Sites](https://afthemes.com/starter-sites/) | [Access All Sites](https://afthemes.com/all-themes-plan/) | [Docs](https://docs.afthemes.com/) | [Plugins](https://afthemes.com/plugins/) | [Videos](https://www.youtube.com/@wpafthemes/) | [Blog](https://afthemes.com/blog/)
+= The All-In-One Solution for Modern News & Magazine Publishers =
 
-[youtube https://www.youtube.com/watch?v=5l-rHlVt6Rk]
+Most WordPress users face three major roadblocks: **Design Frustration** (struggling to match a professional demo), **Performance Bloat** (slow loading times due to unnecessary scripts), and **Technical Blindness** (not knowing why their server is underperforming).
 
-== 🌐 One Click Import: No Coding Hassle! Three Simple Steps 🌟 ==
+**AF Companion** is no longer just an importer; it is a complete site-management ecosystem. We provide the professional foundation you need to launch, the speed tools to keep readers engaged, and the growth analytics to drive revenue.
 
-🖱️ Locate the import dashboard at wp-admin -> <strong>AF Companion</strong> after enabling the plugin. Easily access and manage your AF Companion settings with just a few clicks. 
+[Starter Sites](https://afthemes.com/starter-sites/) | [Knowledge Base](https://docs.afthemes.com/) | [Support](https://afthemes.com/support/) | [Access All Sites](https://afthemes.com/all-themes-plan/)
 
-🌟 1. Choose a Site: 
-Browse through [hundreds of pre-built websites](https://afthemes.com/starter-sites/). Click to choose your favorite.
+[youtube https://www.youtube.com/watch?v=m5Q9WmjOI2U]
 
-🖌️ 2. Customize & Personalize: 
-Unleash your creativity! Tailor every element to your vision.
+== Your Competitive Advantage ==
 
-🚀 3. Publish & Go Live: 
-Your website is ready in minutes – share your story with the world! 🚀🌐
+*   **ATTENTION: Is Your Site Losing Readers to Slow Loading?** A 1-second delay can kill your conversion rate. Most themes load "bloat" that you don't need. 
+*   **INTEREST: The Speed Booster & Growth Suite.** We’ve integrated a powerful optimization engine that strips away WordPress bloat (Emojis, oEmbeds, Query Strings) and adds advanced growth tools like GA4, Hotjar, and Schema markup without needing five extra plugins.
+*   **DESIRE: Professional Results Without the Cost.** Imagine having the speed of a custom-coded site, the design of a premium agency, and the insights of a data scientist—all within one dashboard. 
+*   **ACTION: Elevate Your Digital Presence.** Install AF Companion to transform your blank canvas into a lightning-fast, revenue-ready publication today.
 
-🚀 Enjoy a hassle-free setup experience! Install the AF Companion plugin. Locate the import dashboard at wp-admin -> <strong>[AF Companion](https://afthemes.com/starter-sites/)</strong> after enabling the plugin, choose your desired website demo, and witness the automatic installation and activation of essential plugins during the import process. 
+---
 
-* [General Newspaper](https://demos.afthemes.com/covernews/)
-Perfect for any website type, the General Site offers a clean and versatile design. Whether you're a blogger, business owner, or creative professional, this starter site provides a solid foundation for your online presence.
+== PHASE 1: BUILD — No Coding Hassle, Just 3 Simple Steps ==
 
-* [Sporty Journals](https://demos.afthemes.com/covernews/sport/)
-Capture the spirit of athleticism with the Sporty Vibes starter site. Ideal for sports blogs, fitness enthusiasts, or sports-related businesses, this starter site brings dynamic energy and a sporty aesthetic to your website.
+🖱️ Locate the import dashboard at **wp-admin -> AF Companion**. Easily access and manage your settings with just a few clicks. 
 
-* [Fashion Magazine](https://demos.afthemes.com/chromenews/fashion/)
-Make a stylish statement with the Fashion Forward starter site. Tailored for fashion bloggers, clothing brands, or anyone in the fashion industry, this starter site exudes elegance and modern flair.
+1.  **Choose a Solution:** Browse through [hundreds of pre-built websites](https://afthemes.com/starter-sites/). Click to choose your favorite niche foundation.
+2.  **Customize & Personalize:** Unleash your creativity! Tailor every element to your vision using Gutenberg or your favorite builder.
+3.  **Publish & Go Live:** Your website is ready in minutes—share your story with the world! 🚀🌐
 
-* [Recipes Blog](https://demos.afthemes.com/chromenews/recipe/)
-Calling all foodies! The Delicious Recipes starter site is a culinary delight. Perfect for food bloggers, chefs, or anyone sharing their love for cooking, this starter site showcases mouth-watering visuals and a user-friendly recipe layout.
+**Curated Starter Foundations:**
+*   [General Newspaper](https://demos.afthemes.com/covernews/) - Clean and versatile foundation for any professional brand.
+*   [Sporty Journals](https://demos.afthemes.com/covernews/sport/) - Dynamic energy for sports blogs and fitness enthusiasts.
+*   [Fashion Magazine](https://demos.afthemes.com/chromenews/fashion/) - Elegance and modern flair for clothing brands and style influencers.
+*   [Recipes Blog](https://demos.afthemes.com/chromenews/recipe/) - Culinary delight with user-friendly recipe layouts.
+*   [Classic News](https://demos.afthemes.com/morenews/) - Timeless sophistication for professional portfolios and traditional business.
+*   [Masonry Blog](https://demos.afthemes.com/chromenews-pro/masonry/) - Visually stunning unconventional layouts for photographers and artists.
+*   [Dark News](https://demos.afthemes.com/darknews/) - Sleek, bold, and mysterious aesthetic for stand-out publications.
+*   [Health News](https://demos.afthemes.com/chromenews-pro/covid-19/) - Structured for awareness and resource-heavy community groups.
+*   [Gadget Magazine](https://demos.afthemes.com/covernews-pro/gadgets/) - Tailored for high-tech reviews and innovation news.
+*   [Real Estates](https://demos.afthemes.com/morenews/real-estate/) - Visually appealing property showcases for agencies.
+*   [Automobile News](https://demos.afthemes.com/chromenews/automobile/) - Dynamic platforms for car enthusiasts and automotive blogs.
+*   [Travel Blog](https://demos.afthemes.com/newsphere-pro/travel/) - Capture the essence of adventure and exploration.
+*   [Gaming News](https://demos.afthemes.com/chromenews-pro/gaming/) - Immersive experiences for streamers and gaming communities.
 
-* [Classic News](https://demos.afthemes.com/morenews/)
-For those who appreciate simplicity and sophistication, the Timeless Classic starter site is the perfect choice. Ideal for traditional businesses, professional portfolios, or anyone who values a classic aesthetic.
+**[More to Come](https://afthemes.com/starter-sites/)** - We are constantly expanding your design options.
 
-* [Masonry Blog](https://demos.afthemes.com/chromenews-pro/masonry/)
-Bring creativity to the forefront with the Masonry Magic starter site. This starter site is great for artists, photographers, or anyone who wants to showcase their work in a visually stunning and unconventional layout.
+---
 
-* [Dark News](https://demos.afthemes.com/darknews/)
-Embrace the dark side with the Elegantly Dark starter site. Perfect for those who prefer a sleek and mysterious aesthetic, this starter site is ideal for fashion, photography, or any website looking to stand out with a bold and elegant design.
+== PHASE 2: SPEED UP — The Optimization Engine ==
 
-* [Health News](https://demos.afthemes.com/chromenews-pro/covid-19/)
-Promote awareness and solidarity with the Health Awareness starter site. Whether you're a health organization, community group, or business, this starter site provides a platform to share information and resources related to the pandemic.
+Stop the bloat that kills user engagement. Our optimization suite targets the specific elements that slow down magazine sites:
 
-* [Gadget Magazine](https://demos.afthemes.com/covernews-pro/gadgets/)
-Tech enthusiasts rejoice! The Gadget Guru starter site is tailored for those passionate about gadgets and technology. Perfect for tech blogs, reviews, or any website focused on the latest innovations in the tech world.
+*   **Core Cleanup Solution:** Instantly disable Emojis, oEmbeds, and XML-RPC to harden security and slash load times.
+*   **Advanced Header Polish:** Remove RSD, WLW, and WP Version meta to prevent bot scanning and improve caching.
+*   **Frontend Performance:** Minify HTML, Load JS Asynchronously, and optimize Google Fonts with `font-display: swap` for instant text visibility.
+*   **Asset Management:** Remove Query Strings and disable Dashicons for visitors to significantly reduce CSS/JS weight.
 
-* [Real Estates Magazine](https://demos.afthemes.com/morenews/real-estate/)
-Elevate your real estate business with the Real Estates Showcase starter site. This starter site is designed to showcase properties in a visually appealing manner, making it a perfect choice for real estate agencies, property developers, or individual realtors.
+---
 
-* [Automobile News](https://demos.afthemes.com/chromenews/automobile/)
-Hit the road with the Automobile Adventures starter site. Ideal for car enthusiasts, automotive blogs, or anyone in the automobile industry, this starter site provides a sleek and dynamic platform to showcase vehicles and automotive content.
+== PHASE 3: GROWTH — Revenue & Analytics Suite ==
 
-* [Travel Blog](https://demos.afthemes.com/newsphere-pro/travel/)
-Feed your wanderlust with the Wanderlust Travel starter site. Perfect for travel bloggers, agencies, or anyone sharing their travel experiences, this starter site captures the essence of exploration and adventure.
+Don't just publish—measure, monetize, and scale.
 
-* [Gaming News](https://demos.afthemes.com/chromenews-pro/gaming/)
-Enter the Gaming Galaxy with this starter site designed for gamers and gaming enthusiasts. Whether you're a streamer, content creator, or part of the gaming community, this starter site provides an immersive and visually appealing gaming experience.
+*   **Seamless Tracking:** One-click setup for **GA4**, **Google Tag Manager**, **Meta Pixel**, and **Microsoft Clarity**.
+*   **SEO & Visibility:** Automated **Article Schema (JSON-LD)** for better Google News and Search visibility.
+*   **Monetization Engine:** Quick-inject **AdSense Auto-Ads** and **Mailchimp API** to build your newsletter list.
+*   **Social Optimization:** Custom fallback **Open Graph** images ensure your shared links always look professional on Facebook and X.
 
-<strong>[More to Come](https://afthemes.com/starter-sites/)</strong> Stay tuned for additional sites, ensuring your options are always expanding.
+---
 
+== PHASE 4: KNOW YOUR SYSTEM — Engine Diagnostics ==
+
+Real-time insights into your "under the hood" environment so you are never left in the dark:
+
+*   **Health Check:** Monitor PHP Memory, Execution limits, and OPcache status to ensure your server can handle traffic spikes.
+*   **Database Guard:** Keep an eye on **Autoloaded options** and Database overhead to prevent long-term site slowdowns.
+*   **Media Readiness:** Confirm **Imagick** and **GD library** availability for high-quality, sharp image processing.
 
 ## Celebrating the Success Stories of Our Users
 
@@ -218,26 +232,26 @@ Once the plugin is activated you will find the actual import page in **Appearanc
 
 == Frequently Asked Questions ==
 
-= I have activated the plugin. Where is the "AF Companion" page? =
+= Where do I find the AF Companion dashboard and import settings? =
+Once activated, the complete management suite—including Starter Sites, Speed Booster, and Growth Tools—is located at **wp-admin -> AF Companion**.
 
-You will find the import page in *wp-admin -> AF Companion*.
+= How can I speed up my WordPress site using AF Companion? =
+Simply navigate to the **Speed Booster** tab within the plugin. You can instantly optimize performance by disabling unnecessary core bloat (like Emojis and oEmbeds), minifying HTML, and enabling asynchronous JS loading to improve your Core Web Vitals.
 
-= Where are the demo import files and the log files saved? =
+= Does this plugin include SEO and Analytics tools for publishers? =
+Yes. Under the **Growth Tools** section, you can resolve tracking issues by directly integrating GA4, Meta Pixel, and Microsoft Clarity. It also automatically generates Article Schema (JSON-LD) to help your news content rank higher in search results.
 
-The files used in the demo import will be saved to the default WordPress uploads directory. An example of that directory would be: `../wp-content/uploads/2021/02/`.
+= How do I monitor my server's health and performance? =
+The **System Status** tab provides a real-time diagnostic report of your engine. It monitors critical performance metrics like PHP Memory Limits, Database overhead, and Object Caching, alerting you to "Action Required" items that could slow down your site.
 
-The log file will also be registered in the *wp-admin -> Media* section, so you can access it easily.
+= Where are the demo import files and log files saved? =
+Files used during the demo import are stored in your default WordPress uploads directory (e.g., `../wp-content/uploads/2026/05/`). For transparency and troubleshooting, the log file is also registered in your **wp-admin -> Media** section.
 
-= I can't activate the plugin, because of a fatal error, what can I do? =
+= What should I do if I see a "Fatal Error" during activation? =
+This usually indicates your hosting server is using an outdated version of PHP. While the absolute minimum is 5.3.2, for the **Speed Booster** and **Growth Tools** to function optimally, we strictly recommend **PHP 7.4 or 8.x**. Please ask your hosting provider to update your PHP version to ensure a secure and fast environment.
 
-*Update: There is now a admin error notice, stating that the minimal PHP version required for this plugin is 5.3.2.*
-
-You want to activate the plugin, but this error shows up:
-
-*Plugin could not be activated because it triggered a fatal error*
-
-This happens, because your hosting server is using a very old version of PHP. This plugin requires PHP version of at least **5.3.x**, but we recommend version *5.6.x*. Please contact your hosting company and ask them to update the PHP version for your site.
-
+= Can I use the Speed Booster with other caching plugins? =
+Absolutely. AF Companion’s optimization engine is designed to be lightweight and compatible with major caching solutions like WP Rocket or LiteSpeed, focusing specifically on cleaning up WordPress core bloat that those plugins might miss.
 
 == License ==
 
@@ -276,6 +290,28 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 
 == Changelog ==
+## 2.0.0 - 01/05/2026
+
+Changes:
+*New – Performance & Speed Booster engine integration*
+*New – Growth Tools suite for GA4, Adsense, and Meta Pixel integration*
+*New – System Status & Engine Diagnostics dashboard*
+*New – Automated Article Schema (JSON-LD) for SEO*
+*New – Core Cleanup features (Disable Emojis, oEmbeds, XML-RPC)*
+*New – Advanced Header Cleanup (RSD, WLW, WP Version removal)*
+*New – Frontend Optimization (HTML Minification, Async JS, Font-display swap)*
+*New – Asset Management (Disable jQuery Migrate, Remove Query Strings)*
+*New – Image Optimization (Native Lazy Loading support)*
+*New – Gutenberg Bloat Removal (Optional Block Library CSS cleanup)*
+*New – Server Health Monitoring (Memory, Execution Time, OPcache)*
+*New – Database Health Monitoring (Autoloaded options, Size, Overhead)*
+*New – Analytics Integration for Hotjar and Microsoft Clarity*
+*Update – Major UI/UX overhaul of the AF Companion Dashboard*
+*Update – Refined One-Click Import logic for modern block themes*
+*Update – Improved error handling and diagnostic reporting*
+*Update – Compatibility with WordPress 6.9+ and PHP 8.2+*
+
+
 ### 1.2.6 - 25/08/2023
 
 Changes:

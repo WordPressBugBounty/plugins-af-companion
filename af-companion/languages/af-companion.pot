@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AF Companion\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-23 06:15+0000\n"
+"POT-Creation-Date: 2026-05-01 12:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,29 +16,24 @@ msgstr ""
 "X-Loco-Version: 2.5.5; wp-5.8.2\n"
 "X-Domain: af-companion"
 
-#: inc/class-aftc-main.php:426
-msgid " Import"
-msgstr ""
-
-#: inc/class-aftc-main.php:452
-msgid " is active"
-msgstr ""
-
-#: inc/class-aftc-main.php:468
-msgid " need to be activated"
-msgstr ""
-
-#: inc/class-aftc-main.php:460
-msgid " need to be installed"
-msgstr ""
-
 #: inc/class-aftc-helpers.php:109
 #, php-format
 msgid ""
 "\"import_file_url\" or \"local_import_file\" for %s%s%s are not defined!"
 msgstr ""
 
-#: inc/class-aftc-main.php:730
+#. %1$s current user display name., %2$s this plugin name., %3$s discount coupon code., %4$s discount percentage.
+#: inc/notice-upgrade.php:179
+#, php-format
+msgid ""
+"%1$s If you love the one-click starter site importer, please consider giving "
+"us a %4$s5-star rating%5$s on WordPress.org. Your support means the world "
+"and keeps us motivated to create exciting new features for free.%7$sDon't "
+"forget, the %3$s awaits for 330+ expert designed starter templates, and "
+"sections. Enjoy the journey! %8$s"
+msgstr ""
+
+#: inc/class-aftc-main.php:555
 #, php-format
 msgid ""
 "%1$sThat's it, all done!%2$sThe demo import has finished. Please check your "
@@ -46,19 +41,19 @@ msgid ""
 "beautiful WordPress products please visit %3$sAF themes%4$s. %5$s"
 msgstr ""
 
-#: inc/class-aftc-main.php:740
+#: inc/class-aftc-main.php:565
 #, php-format
 msgid ""
 "%1$sThe demo import has finished, but there were some import errors.%2$sMore "
 "details about the errors can be found in this %3$s%5$slog file%6$s%4$s%7$s"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:763
+#: inc/importer/class-wxr-importer.php:766
 #, php-format
 msgid "%s \"%s\" already exists."
 msgstr ""
 
-#: inc/class-aftc-main.php:242
+#: inc/class-aftc-main.php:248
 #, php-format
 msgid ""
 "%sWarning: your server is using %sPHP safe mode%s. This means that you might "
@@ -72,8 +67,51 @@ msgid ""
 "data.%s"
 msgstr ""
 
+#: inc/notice-activate.php:56
+msgid "1. Demo Import"
+msgstr ""
+
+#: inc/notice-activate.php:61
+msgid "2. Speed Booster"
+msgstr ""
+
+#: inc/notice-activate.php:66
+msgid "3. Growth Tools"
+msgstr ""
+
+#: inc/notice-activate.php:71
+msgid "4. System Status"
+msgstr ""
+
+#: inc/notice-upgrade.php:69 inc/notice-upgrade.php:89
+msgid "Action failed. Please refresh the page and retry."
+msgstr ""
+
+#: inc/class-aftc-system-status.php:38
+msgid "Action Required"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:128
+msgid ""
+"Adds async parameter to header scripts so they do not block page rendering."
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:132
+msgid ""
+"Adds font-display: swap to Google Fonts for faster text visibility during "
+"load."
+msgstr ""
+
+#: inc/class-aftc-growth-tools.php:79
+msgid "AdSense Publisher ID"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:89
+msgid "Advanced Header Cleanup"
+msgstr ""
+
 #. Name of the plugin
-#: inc/class-aftc-main.php:97 inc/class-aftc-main.php:98
+#: inc/class-aftc-main.php:100 inc/class-aftc-main.php:101 
 #: inc/class-aftc-helpers.php:392 inc/class-aftc-helpers.php:393
 msgid "AF Companion"
 msgstr ""
@@ -83,16 +121,16 @@ msgid "AF Companion - "
 msgstr ""
 
 #. Author of the plugin
-#: inc/class-aftc-main.php:228
+#: inc/class-aftc-main.php:233
 msgid "AF themes"
 msgstr ""
 
-#: inc/class-aftc-main.php:369
-msgid "All"
+#: inc/class-aftc-main.php:276
+msgid "All demo settings will get imported"
 msgstr ""
 
-#: inc/class-aftc-main.php:269
-msgid "All demo settings will get imported"
+#: inc/notice-upgrade.php:201
+msgid "All Themes Plan"
 msgstr ""
 
 #: inc/class-aftc-helpers.php:234
@@ -122,84 +160,95 @@ msgid ""
 "to: %s%s."
 msgstr ""
 
-#: inc/class-aftc-main.php:589
+#: inc/class-aftc-growth-tools.php:46
+msgid "Analytics & Measurement"
+msgstr ""
+
+#: inc/class-aftc-main.php:412
 msgid "Are you sure?"
 msgstr ""
 
-#: inc/class-aftc-main.php:258
+#: inc/class-aftc-growth-tools.php:63
+msgid "Article Schema"
+msgstr ""
+
+#: inc/class-aftc-main.php:265
 msgid "Before you begin, make sure all the required plugins are activated."
 msgstr ""
 
-#: inc/class-aftc-main.php:197 inc/class-aftc-main.php:198
+#: inc/class-aftc-speed-booster.php:153
+msgid "Block Editor (Gutenberg)"
+msgstr ""
+
+#: inc/class-aftc-main.php:202 inc/class-aftc-main.php:203
 msgid "Blog"
 msgstr ""
 
-#: inc/class-aftc-main.php:590
+#: inc/class-aftc-main.php:413
 msgid "Cancel"
 msgstr ""
 
-#: inc/class-aftc-main.php:325
+#: inc/notice-upgrade.php:73 inc/notice-upgrade.php:93
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: inc/class-aftc-main.php:332
 msgid "Choose a JSON file for Redux import:"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1977
-#, php-format
+#: inc/importer/class-wxr-importer.php:1980
 msgid "Comment %d was imported with author %d, but could not be found"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1959
-#, php-format
+#: inc/importer/class-wxr-importer.php:1962
 msgid "Comment %d was imported with parent %d, but could not be found"
 msgstr ""
 
-#: inc/class-aftc-main.php:932
+#: inc/class-aftc-main.php:758
 msgid "Completed AJAX call number: "
 msgstr ""
 
-#: inc/class-aftc-main.php:435
-msgid "Configuring, please wait!"
-msgstr ""
-
-#: inc/class-aftc-main.php:300
+#: inc/class-aftc-main.php:307
 msgid "Content import"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1841
+#: inc/class-aftc-speed-booster.php:59
+msgid "Core Cleanup"
+msgstr ""
+
+#: inc/importer/class-wxr-importer.php:1844
 #, php-format
 msgid "Could not find the author for \"%s\" (post #%d)"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1973
-#, php-format
+#: inc/importer/class-wxr-importer.php:1976
 msgid "Could not find the author for comment #%d"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1955
-#, php-format
+#: inc/importer/class-wxr-importer.php:1958
 msgid "Could not find the comment parent for comment #%d"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1928
+#: inc/importer/class-wxr-importer.php:1931
 #, php-format
 msgid "Could not find the menu object for \"%s\" (post #%d)"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1822
+#: inc/importer/class-wxr-importer.php:1825
 #, php-format
 msgid "Could not find the post parent for \"%s\" (post #%d)"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:130
+#: inc/importer/class-wxr-importer.php:133
 msgid "Could not open the file for parsing"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1883
+#: inc/importer/class-wxr-importer.php:1886
 #, php-format
 msgid "Could not update \"%s\" (post #%d) with mapped data"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1994
-#, php-format
+#: inc/importer/class-wxr-importer.php:1997
 msgid "Could not update comment #%d with mapped data"
 msgstr ""
 
@@ -208,44 +257,120 @@ msgstr ""
 msgid "Customizer file was not uploaded. Error: %s"
 msgstr ""
 
-#: inc/class-aftc-main.php:316
+#: inc/class-aftc-main.php:323
 msgid "Customizer import"
 msgstr ""
 
-#: inc/class-aftc-main.php:878
+#: inc/class-aftc-main.php:704
 msgid "Customizer settings import finished!"
 msgstr ""
 
-#: inc/class-aftc-main.php:151 inc/class-aftc-main.php:152
+#: inc/class-aftc-system-status.php:177
+msgid "Data is cached for 12 hours."
+msgstr ""
+
+#: inc/class-aftc-system-status.php:157
+msgid "Database"
+msgstr ""
+
+#: af-companion.php:61
+msgid "Demo Import"
+msgstr ""
+
+#: inc/class-aftc-growth-tools.php:48
+msgid "Direct Google Analytics 4 integration."
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:155
+msgid "Disable Block Editor"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:63
+msgid "Disable Emojis"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:123
+msgid "Disable jQuery Migrate"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:67
+msgid "Disable oEmbeds"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:97
+msgid "Disable Self-Pingbacks"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:71
+msgid "Disable XML-RPC"
+msgstr ""
+
+#: inc/notice-activate.php:81
+msgid "Dismiss permanently"
+msgstr ""
+
+#: inc/class-aftc-main.php:156 inc/class-aftc-main.php:157
 msgid "Documentation"
 msgstr ""
 
-#: inc/class-aftc-main.php:667 inc/class-aftc-main.php:678
+#: inc/class-aftc-main.php:492 inc/class-aftc-main.php:503
 msgid "Downloaded files"
 msgstr ""
 
-#: inc/class-aftc-main.php:330
+#: inc/class-aftc-speed-booster.php:101
+msgid "Enable DNS Prefetching"
+msgstr ""
+
+#: inc/class-aftc-growth-tools.php:56
+msgid "Enable heatmaps and session recordings."
+msgstr ""
+
+#: inc/class-aftc-growth-tools.php:63
+msgid "Enable NewsArticle/BlogPosting JSON-LD for posts."
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:64
+msgid ""
+"Enable to prevent WordPress from automatically detecting and generating "
+"emojis in your pages."
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:149
+msgid ""
+"Enables native browser lazy loading for all images to improve initial page "
+"load time."
+msgstr ""
+
+#: inc/class-aftc-system-status.php:103
+msgid "Engine Diagnostics"
+msgstr ""
+
+#: inc/class-aftc-main.php:336
 msgid "Enter the Redux option name:"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:855
+#: inc/importer/class-wxr-importer.php:858
 #, php-format
 msgid "Failed to import \"%s\" (%s)"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:753
+#: inc/importer/class-wxr-importer.php:756
 #, php-format
 msgid "Failed to import \"%s\": Invalid post type %s"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1681
+#: inc/importer/class-wxr-importer.php:1684
 #, php-format
 msgid "Failed to import %s %s"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1519
+#: inc/importer/class-wxr-importer.php:1522
 #, php-format
 msgid "Failed to import user \"%s\""
+msgstr ""
+
+#: inc/class-aftc-growth-tools.php:80
+msgid "Fallback Open Graph image."
 msgstr ""
 
 #: inc/class-aftc-helpers.php:625
@@ -255,12 +380,37 @@ msgid ""
 "%4$s%1$sCustomizer file = %5$s"
 msgstr ""
 
-#: inc/class-aftc-main.php:439
-msgid "Following plugins are required to import demo"
+#: inc/class-aftc-growth-tools.php:57
+msgid "Free behavioral analytics by Microsoft."
 msgstr ""
 
-#: inc/class-aftc-main.php:160 inc/class-aftc-main.php:161
+#: inc/class-aftc-main.php:165 inc/class-aftc-main.php:166
 msgid "Free Themes"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:111
+msgid "Frontend Optimization"
+msgstr ""
+
+#: inc/class-aftc-growth-tools.php:48
+msgid "GA4 Measurement ID"
+msgstr ""
+
+#: inc/class-aftc-growth-tools.php:49
+msgid "Google Tag Manager ID"
+msgstr ""
+
+#: af-companion.php:67 inc/class-aftc-growth-tools.php:31 
+#: inc/class-aftc-growth-tools.php:32 inc/class-aftc-growth-tools.php:213
+msgid "Growth Tools"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:340
+msgid "High-performance engine optimization for WordPress."
+msgstr ""
+
+#: inc/class-aftc-growth-tools.php:56
+msgid "Hotjar Site ID"
 msgstr ""
 
 #. URI of the plugin
@@ -271,30 +421,29 @@ msgstr ""
 msgid "https://www.afthemes.com"
 msgstr ""
 
-#: inc/class-aftc-main.php:486 inc/class-aftc-main.php:499
-#: inc/class-aftc-main.php:508
-msgid "Import"
+#: inc/class-aftc-growth-tools.php:72
+msgid "Identify your site type for Google Knowledge Graph."
 msgstr ""
 
-#. Description of the plugin
-msgid ""
-"Import AF themes starter content, widgets and theme settings with one click."
+#: inc/class-aftc-speed-booster.php:145
+msgid "Image Optimization"
 msgstr ""
 
-#: inc/class-aftc-main.php:338 inc/class-aftc-main.php:352
+#: inc/demo-importer.php:234
+msgid "Import a Starter Site, Personalize, and Live it in 3 Easy Steps!"
+msgstr ""
+
+#: inc/class-aftc-main.php:145 inc/class-aftc-main.php:146 
+#: inc/class-aftc-main.php:344
 msgid "Import Demo"
-msgstr ""
-
-#: inc/class-aftc-main.php:142 inc/class-aftc-main.php:143
-msgid "Import Demo Data"
 msgstr ""
 
 #: inc/class-aftc-widget-importer.php:232
 msgid "Imported"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:887
-#: inc/importer/class-wxr-importer.php:1705
+#: inc/importer/class-wxr-importer.php:890 
+#: inc/importer/class-wxr-importer.php:1708
 #, php-format
 msgid "Imported \"%s\" (%s)"
 msgstr ""
@@ -303,25 +452,31 @@ msgstr ""
 msgid "Imported to Inactive"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1540
+#: inc/importer/class-wxr-importer.php:1543
 #, php-format
 msgid "Imported user \"%s\""
 msgstr ""
 
-#: inc/class-aftc-main.php:797
+#: inc/class-aftc-main.php:623
 msgid "Importing content"
 msgstr ""
 
-#: inc/class-aftc-main.php:872 inc/class-aftc-main.php:880
+#: inc/class-aftc-main.php:698 inc/class-aftc-main.php:706
 msgid "Importing customizer settings"
 msgstr ""
 
-#: inc/class-aftc-main.php:837 inc/class-aftc-main.php:849
+#: inc/class-aftc-main.php:663 inc/class-aftc-main.php:675
 msgid "Importing widgets"
 msgstr ""
 
-#: inc/class-aftc-main.php:535
+#: inc/class-aftc-main.php:360
 msgid "Importing, please wait!"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:72
+msgid ""
+"Improves security and speed by disabling a legacy API often targeted by "
+"brute-force attacks."
 msgstr ""
 
 #: inc/class-aftc-helpers.php:621
@@ -329,37 +484,85 @@ msgstr ""
 msgid "Initial max execution time = %s"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:564
+#: inc/class-aftc-growth-tools.php:79
+msgid "Injects AdSense Auto-Ads script."
+msgstr ""
+
+#: inc/class-aftc-growth-tools.php:49
+msgid "Injects GTM container in head and body."
+msgstr ""
+
+#: inc/importer/class-wxr-importer.php:567
 msgid "Invalid author mapping"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1036
+#: inc/importer/class-wxr-importer.php:1039
 msgid "Invalid file type"
 msgstr ""
 
-#: inc/class-aftc-main.php:296
+#: inc/class-aftc-speed-booster.php:147
+msgid "Lazy Load Images"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:127
+msgid "Load JS Asynchronously"
+msgstr ""
+
+#: inc/class-aftc-growth-tools.php:81
+msgid "Mailchimp API"
+msgstr ""
+
+#: inc/class-aftc-main.php:303
 msgid "Manual demo files upload"
 msgstr ""
 
-#: inc/class-aftc-main.php:651
+#: inc/class-aftc-main.php:476
 msgid "Manually uploaded files"
 msgstr ""
 
-#: inc/class-aftc-main.php:795
+#: inc/class-aftc-main.php:621
 msgid "Max execution time after content import = "
 msgstr ""
 
-#: inc/class-aftc-main.php:266
+#: inc/notice-upgrade.php:209
+msgid "Maybe later"
+msgstr ""
+
+#: inc/class-aftc-system-status.php:146
+msgid "Media Handling"
+msgstr ""
+
+#: inc/class-aftc-growth-tools.php:50
+msgid "Meta Pixel ID"
+msgstr ""
+
+#: inc/class-aftc-growth-tools.php:57
+msgid "Microsoft Clarity ID"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:115
+msgid "Minify HTML Output"
+msgstr ""
+
+#: inc/class-aftc-growth-tools.php:77
+msgid "Monetization & Retention"
+msgstr ""
+
+#: inc/notice-upgrade.php:214
+msgid "Need help?"
+msgstr ""
+
+#: inc/class-aftc-main.php:273
 msgid ""
 "No existing posts, pages, categories, images, custom post types or any other "
 "data will be deleted or modified."
 msgstr ""
 
-#: inc/class-aftc-main.php:683
+#: inc/class-aftc-main.php:508
 msgid "No import files specified!"
 msgstr ""
 
-#: inc/class-aftc-main.php:265
+#: inc/class-aftc-main.php:272
 msgid "No other data will be deleted"
 msgstr ""
 
@@ -367,12 +570,8 @@ msgstr ""
 msgid "No plugin specified."
 msgstr ""
 
-#: inc/class-aftc-main.php:588
+#: inc/class-aftc-main.php:411
 msgid "No preview image defined for this import."
-msgstr ""
-
-#: inc/class-aftc-main.php:408
-msgid "No preview image."
 msgstr ""
 
 #: inc/class-aftc-widget-importer.php:291
@@ -387,11 +586,43 @@ msgstr ""
 msgid "not defined!"
 msgstr ""
 
-#: inc/class-aftc-main.php:231
+#: inc/class-aftc-main.php:236
 msgid "One Click Demo Import"
 msgstr ""
 
-#: inc/class-aftc-main.php:274
+#: inc/class-aftc-system-status.php:37
+msgid "Optimal"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:131
+msgid "Optimize Google Fonts"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:79
+msgid "Optimize Heartbeat"
+msgstr ""
+
+#: inc/class-aftc-growth-tools.php:216
+msgid "Optimized analytics and discovery suite for publishers."
+msgstr ""
+
+#: inc/class-aftc-growth-tools.php:65
+msgid "Organization Type"
+msgstr ""
+
+#: inc/class-aftc-system-status.php:112
+msgid "Performance"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:338
+msgid "PERFORMANCE & OPTIMIZATION"
+msgstr ""
+
+#: inc/class-aftc-system-status.php:177
+msgid "Performance Guide"
+msgstr ""
+
+#: inc/class-aftc-main.php:281
 msgid ""
 "Please click on the Import button only once and wait, it can take a couple "
 "of minutes."
@@ -404,98 +635,175 @@ msgid ""
 "Customizer Export/Import plugin."
 msgstr ""
 
-#: inc/class-aftc-main.php:178 inc/class-aftc-main.php:179
+#: inc/class-aftc-main.php:183 inc/class-aftc-main.php:184
 msgid "Plugins"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:892
-#, php-format
+#: inc/importer/class-wxr-importer.php:895
 msgid "Post %d remapped to %d"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1846
+#: inc/importer/class-wxr-importer.php:1849
 #, php-format
 msgid "Post %d was imported with author \"%s\", but could not be found"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1933
+#: inc/importer/class-wxr-importer.php:1936
 #, php-format
 msgid ""
 "Post %d was imported with object \"%d\" of type \"%s\", but could not be "
 "found"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1827
-#, php-format
+#: inc/importer/class-wxr-importer.php:1830
 msgid "Post %d was imported with parent %d, but could not be found"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1872
-#, php-format
+#: inc/importer/class-wxr-importer.php:1875
 msgid "Post %d was marked for post-processing, but none was required."
 msgstr ""
 
-#: inc/class-aftc-main.php:270
+#: inc/class-aftc-main.php:277
 msgid ""
 "Posts, pages, images, widgets, menus and other theme settings will get "
 "imported."
 msgstr ""
 
-#: inc/class-aftc-main.php:522
-msgid "Preview"
+#: inc/class-aftc-speed-booster.php:136
+msgid ""
+"Prevents Dashicons from loading for non-logged-in visitors to reduce CSS "
+"weight."
 msgstr ""
 
-#: inc/class-aftc-main.php:169 inc/class-aftc-main.php:170
+#: inc/class-aftc-speed-booster.php:68
+msgid ""
+"Prevents others from embedding your content and stops external embeds from "
+"loading JS on your site."
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:98
+msgid ""
+"Prevents WordPress from sending pingbacks to your own site when you link to "
+"your own posts."
+msgstr ""
+
+#: inc/class-aftc-main.php:174 inc/class-aftc-main.php:175
 msgid "Pro Themes"
 msgstr ""
 
-#: inc/class-aftc-main.php:273
+#: inc/class-aftc-main.php:280
 msgid "Ready in a couple of minutes"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1776
+#: inc/class-aftc-system-status.php:105
+msgid "Real-time environment report for your WordPress installation."
+msgstr ""
+
+#: inc/importer/class-wxr-importer.php:1779
 msgid "Remote file is incorrect size"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1787
+#: inc/importer/class-wxr-importer.php:1790
 #, php-format
 msgid "Remote file is too large, limit is %s"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1763
+#: inc/importer/class-wxr-importer.php:1766
 #, php-format
 msgid "Remote server returned %1$d %2$s for %3$s"
 msgstr ""
 
-#: inc/class-aftc-main.php:490
-msgid ""
-"Required plugins are ready for the process. Click the button to import "
-"starter demo site."
+#: inc/class-aftc-speed-booster.php:160
+msgid "Remove Block Library CSS"
 msgstr ""
 
-#: inc/class-aftc-main.php:547
+#: inc/class-aftc-speed-booster.php:135
+msgid "Remove Dashicons"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:119
+msgid "Remove Query Strings"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:93
+msgid "Remove RSD & WLW Links"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:75
+msgid "Remove WP Version Meta"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:94
+msgid ""
+"Removes Really Simple Discovery and Windows Live Writer manifest links from "
+"your site header."
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:162
+msgid ""
+"Removes the default Gutenberg CSS files from the frontend to reduce bloat."
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:124
+msgid ""
+"Removes the legacy jQuery Migrate script which is unnecessary for modern "
+"themes."
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:76
+msgid ""
+"Removes the version number from your header and static resources to improve "
+"security and caching."
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:116
+msgid ""
+"Removes unnecessary characters from your HTML output saving data and "
+"improving site speed."
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:120
+msgid ""
+"Removes version query strings (?ver=) from static resources to improve "
+"caching."
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:102
+msgid ""
+"Resolves domain names before a user clicks a link, which can reduce latency "
+"for external assets."
+msgstr ""
+
+#: inc/class-aftc-main.php:369
 msgid "Return to Importer"
 msgstr ""
 
+#: inc/class-aftc-growth-tools.php:214
+msgid "Revenue & Monetize"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:157
+msgid "Reverts to the Classic Editor interface for all posts and pages."
+msgstr ""
+
 #. for when debug logging is off
-#: inc/importer/class-wxr-importer.php:1809
-#, php-format
+#: inc/importer/class-wxr-importer.php:1812
 msgid "Running post-processing for post %d"
 msgstr ""
 
-#: inc/class-aftc-main.php:381
-msgid "Search demos..."
+#: inc/class-aftc-speed-booster.php:375
+msgid "Save & Apply Optimizations"
 msgstr ""
 
-#: inc/class-aftc-main.php:592
+#: inc/class-aftc-growth-tools.php:61
+msgid "Schema & Search Appearance"
+msgstr ""
+
+#: inc/class-aftc-main.php:415
 msgid "Selected demo for the import"
 msgstr ""
 
-#: inc/class-aftc-main.php:494
-msgid "Setup Plugins"
-msgstr ""
-
-#: inc/class-aftc-main.php:232
+#: inc/class-aftc-main.php:237
 msgid "Setup Your Site in a Single Click"
 msgstr ""
 
@@ -507,34 +815,72 @@ msgstr ""
 msgid "Site does not support widget"
 msgstr ""
 
+#: inc/class-aftc-system-status.php:135
+msgid "Site Health"
+msgstr ""
+
+#: inc/class-aftc-speed-booster.php:80
+msgid ""
+"Slows down the WordPress Heartbeat API to reduce server CPU usage while "
+"editing."
+msgstr ""
+
+#: inc/class-aftc-growth-tools.php:80
+msgid "Social Share Image"
+msgstr ""
+
 #: inc/import-packages/import-packages.php:57
 msgid "Sorry, you are not allowed to install plugins on this site."
+msgstr ""
+
+#: af-companion.php:64 inc/class-aftc-speed-booster.php:45 
+#: inc/class-aftc-speed-booster.php:46 inc/class-aftc-speed-booster.php:337
+msgid "Speed Booster"
 msgstr ""
 
 #: inc/import-packages/import-packages.php:124
 msgid "success"
 msgstr ""
 
-#: inc/class-aftc-main.php:550
+#: inc/notice-upgrade.php:197
+msgid "Sure thing"
+msgstr ""
+
+#: inc/class-aftc-main.php:371
 msgid "Switch back to theme predefined imports!"
 msgstr ""
 
-#: inc/class-aftc-main.php:544
+#: inc/class-aftc-main.php:368
 msgid "Switch to manual import!"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1710
-#, php-format
+#: inc/class-aftc-growth-tools.php:81
+msgid "Sync magazine newsletter subscribers."
+msgstr ""
+
+#: inc/class-aftc-system-status.php:20 inc/class-aftc-system-status.php:21 
+#: inc/class-aftc-system-status.php:102
+msgid "System Status"
+msgstr ""
+
+#: inc/importer/class-wxr-importer.php:1713
 msgid "Term %d remapped to %d"
 msgstr ""
 
-#: af-companion.php:27
+#: af-companion.php:29
 #, php-format
 msgid ""
 "The %2$sAF Companion%3$s plugin requires %2$sPHP 5.3.2+%3$s to run properly. "
 "Please contact your hosting company and ask them to update the PHP version "
 "of your site to at least PHP 5.3.2.%4$s Your current version of PHP: "
 "%2$s%1$s%3$s"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"The all-in-one performance and growth suite for WordPress. Instantly deploy "
+"expert-designed starter sites, optimize site speed with the Speed Booster "
+"engine, and scale your audience with integrated growth and diagnostic tools."
 msgstr ""
 
 #: inc/class-aftc-customizer-importer.php:38
@@ -548,11 +894,11 @@ msgid ""
 "use the correct customizer import file."
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:504
+#: inc/importer/class-wxr-importer.php:507
 msgid "The file does not exist, please try again."
 msgstr ""
 
-#: inc/class-aftc-main.php:674
+#: inc/class-aftc-main.php:499
 #, php-format
 msgid "The import files for: %s were successfully downloaded!"
 msgstr ""
@@ -561,7 +907,11 @@ msgstr ""
 msgid "The import files were successfully uploaded!"
 msgstr ""
 
-#: inc/class-aftc-main.php:289
+#: inc/demo-importer.php:231
+msgid "The Templatespare plugin should be updated to the latest version"
+msgstr ""
+
+#: inc/class-aftc-main.php:296
 msgid ""
 "There are no predefined import files available in this theme. Please upload "
 "the import files manually!"
@@ -575,36 +925,44 @@ msgid ""
 "of your site. You can change this setting with these instructions: %s."
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:166
-#: inc/importer/class-wxr-importer.php:282
-#: inc/importer/class-wxr-importer.php:355
+#: inc/importer/class-wxr-importer.php:169 
+#: inc/importer/class-wxr-importer.php:285 
+#: inc/importer/class-wxr-importer.php:358
 #, php-format
 msgid ""
 "This WXR file (version %s) is newer than the importer (version %s) and may "
 "not be supported. Please consider updating."
 msgstr ""
 
+#: inc/class-aftc-growth-tools.php:50
+msgid "Track social media conversions."
+msgstr ""
+
 #: inc/import-packages/import-packages.php:104
 msgid "Unable to connect to the filesystem. Please confirm your credentials."
 msgstr ""
 
-#: inc/class-aftc-main.php:517
-msgid "Upgrade to Pro"
+#: inc/notice-activate.php:77
+msgid "Unlock 1,000+ Templates with All Themes Plan"
 msgstr ""
 
-#: inc/class-aftc-main.php:318
+#: inc/class-aftc-growth-tools.php:241
+msgid "Update Growth Engine"
+msgstr ""
+
+#: inc/class-aftc-main.php:325
 msgid "Upload a DAT file"
 msgstr ""
 
-#: inc/class-aftc-main.php:310
+#: inc/class-aftc-main.php:317
 msgid "Upload a WIE or JSON file"
 msgstr ""
 
-#: inc/class-aftc-main.php:302
+#: inc/class-aftc-main.php:309
 msgid "Upload a XML file"
 msgstr ""
 
-#: inc/class-aftc-helpers.php:557 inc/class-aftc-helpers.php:578
+#: inc/class-aftc-helpers.php:557 inc/class-aftc-helpers.php:578 
 #: inc/class-aftc-helpers.php:596 inc/class-aftc-helpers.php:604
 msgid "Upload files"
 msgstr ""
@@ -614,13 +972,25 @@ msgstr ""
 msgid "URL for %s%s%s file is not defined!"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1544
-#, php-format
+#: inc/importer/class-wxr-importer.php:1547
 msgid "User %d remapped to %d"
 msgstr ""
 
-#: inc/class-aftc-main.php:188 inc/class-aftc-main.php:189
+#: inc/class-aftc-growth-tools.php:54
+msgid "User Experience & Heatmaps"
+msgstr ""
+
+#: inc/class-aftc-main.php:193 inc/class-aftc-main.php:194
 msgid "Videos"
+msgstr ""
+
+#: inc/notice-upgrade.php:204
+msgid "View Stater Sites"
+msgstr ""
+
+#: inc/notice-activate.php:48
+#, php-format
+msgid "Welcome to AF Companion, %s!"
 msgstr ""
 
 #: inc/class-aftc-widget-importer.php:173
@@ -632,7 +1002,7 @@ msgstr ""
 msgid "Widget file was not uploaded. Error: %s"
 msgstr ""
 
-#: inc/class-aftc-main.php:308
+#: inc/class-aftc-main.php:315
 msgid "Widget import"
 msgstr ""
 
@@ -644,14 +1014,21 @@ msgstr ""
 msgid "Widget import file could not be found."
 msgstr ""
 
-#: inc/class-aftc-main.php:591
+#: inc/class-aftc-main.php:414
 msgid "Yes, import!"
+msgstr ""
+
+#: inc/notice-activate.php:50
+msgid ""
+"Your site management ecosystem is ready. From building with professional "
+"starter sites to boosting performance and tracking growth, everything you "
+"need is right here."
 msgstr ""
 
 #: inc/class-aftc-helpers.php:413
 msgid "Your WordPress login credentials don't allow to use WP_Filesystem!"
 msgstr ""
 
-#: inc/importer/class-wxr-importer.php:1781
+#: inc/importer/class-wxr-importer.php:1784
 msgid "Zero size file downloaded"
 msgstr ""

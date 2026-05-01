@@ -2,8 +2,8 @@
 /*
     Plugin Name: AF Companion
     Plugin URI: https://wordpress.org/plugins/af-companion/
-    Description: Build Stylish WordPress Websites in Minutes – No Coding, Just Click and Go! Starter Sites Importer for WordPress
-    Version: 1.2.14
+    Description: The all-in-one performance and growth suite for WordPress. Instantly deploy expert-designed starter sites, optimize site speed with the Speed Booster engine, and scale your audience with integrated growth and diagnostic tools.
+    Version: 2.0.0
     Author: AF themes
     Author URI: https://www.afthemes.com
     License: GPL3
@@ -49,4 +49,33 @@ if (version_compare(phpversion(), '5.3.2', '<')) {
   require_once(AFTC_PATH . '/freemius.php');
 	// Instantiate the main plugin class *Singleton*.
 	$AF_Companion = AF_Companion::getInstance();
+}
+
+/**
+ * Add Quick-Access Solution Links to the Plugin Dashboard
+ */
+add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'af_companion_action_links' );
+
+function af_companion_action_links( $links ) {
+    // 1. Link to the Build/Import section
+    $build_link = '<a href="' . admin_url( 'admin.php?page=af-companion' ) . '">' . esc_html__( 'Demo Import', 'af-companion' ) . '</a>';
+    
+    // 2. Link to the Speed Booster tab (assumes you handle these via tab parameters)
+    $speed_link = '<a href="' . admin_url( 'admin.php?page=af-speed' ) . '">' . esc_html__( 'Speed Booster', 'af-companion' ) . '</a>';
+    
+    // 3. Link to Growth Tools
+    $growth_link = '<a href="' . admin_url( 'admin.php?page=af-growth' ) . '">' . esc_html__( 'Growth Tools', 'af-companion' ) . '</a>';
+    
+    // 4. Link to System Status (the class we built earlier)
+    $status_link = '<a href="' . admin_url( 'admin.php?page=af-status' ) . '" style="font-weight: bold; color: #6366f1;">' . esc_html__( 'System Status', 'af-status' ) . '</a>';
+
+    // Add them to the start of the links array
+    $new_links = array(
+        'build'  => $build_link,
+        'speed'  => $speed_link,
+        'growth' => $growth_link,
+        'status' => $status_link,
+    );
+
+    return array_merge( $new_links, $links );
 }
