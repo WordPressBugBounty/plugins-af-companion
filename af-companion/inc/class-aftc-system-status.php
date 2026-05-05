@@ -199,7 +199,7 @@ class AF_System_Status {
             .af-status-fail { background: #fef2f2; color: #dc2626; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 10px; font-weight: 700; }
             .af-status-footer { margin-top: 40px; text-align: center; color: #94a3b8; font-size: 13px; }
             .af-status-footer a { color: #6366f1; text-decoration: none; font-weight: 600; }
-            .notice, .aftc-notice, div.fs-notice.promotion, div.fs-notice.success, div.fs-notice.updated { display: none !important; }
+            .notice, .aftc-notice, div.fs-notice.promotion, div.fs-notice.success, div.fs-notice.updated, .update-nag.gt-admin-notice { display: none !important; }
         </style>
         <?php
     }

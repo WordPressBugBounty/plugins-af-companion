@@ -400,7 +400,7 @@ class AF_Speed_Booster {
             input:checked + .af-slider { background-color: #10b981; }
             input:checked + .af-slider:before { transform: translateX(22px); }
             .af-submit-btn { padding: 12px 30px !important; font-size: 14px !important; font-weight: 600 !important; border-radius: 6px !important; background: #2271b1 !important; border: none !important; box-shadow: 0 4px 6px rgba(34, 113, 177, 0.2) !important; transition: background 0.2s !important; }
-            .notice, .aftc-notice, div.fs-notice.promotion, div.fs-notice.success, div.fs-notice.updated{ display: none!important; }
+            .notice, .aftc-notice, div.fs-notice.promotion, div.fs-notice.success, div.fs-notice.updated, .update-nag.gt-admin-notice{ display: none!important; }
         </style>
         <?php
     }

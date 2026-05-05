@@ -260,7 +260,7 @@ class AF_Growth_Tools {
             .af-growth-input:focus { border-color: #10b981; outline: none; box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1); }
             .af-submit-btn { background: #10b981 !important; border: none !important; padding: 12px 35px !important; font-weight: 600 !important; border-radius: 8px !important; transition: 0.2s; }
             .af-submit-btn:hover { background: #059669 !important; transform: translateY(-1px); }
-            .notice, .aftc-notice, div.fs-notice.promotion, div.fs-notice.success, div.fs-notice.updated { display: none !important; }
+            .notice, .aftc-notice, div.fs-notice.promotion, div.fs-notice.success, div.fs-notice.updated, .update-nag.gt-admin-notice { display: none !important; }
         </style>
         <?php
     }

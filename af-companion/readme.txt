@@ -1,4 +1,4 @@
-=== AF Companion - Build, Speed Up, and Scale Your Professional Magazine ===
+=== AF Companion – Starter Sites, Speed Booster & Growth Suite for Professional Publishing ===
 Contributors: afthemes
 Tags: news, magazine, performance, seo, demo-import
 Requires at least: 5.0
@@ -8,11 +8,11 @@ License: GPLv3 or later
 
 == Description ==
 
-= The All-In-One Solution for Modern News & Magazine Publishers =
+= One-Click Starter Sites, Performance Optimization, and Publisher Growth Tools =
 
-Most WordPress users face three major roadblocks: **Design Frustration** (struggling to match a professional demo), **Performance Bloat** (slow loading times due to unnecessary scripts), and **Technical Blindness** (not knowing why their server is underperforming).
+Launch professional news and magazine websites with ease. **AF Companion** is a comprehensive site-management suite designed to solve three critical challenges for publishers: **Design Implementation** (expertly crafted starter sites), **Site Speed** (automated performance optimization), and **Search Visibility** (integrated SEO and growth tools).
 
-**AF Companion** is no longer just an importer; it is a complete site-management ecosystem. We provide the professional foundation you need to launch, the speed tools to keep readers engaged, and the growth analytics to drive revenue.
+Whether you are starting a new project or optimizing an existing one, this plugin provides a centralized dashboard to deploy designs, strip away WordPress bloat, and monitor server health.
 
 [Starter Sites](https://afthemes.com/starter-sites/) | [Knowledge Base](https://docs.afthemes.com/) | [Support](https://afthemes.com/support/) | [Access All Sites](https://afthemes.com/all-themes-plan/)
 
@@ -20,10 +20,10 @@ Most WordPress users face three major roadblocks: **Design Frustration** (strugg
 
 == Your Competitive Advantage ==
 
-*   **ATTENTION: Is Your Site Losing Readers to Slow Loading?** A 1-second delay can kill your conversion rate. Most themes load "bloat" that you don't need. 
-*   **INTEREST: The Speed Booster & Growth Suite.** We’ve integrated a powerful optimization engine that strips away WordPress bloat (Emojis, oEmbeds, Query Strings) and adds advanced growth tools like GA4, Hotjar, and Schema markup without needing five extra plugins.
-*   **DESIRE: Professional Results Without the Cost.** Imagine having the speed of a custom-coded site, the design of a premium agency, and the insights of a data scientist—all within one dashboard. 
-*   **ACTION: Elevate Your Digital Presence.** Install AF Companion to transform your blank canvas into a lightning-fast, revenue-ready publication today.
+*   **Is Your Site Losing Readers to Slow Loading?** — A 1-second delay can kill your conversion rate and tank your SEO. AF Companion automatically identifies and strips away the "core bloat" that standard themes leave behind, ensuring your content loads instantly. 
+*   **The Speed Booster & Growth Suite** — Stop slowing down your site with dozens of single-purpose plugins. We’ve integrated a powerful optimization engine that handles everything from script cleanup to advanced tracking (GA4, Hotjar, and Schema) in one lightweight ecosystem.
+*   **Professional Agency Results Without the Cost** — Imagine having the performance of a custom-coded site, the design of a premium agency, and the analytical insights of a data scientist—all accessible from your WordPress dashboard without hiring a developer.
+*   **Elevate Your Digital Presence Today** — Don't waste weeks on technical configuration. Install AF Companion to transform your **blank canvas** into a lightning-fast, **revenue-ready publication** in a single afternoon.
 
 ---
 
@@ -214,13 +214,27 @@ __ Check all of our [Premium](https://afthemes.com/plugins) plugins __
 👉 [Team and Testimonial Block](https://1.envato.market/Jr0QzE)
 
 == Screenshots ==
-1. AF Companion - Demo Import Dashboard
-2. AF Companion - Successful Predefined Demo Import
-3. AF Companion - Manual Demo Import Dashbaord
-4. AF Companion - Examples of Predefined Demos for CoverNews
 
+1. The Launchpad: Browse through 100+ professional starter sites across news, magazine, and business niches.
+2. One-Click Importer: A seamless dashboard to import full demo data or upload your custom assets instantly.
+3. Speed Booster Engine: Strip away WordPress bloat and optimize Core Web Vitals with our powerful performance suite.
+4. Growth & Analytics Suite: Scale your audience with one-click integration for GA4, Hotjar, and Article Schema.
+5. System Status & Diagnostics: Monitor server health, PHP limits, and database integrity to ensure 24/7 stability.
+6. Manual Import Expert: Granular control over XML content, WIE widgets, and DAT customizer file uploads.
+7. Global Showcase: Versatile foundations for Dark Mode, Arabic News, Architecture, and Environmental portals.
+8. Multi-Language Ready: Specialized layouts for Chinese, Korean, and Indian news with deep Gutenberg integration.
+9. Lifestyle & Commerce: Expertly crafted designs for eCommerce, Travel, Fashion, and Sports publications.
+10. Modern Visuals: Digital, Metro, and Portfolio styles including specialized Turkish and Prime News layouts.
+11. Health & Culture: Dedicated foundations for Yoga, Wellness, and regional Bangla news templates.
+12. Feminine & Creative: Elegant Elementor-compatible designs for Lifestyle, Yoga, and Recipe blogs.
+13. Enterprise Solutions: High-impact 3-column news sites and professional business templates for live updates.
+14. Niche Specialized: Professional setups for Dental, Religious, and General Business online news.
+15. Gaming & High-Tech: Immersive layouts for eSports, Health, and innovative Flower Business shops.
+16. Pixel-Perfect Desktop: Experience the clean, high-performance design on widescreen displays.
+17. Tablet Optimized: Fully responsive editorial experience for readers on the move.
+18. Mobile-First Design: Lightning-fast and perfectly scaled layouts for the ultimate smartphone reading experience.
 
-== Installation ==
+== Istallation ==
 
 **From your WordPress dashboard**
 
@@ -290,6 +304,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 
 == Changelog ==
+
 ## 2.0.0 - 01/05/2026
 
 Changes:
@@ -403,4 +418,4 @@ Changes:
 ### 1.0.0 - 16/02/2021
 
 Changes:
-*Initial ReleaseE*
+*Initial Release*
