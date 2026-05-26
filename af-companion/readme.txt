@@ -2,8 +2,8 @@
 Contributors: afthemes
 Tags: news, magazine, performance, seo, demo-import
 Requires at least: 5.0
-Tested up to: 6.9
-Stable tag: 2.1.0
+Tested up to: 7.0
+Stable tag: 2.1.1
 License: GPLv3 or later
 
 == Description ==
