@@ -1,3 +1,96 @@
+== Changelog ==
+
+## 2.2.0 - 15/09/2026
+
+* Fixed a security vulnerability in the demo import file upload process that could allow unauthorized file uploads and privilege escalation.
+* Improved file upload security by restricting uploads to allowed MIME types.
+* Improved demo import security and validation for content, widget, and customizer files.
+* Fixed an undefined array key warning in the demo import process.
+* Added support for displaying demos based on the selected demo import conditions.
+* Improved compatibility with all AF Themes plans.
+* Improved plugin code structure and maintainability.
+* Improved admin menu organization.
+* Fixed issues with manually uploaded files during demo import.
+* Added additional security checks for file uploads.
+* Security fix reported by Farhan Fawwaz Saputra and coordinated with WPScan/Jetpack.
+
+
+## 2.0.0 - 01/05/2026
+
+Changes:
+*New – Performance & Speed Booster engine integration*
+*New – Growth Tools suite for GA4, Adsense, and Meta Pixel integration*
+*New – System Status & Engine Diagnostics dashboard*
+*New – Automated Article Schema (JSON-LD) for SEO*
+*New – Core Cleanup features (Disable Emojis, oEmbeds, XML-RPC)*
+*New – Advanced Header Cleanup (RSD, WLW, WP Version removal)*
+*New – Frontend Optimization (HTML Minification, Async JS, Font-display swap)*
+*New – Asset Management (Disable jQuery Migrate, Remove Query Strings)*
+*New – Image Optimization (Native Lazy Loading support)*
+*New – Gutenberg Bloat Removal (Optional Block Library CSS cleanup)*
+*New – Server Health Monitoring (Memory, Execution Time, OPcache)*
+*New – Database Health Monitoring (Autoloaded options, Size, Overhead)*
+*New – Analytics Integration for Hotjar and Microsoft Clarity*
+*Update – Major UI/UX overhaul of the AF Companion Dashboard*
+*Update – Refined One-Click Import logic for modern block themes*
+*Update – Improved error handling and diagnostic reporting*
+*Update – Compatibility with WordPress 6.9+ and PHP 8.2+*
+
+
+### 1.2.6 - 25/08/2023
+
+Changes:
+*Update – Compatibility with PHP 8.2*
+
+### 1.2.5 - 25/08/2023
+
+Changes:
+*Update – Compatibility with WP 6.3*
+
+### 1.2.4 - 27/04/2023
+
+Changes:
+*Update – Compatibility with WP 6.2*
+
+### 1.2.3 - 06/01/2023
+
+Changes:
+*Update – Compatibility with WP 6.1.1*
+
+
+### 1.2.2 - 20/01/2022
+
+Changes:
+*New – Language file added for translation*
+*Update – Functional updates*
+
+### 1.2.1 - 22/12/2021
+
+Changes:
+*New – Language file added for translation*
+*Update – Security updates*
+
+
+### 1.2.0 - 22/12/2021
+
+Changes:
+*Fixed – check_ajax_referer issue resolved*
+
+### 1.1.2 - 16/12/2021
+
+Changes:
+*Fixed – Unused functions removed*
+
+### 1.1.1 - 12/11/2021
+
+Changes:
+*Fixed – Unused functions removed*
+
+### 1.1.0 - 12/11/2021
+
+Changes:
+*Fixed - Required plugins setup functionality added*
+
 ### 1.0.6 - 15/09/2021
 
 Changes:
@@ -35,4 +128,4 @@ Changes:
 ### 1.0.0 - 16/02/2021
 
 Changes:
-*Initial ReleaseE*
+*Initial Release*

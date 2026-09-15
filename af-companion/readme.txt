@@ -3,7 +3,7 @@ Contributors: afthemes
 Tags: news, magazine, performance, seo, demo-import
 Requires at least: 5.0
 Tested up to: 7.1
-Stable tag: 2.1.2
+Stable tag: 2.2.0
 License: GPLv3 or later
 
 == Description ==
@@ -304,6 +304,21 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 
 == Changelog ==
+
+## 2.2.0 - 15/09/2026
+
+* Fixed a security vulnerability in the demo import file upload process that could allow unauthorized file uploads and privilege escalation.
+* Improved file upload security by restricting uploads to allowed MIME types.
+* Improved demo import security and validation for content, widget, and customizer files.
+* Fixed an undefined array key warning in the demo import process.
+* Added support for displaying demos based on the selected demo import conditions.
+* Improved compatibility with all AF Themes plans.
+* Improved plugin code structure and maintainability.
+* Improved admin menu organization.
+* Fixed issues with manually uploaded files during demo import.
+* Added additional security checks for file uploads.
+* Security fix reported by Farhan Fawwaz Saputra and coordinated with WPScan/Jetpack.
+
 
 ## 2.0.0 - 01/05/2026
 
