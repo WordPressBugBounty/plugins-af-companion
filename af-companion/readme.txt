@@ -1,140 +1,270 @@
-=== AF Companion – Starter Sites, Speed Booster & Growth Suite for Professional Publishing ===
+=== AF Companion – WordPress Performance, Maintenance & Site Health ===
 Contributors: afthemes
-Tags: news, magazine, performance, seo, demo-import
-Requires at least: 5.0
+Tags: performance, database, accessibility, broken-links, seo
+Requires at least: 6.0
 Tested up to: 7.1
-Stable tag: 2.2.1
+Stable tag: 3.0.0
 License: GPLv3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+
+Optimize WordPress performance, clean your database, audit image alt text, monitor content and links, and check site health.
 
 == Description ==
 
-= One-Click Starter Sites, Performance Optimization, and Publisher Growth Tools =
+= WordPress Performance, Maintenance, Content Audits & Site Health =
 
-Launch professional news and magazine websites with ease. **AF Companion** is a comprehensive site-management suite designed to solve three critical challenges for publishers: **Design Implementation** (expertly crafted starter sites), **Site Speed** (automated performance optimization), and **Search Visibility** (integrated SEO and growth tools).
+**AF Companion** brings essential WordPress performance, maintenance, and website monitoring tools together in one dashboard. Optimize common WordPress settings, maintain your database, review website content, find missing image alternative text, monitor links, and check important server and WordPress health indicators.
 
-Whether you are starting a new project or optimizing an existing one, this plugin provides a centralized dashboard to deploy designs, strip away WordPress bloat, and monitor server health.
+Whether you manage a blog, business website, online magazine, or publishing platform, AF Companion helps you take care of routine website maintenance without relying on a collection of separate utility plugins.
 
-[Starter Sites](https://afthemes.com/starter-sites/) | [Knowledge Base](https://docs.afthemes.com/) | [Support](https://afthemes.com/support/) | [Access All Sites](https://afthemes.com/all-themes-plan/)
+**Key features include:**
 
-[youtube https://www.youtube.com/watch?v=m5Q9WmjOI2U]
+* **Performance Optimization:** Control selected WordPress features and frontend optimizations, including Emojis, oEmbeds, XML-RPC, HTML minification, asynchronous JavaScript loading, Google Fonts display, and other asset settings.
+* **Database Maintenance:** Review database overhead and clean up selected revisions, expired transients, spam comments, and orphaned post metadata with dry-run scanning and batched deletion.
+* **Content Monitor:** Monitor website content and identify content that may need attention as part of your regular maintenance workflow.
+* **Alt Text Manager:** Audit your media library for images with missing alternative text and update image alt text.
+* **Link Monitor:** Check website link health and identify links that may need review.
+* **Website Diagnostics:** Check important WordPress and server components, including REST API availability, loopback requests, PHP configuration, scheduled tasks, and database information.
+* **SEO and Analytics Integrations:** Configure supported analytics, tracking, social metadata, schema, and webmaster verification settings.
+* **Legacy Demo Import:** Existing demo and manual import tools remain available for supported AF themes setup workflows.
 
-== Your Competitive Advantage ==
+Manage these tools from the **AF Companion** dashboard in your WordPress administration area.
 
-*   **Is Your Site Losing Readers to Slow Loading?** — A 1-second delay can kill your conversion rate and tank your SEO. AF Companion automatically identifies and strips away the "core bloat" that standard themes leave behind, ensuring your content loads instantly. 
-*   **The Speed Booster & Growth Suite** — Stop slowing down your site with dozens of single-purpose plugins. We’ve integrated a powerful optimization engine that handles everything from script cleanup to advanced tracking (GA4, Hotjar, and Schema) in one lightweight ecosystem.
-*   **Professional Agency Results Without the Cost** — Imagine having the performance of a custom-coded site, the design of a premium agency, and the analytical insights of a data scientist—all accessible from your WordPress dashboard without hiring a developer.
-*   **Elevate Your Digital Presence Today** — Don't waste weeks on technical configuration. Install AF Companion to transform your **blank canvas** into a lightning-fast, **revenue-ready publication** in a single afternoon.
+**Documentation:** https://docs.afthemes.com/
 
----
+**Support:** https://afthemes.com/support/
 
-== PHASE 1: BUILD — No Coding Hassle, Just 3 Simple Steps ==
+**AF themes:** https://afthemes.com/
 
-🖱️ Locate the import dashboard at **wp-admin -> AF Companion**. Easily access and manage your settings with just a few clicks. 
+== Performance Optimization ==
 
-1.  **Choose a Solution:** Browse through [hundreds of pre-built websites](https://afthemes.com/starter-sites/). Click to choose your favorite niche foundation.
-2.  **Customize & Personalize:** Unleash your creativity! Tailor every element to your vision using Gutenberg or your favorite builder.
-3.  **Publish & Go Live:** Your website is ready in minutes—share your story with the world! 🚀🌐
+Improve your WordPress site's configuration with controls for selected core features, frontend assets, and loading behavior.
 
-**Curated Starter Foundations:**
-*   [General Newspaper](https://demos.afthemes.com/covernews/) - Clean and versatile foundation for any professional brand.
-*   [Sporty Journals](https://demos.afthemes.com/covernews/sport/) - Dynamic energy for sports blogs and fitness enthusiasts.
-*   [Fashion Magazine](https://demos.afthemes.com/chromenews/fashion/) - Elegance and modern flair for clothing brands and style influencers.
-*   [Recipes Blog](https://demos.afthemes.com/chromenews/recipe/) - Culinary delight with user-friendly recipe layouts.
-*   [Classic News](https://demos.afthemes.com/morenews/) - Timeless sophistication for professional portfolios and traditional business.
-*   [Masonry Blog](https://demos.afthemes.com/chromenews-pro/masonry/) - Visually stunning unconventional layouts for photographers and artists.
-*   [Dark News](https://demos.afthemes.com/darknews/) - Sleek, bold, and mysterious aesthetic for stand-out publications.
-*   [Health News](https://demos.afthemes.com/chromenews-pro/covid-19/) - Structured for awareness and resource-heavy community groups.
-*   [Gadget Magazine](https://demos.afthemes.com/covernews-pro/gadgets/) - Tailored for high-tech reviews and innovation news.
-*   [Real Estates](https://demos.afthemes.com/morenews/real-estate/) - Visually appealing property showcases for agencies.
-*   [Automobile News](https://demos.afthemes.com/chromenews/automobile/) - Dynamic platforms for car enthusiasts and automotive blogs.
-*   [Travel Blog](https://demos.afthemes.com/newsphere-pro/travel/) - Capture the essence of adventure and exploration.
-*   [Gaming News](https://demos.afthemes.com/chromenews-pro/gaming/) - Immersive experiences for streamers and gaming communities.
+Available optimization settings include:
 
-**[More to Come](https://afthemes.com/starter-sites/)** - We are constantly expanding your design options.
+* Disable WordPress Emojis when they are not needed.
+* Disable oEmbeds.
+* Disable XML-RPC when your website and integrations do not require it.
+* Remove selected header metadata, including RSD, WLW, and WordPress version information.
+* Minify HTML output.
+* Load JavaScript asynchronously.
+* Configure Google Fonts display using `font-display: swap`.
+* Remove query strings from selected static assets.
+* Disable Dashicons for visitors who are not logged in.
+* Control WordPress Heartbeat API frequency.
+* Adjust the editor autosave interval.
+* Limit the number of stored post revisions.
+* Remove selected block library CSS when it is not needed.
+* Enable lazy loading for video iframes.
 
----
+These settings provide control over selected WordPress behaviors and frontend resources. Results depend on your theme, plugins, hosting environment, and site configuration. Test optimization settings with your active theme and plugins before enabling them on a production website.
 
-== PHASE 2: SPEED UP — The Optimization Engine ==
+== Database Maintenance ==
 
-Stop the bloat that kills user engagement. Our optimization suite targets the specific elements that slow down magazine sites:
+Keep your WordPress database manageable with tools for reviewing and cleaning selected data.
 
-*   **Core Cleanup Solution:** Instantly disable Emojis, oEmbeds, and XML-RPC to harden security and slash load times.
-*   **Advanced Header Polish:** Remove RSD, WLW, and WP Version meta to prevent bot scanning and improve caching.
-*   **Frontend Performance:** Minify HTML, Load JS Asynchronously, and optimize Google Fonts with `font-display: swap` for instant text visibility.
-*   **Asset Management:** Remove Query Strings and disable Dashicons for visitors to significantly reduce CSS/JS weight.
+Database maintenance features include:
 
----
+* Scan database overhead before performing cleanup.
+* Preview eligible cleanup operations using dry-run scanning.
+* Remove selected post revisions.
+* Clean expired transients.
+* Remove spam comments.
+* Remove orphaned post metadata.
+* Process deletion tasks in batches to help reduce the risk of long-running database operations.
+* Inspect database information and autoloaded options.
+* Convert supported MyISAM database tables to InnoDB.
 
-== PHASE 3: GROWTH — Revenue & Analytics Suite ==
+**Important:** Database cleanup and table conversion can affect stored website data. Review the available operations and create a database backup before performing maintenance. Test database changes on a staging site when possible.
 
-Don't just publish—measure, monetize, and scale.
+== Content Monitor ==
 
-*   **Seamless Tracking:** One-click setup for **GA4**, **Google Tag Manager**, **Meta Pixel**, and **Microsoft Clarity**.
-*   **SEO & Visibility:** Automated **Article Schema (JSON-LD)** for better Google News and Search visibility.
-*   **Monetization Engine:** Quick-inject **AdSense Auto-Ads** and **Mailchimp API** to build your newsletter list.
-*   **Social Optimization:** Custom fallback **Open Graph** images ensure your shared links always look professional on Facebook and X.
+Keep track of website content as part of your regular publishing and maintenance workflow.
 
----
+The Content Monitor module provides content monitoring tools to help you review existing content and identify items that may need attention.
 
-== PHASE 4: KNOW YOUR SYSTEM — Engine Diagnostics ==
+Use it as part of a regular editorial maintenance routine to help keep published pages and posts up to date.
 
-Real-time insights into your "under the hood" environment so you are never left in the dark:
+== Alt Text Manager ==
 
-*   **Health Check:** Monitor PHP Memory, Execution limits, and OPcache status to ensure your server can handle traffic spikes.
-*   **Database Guard:** Keep an eye on **Autoloaded options** and Database overhead to prevent long-term site slowdowns.
-*   **Media Readiness:** Confirm **Imagick** and **GD library** availability for high-quality, sharp image processing.
+Review image alternative text across your WordPress media library.
 
-## Celebrating the Success Stories of Our Users
+The Alt Text Manager helps you:
 
-<strong>I LOVE THIS THEME!!! It’s great for websites that have lots of content!</strong>
-🌟🌟🌟🌟🌟
-> I’ve used various versions of this theme and highly recommend it for sites that include lots of content!
+* Audit media library images for missing alternative text.
+* Identify images that may need descriptive alt text.
+* Update image alternative text from the management interface.
 
-[@perfectrepublic](https://wordpress.org/support/topic/i-love-this-theme-its-great-for-websites-that-have-lots-of-content/)
+Alternative text helps communicate the purpose or content of meaningful images to people using assistive technologies. Write descriptions that fit the image's context rather than adding keywords for search engines.
 
-<strong>One of the most awesome themes</strong>
-🌟🌟🌟🌟🌟
-> This theme is very hand and good to use. One should check this out and you can use the theme for your site.
+An attachment's alt text and an image's rendered markup are not always the same. Images inserted through custom HTML, page builders, or other plugins may require separate review.
 
-[@mandatory1958](https://wordpress.org/support/topic/one-of-the-most-awesome-themes/)
+== Link Monitor ==
 
+Keep an eye on links across your website with the Link Monitor module.
 
-<strong>Amazing & Excellent replacement theme</strong>
-🌟🌟🌟🌟🌟
-> The look and feel of this theme are excellent… I recommend it for Everyone who likes a dynamic blog.
+Use link monitoring to review website link health and identify links that may need attention. Checking links regularly can help you find outdated or unavailable destinations and maintain a better experience for visitors.
 
-[@doctutorials](https://wordpress.org/support/topic/amazing-excellent-replacement-theme/)
+Review reported link issues before changing or removing URLs. A destination that temporarily blocks automated requests or limits traffic may not necessarily be unavailable to visitors.
 
+== SEO, Analytics & Social Integrations ==
 
-<strong>Great theme with free templates</strong>
-🌟🌟🌟🌟🌟
-> I like the theme because it comes with many free templates for anyone to get started.
+Configure supported tracking, metadata, and publishing integrations from the AF Companion dashboard.
 
-[@tsquare07](https://wordpress.org/support/topic/great-theme-with-free-templates/)
+**Analytics and tracking**
 
-<strong>So clean and modern looking </strong>
-🌟🌟🌟🌟🌟
-> I tried the free version for awhile before going premium. I love the features in the pro version, well worth the price.
+* Google Analytics 4 (GA4).
+* Google Tag Manager.
+* Meta Pixel.
+* Microsoft Clarity.
 
-[@macsopinion](https://wordpress.org/support/topic/so-clean-and-modern-looking/)
+**SEO and structured data**
 
+* Article Schema (JSON-LD) settings.
+* SEO plugin compatibility checks to help prevent duplicate schema output.
+* Supported integrations with Yoast SEO, Rank Math, All in One SEO, and SEOPress.
 
-[Read More Reviews](https://wordpress.org/support/theme/covernews/reviews/?filter=5)
+**Social sharing**
 
-## Manually Import live demo content, widgets, and settings
+* Open Graph settings.
+* Fallback social sharing images.
+* Live social share card preview for supported social platforms, including Facebook, X, and WhatsApp.
 
-This plugin will create a page in **AF Companion**. 
+**Webmaster verification**
 
-Switch to manual import! Then you will be given three file upload inputs. The first one is mandatory, whereas the second and third one is optional.
+* Google Search Console.
+* Bing Webmaster Tools.
+* Yandex.
+* Pinterest.
 
-In the first one , you need to upload demo content XML file for the genuine demo import.
+**Publisher tools**
 
-In the second one, it asks you for WIE or JSON file to import widgets. You can create that file using [Widget Importer & Exporter](https://wordpress.org/plugins/widget-importer-exporter/) plugin.
+* Google News keywords and related publisher metadata.
+* Copyright attribution URL settings.
+* RSS feed content attribution footer.
+* AdSense Auto Ads integration.
+* Mailchimp API settings.
 
-In the third one, you can import the customizer settings, choose the DAT file that can be created from [Customizer Export/Import](https://wordpress.org/plugins/customizer-export-import/) plugin (the customizer settings will be imported only if the export file was created from the same theme).
+Tracking and third-party integrations may require configuration or account credentials from the relevant service. Check your site's privacy and consent requirements before enabling tracking scripts.
 
+If another SEO plugin already outputs structured data, review your schema settings to avoid duplicate markup.
 
-## AF Themes
+== Website Health & Diagnostics ==
+
+Review important parts of your WordPress installation and hosting environment.
+
+Available diagnostic checks include:
+
+* WordPress REST API accessibility.
+* Loopback request availability.
+* PHP memory and execution limits.
+* PHP extension availability.
+* WP-Cron monitoring.
+* Database information and autoloaded options.
+* Imagick and GD image library availability.
+* MyISAM and InnoDB database table information.
+
+These checks help identify configuration issues that may require attention from your hosting provider or website administrator. AF Companion does not replace server monitoring or a complete security audit.
+
+== Legacy Demo Import Tools ==
+
+AF Companion retains its legacy demo and manual import functionality for supported AF themes workflows.
+
+The manual import interface supports the following files:
+
+* **XML:** Import WordPress demo content.
+* **WIE or JSON:** Import widget settings exported using a compatible widget import/export tool.
+* **DAT:** Import Customizer settings exported from the same theme.
+
+The XML file is required for a content import. Widget and Customizer files are optional.
+
+Customizer settings should be imported only when the export file was created using the same theme. Always review imported content and settings before using them on a live website.
+
+== Installation ==
+
+1. In your WordPress dashboard, go to **Plugins > Add New**.
+2. Search for **AF Companion**.
+3. Install and activate the plugin.
+4. Open **AF Companion** from your WordPress administration menu.
+5. Select the module you want to configure and review its available settings.
+
+Before enabling performance optimizations or running database maintenance, create a backup of your website.
+
+== Frequently Asked Questions ==
+
+= What is AF Companion? =
+
+AF Companion is a WordPress maintenance and optimization plugin. It includes performance controls, database maintenance, content monitoring, image alt text auditing, link monitoring, website diagnostics, and supported SEO and analytics integrations.
+
+= Where can I find the AF Companion dashboard? =
+
+After activating the plugin, open **AF Companion** from the WordPress administration menu. The dashboard provides access to its available modules and settings.
+
+= Can AF Companion help improve WordPress performance? =
+
+Yes. AF Companion includes settings for selected WordPress core features, frontend assets, JavaScript loading, HTML output, Heartbeat API frequency, editor autosave, post revisions, and video iframe lazy loading. The impact of each setting depends on your theme, plugins, hosting, and website configuration.
+
+= Does AF Companion include database cleanup tools? =
+
+Yes. You can review database overhead and clean selected post revisions, expired transients, spam comments, and orphaned post metadata. The maintenance tools include dry-run scanning and batched deletion.
+
+Always back up your database before performing cleanup operations.
+
+= What does the Content Monitor do? =
+
+Content Monitor provides tools for monitoring website content and identifying content that may need attention as part of your regular publishing and maintenance workflow.
+
+= How does the Alt Text Manager help with accessibility? =
+
+The Alt Text Manager audits your media library to identify images with missing alternative text and provides a way to update image alt text. Meaningful images should have descriptions appropriate to their context, while decorative images generally do not need descriptive alternative text.
+
+= Can AF Companion check broken links? =
+
+AF Companion includes a Link Monitor module for reviewing website link health and identifying links that may need attention. Review reported issues before changing URLs, since temporary connection problems or destination-side restrictions can affect automated checks.
+
+= Does AF Companion include SEO features? =
+
+Yes. AF Companion includes supported Article Schema settings, SEO plugin compatibility checks, Open Graph settings, webmaster verification fields, and publisher-specific metadata. It is intended to complement your SEO workflow, not replace a dedicated SEO plugin.
+
+= Which analytics services are supported? =
+
+The available integrations include Google Analytics 4, Google Tag Manager, Meta Pixel, and Microsoft Clarity. You may need credentials or configuration details from the relevant service.
+
+= Can I use AF Companion with an SEO plugin? =
+
+Yes. AF Companion includes schema compatibility checks for supported SEO plugins, including Yoast SEO, Rank Math, All in One SEO, and SEOPress. Review your configuration to avoid duplicate structured data.
+
+= Can I use AF Companion with a caching plugin? =
+
+AF Companion provides WordPress optimization settings that may be used alongside a caching plugin. However, some optimization features can overlap or conflict with caching, minification, and JavaScript optimization tools. Test settings individually and disable duplicate functionality where necessary.
+
+= Does AF Companion still include demo import functionality? =
+
+Yes. Legacy demo and manual import tools remain available for supported AF themes workflows. The plugin's primary focus is now WordPress performance, maintenance, monitoring, and site health.
+
+= Is AF Companion suitable for websites that do not use AF themes? =
+
+Many of AF Companion's performance, maintenance, monitoring, and diagnostic tools are intended for general WordPress websites. Legacy demo import functionality is intended for compatible AF themes workflows.
+
+= Where can I get help with AF Companion? =
+
+For documentation and support, visit:
+
+* Documentation: https://docs.afthemes.com/
+* Support: https://afthemes.com/support/
+
+== Screenshots ==
+
+1. **AF Companion Dashboard:** Overview of the plugin's modules and administration navigation.
+2. **Performance Optimization:** Controls for selected WordPress core features and frontend optimization settings.
+3. **Database Maintenance:** Database overhead scanning and available cleanup operations.
+4. **Content Monitor:** Content monitoring interface for reviewing website content.
+5. **Alt Text Manager:** Media library audit showing images with missing alternative text.
+6. **Link Monitor:** Link monitoring interface showing website link health information.
+7. **SEO and Analytics Integrations:** Settings for supported analytics, structured data, social metadata, and webmaster verification.
+8. **Website Health & Diagnostics:** WordPress and server diagnostic information.
+
+## AF themes
 >The most flexible WordPress themes and plugins crafted for the future web.
 
 ##  Access a diverse collection of ready-to-use websites with AF Companion 🌟
@@ -164,6 +294,7 @@ __ Check all of our [Free](https://afthemes.com/products/category/free/) themes 
 👉 [MoreNews](https://afthemes.com/products/morenews/)
 👉 [Newsphere](https://afthemes.com/products/newsphere/)
 👉 [DarkNews](https://afthemes.com/products/darknews/)
+👉 [Newspare](https://afthemes.com/products/newspare/)
 👉 [BroadNews](https://afthemes.com/products/broadnews/)
 👉 [EnterNews](https://afthemes.com/products/enternews/)
 👉 [Newsium](https://afthemes.com/products/newsium/)
@@ -180,6 +311,7 @@ __ Check all of our [Premium](https://afthemes.com/products/category/pro/) theme
 👉 [ChromeNews Pro](https://afthemes.com/products/chromenews-pro/)
 👉 [MoreNews Pro](https://afthemes.com/products/morenews-pro/)
 👉 [Newsphere Pro](https://afthemes.com/products/newsphere-pro/)
+👉 [ReviewNews Pro](https://afthemes.com/products/reviewnews-pro/)
 👉 [DarkNews Pro](https://afthemes.com/products/darknews-pro/)
 👉 [BroadNews Pro](https://afthemes.com/products/broadnews-pro/)
 👉 [EnterNews Pro](https://afthemes.com/products/enternews-pro/)
@@ -198,7 +330,8 @@ __ Check all of our [Free](https://profiles.wordpress.org/afthemes/#content-plug
 👉 [Templatespare](https://templatespare.com)
 👉 [WP Post Author](https://afthemes.com/plugins/wp-post-author/)
 👉 [Blockspare](https://blockspare.com)
-👉 [Elespare](https://elespare.com)
+👉 [Elespare](https://afthemes.com/plugins/elespare/)
+👉 [AF Translate](https://wordpress.org/plugins/af-translate/)
 👉 [Latest Posts Block Lite](https://wordpress.org/plugins/latest-posts-block-lite/)
 👉 [Magic Content Box Lite](https://wordpress.org/plugins/magic-content-box-lite/)
 
@@ -207,65 +340,13 @@ __ Check all of our [Premium](https://afthemes.com/plugins) plugins __
 
 👉 [WP Post Author Pro](https://afthemes.com/plugins/wp-post-author/)
 👉 [Blockspare  Pro](https://blockspare.com)
-👉 [Elespare Pro](https://elespare.com)
+👉 [Elespare Pro](https://afthemes.com/plugins/elespare/)
 👉 [Latest Posts Block](https://1.envato.market/2xxbD)
 👉 [Magic Content Box](https://1.envato.market/NOO1O)
 👉 [Pricing Table Block](http://1.envato.market/XxAZYg)
 👉 [Team and Testimonial Block](https://1.envato.market/Jr0QzE)
 
-== Screenshots ==
 
-1. The Launchpad: Browse through 100+ professional starter sites across news, magazine, and business niches.
-2. One-Click Importer: A seamless dashboard to import full demo data or upload your custom assets instantly.
-3. Speed Booster Engine: Strip away WordPress bloat and optimize Core Web Vitals with our powerful performance suite.
-4. Growth & Analytics Suite: Scale your audience with one-click integration for GA4, Hotjar, and Article Schema.
-5. System Status & Diagnostics: Monitor server health, PHP limits, and database integrity to ensure 24/7 stability.
-6. Manual Import Expert: Granular control over XML content, WIE widgets, and DAT customizer file uploads.
-7. Global Showcase: Versatile foundations for Dark Mode, Arabic News, Architecture, and Environmental portals.
-8. Multi-Language Ready: Specialized layouts for Chinese, Korean, and Indian news with deep Gutenberg integration.
-9. Lifestyle & Commerce: Expertly crafted designs for eCommerce, Travel, Fashion, and Sports publications.
-10. Modern Visuals: Digital, Metro, and Portfolio styles including specialized Turkish and Prime News layouts.
-11. Health & Culture: Dedicated foundations for Yoga, Wellness, and regional Bangla news templates.
-12. Feminine & Creative: Elegant Elementor-compatible designs for Lifestyle, Yoga, and Recipe blogs.
-13. Enterprise Solutions: High-impact 3-column news sites and professional business templates for live updates.
-14. Niche Specialized: Professional setups for Dental, Religious, and General Business online news.
-15. Gaming & High-Tech: Immersive layouts for eSports, Health, and innovative Flower Business shops.
-16. Pixel-Perfect Desktop: Experience the clean, high-performance design on widescreen displays.
-17. Tablet Optimized: Fully responsive editorial experience for readers on the move.
-18. Mobile-First Design: Lightning-fast and perfectly scaled layouts for the ultimate smartphone reading experience.
-
-== Istallation ==
-
-**From your WordPress dashboard**
-
-1. Visit 'Plugins > Add New',
-2. Search for 'AF Companion' and install the plugin.
-3. Activate 'AF Companion' from your Plugins page.
-
-Once the plugin is activated you will find the actual import page in **Appearance -> AF Companion.**
-
-== Frequently Asked Questions ==
-
-= Where do I find the AF Companion dashboard and import settings? =
-Once activated, the complete management suite—including Starter Sites, Speed Booster, and Growth Tools—is located at **wp-admin -> AF Companion**.
-
-= How can I speed up my WordPress site using AF Companion? =
-Simply navigate to the **Speed Booster** tab within the plugin. You can instantly optimize performance by disabling unnecessary core bloat (like Emojis and oEmbeds), minifying HTML, and enabling asynchronous JS loading to improve your Core Web Vitals.
-
-= Does this plugin include SEO and Analytics tools for publishers? =
-Yes. Under the **Growth Tools** section, you can resolve tracking issues by directly integrating GA4, Meta Pixel, and Microsoft Clarity. It also automatically generates Article Schema (JSON-LD) to help your news content rank higher in search results.
-
-= How do I monitor my server's health and performance? =
-The **System Status** tab provides a real-time diagnostic report of your engine. It monitors critical performance metrics like PHP Memory Limits, Database overhead, and Object Caching, alerting you to "Action Required" items that could slow down your site.
-
-= Where are the demo import files and log files saved? =
-Files used during the demo import are stored in your default WordPress uploads directory (e.g., `../wp-content/uploads/2026/05/`). For transparency and troubleshooting, the log file is also registered in your **wp-admin -> Media** section.
-
-= What should I do if I see a "Fatal Error" during activation? =
-This usually indicates your hosting server is using an outdated version of PHP. While the absolute minimum is 5.3.2, for the **Speed Booster** and **Growth Tools** to function optimally, we strictly recommend **PHP 7.4 or 8.x**. Please ask your hosting provider to update your PHP version to ensure a secure and fast environment.
-
-= Can I use the Speed Booster with other caching plugins? =
-Absolutely. AF Companion’s optimization engine is designed to be lightweight and compatible with major caching solutions like WP Rocket or LiteSpeed, focusing specifically on cleaning up WordPress core bloat that those plugins might miss.
 
 == License ==
 
@@ -284,7 +365,7 @@ https://www.gnu.org/licenses/gpl-2.0.html
 
 == Copyright ==
 
-AF Companion, Copyright 2021 AF themes
+AF Companion, Copyright 2026 AF themes
 
 AF Companion is distributed under the terms of the GNU GPL
 
@@ -305,6 +386,23 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 == Changelog ==
 
+## 3.0.0 - 05/11/2026
+
+* Introduced a unified administration header with AF themes branding, plugin version information, and responsive module navigation.
+* Added the Speed Booster control center with database write throttling, post revision limits, editor autosave interval controls, Heartbeat API frequency settings, selective block library CSS removal, and video iframe lazy loading.
+* Added the Alt Text Manager for auditing media library images with missing alternative text.
+* Added Content Monitor and Link Monitor modules.
+* Improved database maintenance with dry-run scanning and batched cleanup operations for selected revisions, expired transients, spam comments, and orphaned post metadata.
+* Improved system diagnostics for loopback requests, REST API accessibility, PHP extensions, and scheduled tasks.
+* Added database table conversion support from MyISAM to InnoDB.
+* Added a live social sharing preview for supported social platforms.
+* Added webmaster verification settings for Google Search Console, Bing, Yandex, and Pinterest.
+* Improved SEO schema compatibility checks for supported SEO plugins.
+* Added publisher metadata settings, including Google News keywords, copyright attribution URLs, and RSS content attribution footers.
+* Added a recommended free themes showcase for AF themes.
+* Improved administration layout, input sanitization, capability checks, and modular code organization.
+
+
 ## 2.2.0 - 15/09/2026
 
 * Fixed a security vulnerability in the demo import file upload process that could allow unauthorized file uploads and privilege escalation.
@@ -312,7 +410,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 * Improved demo import security and validation for content, widget, and customizer files.
 * Fixed an undefined array key warning in the demo import process.
 * Added support for displaying demos based on the selected demo import conditions.
-* Improved compatibility with all AF Themes plans.
+* Improved compatibility with all AF themes plans.
 * Improved plugin code structure and maintainability.
 * Improved admin menu organization.
 * Fixed issues with manually uploaded files during demo import.

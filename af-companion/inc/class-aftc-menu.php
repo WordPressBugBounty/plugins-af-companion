@@ -75,13 +75,13 @@ fill="#000000" stroke="none">
       $this->plugin_page_setup['menu_slug'],
       apply_filters('af-companion/plugin_page_display_callback_function', array($this, 'display_plugin_page')),
       'data:image/svg+xml;base64,' . base64_encode($aft_logo_svg),
-      60
+      33
     );
 
     add_submenu_page(
       'af-companion',
-      esc_html__('Import Demo', 'af-companion'),
-      esc_html__('Import Demo', 'af-companion'),
+      esc_html__('Import Website', 'af-companion'),
+      esc_html__('Import Website', 'af-companion'),
       'import',
       'af-companion',
       apply_filters('af-companion/plugin_page_display_callback_function', array($this, 'display_plugin_page'))
@@ -98,19 +98,19 @@ fill="#000000" stroke="none">
 
     );
 
+    // add_submenu_page(
+    //   'af-companion',
+    //   esc_html__('Free Themes', 'af-companion'),
+    //   esc_html__('Free Themes', 'af-companion'),
+    //   'manage_options',
+    //   esc_url('https://afthemes.com/products/category/free/')
+
+    // );
+
     add_submenu_page(
       'af-companion',
-      esc_html__('Free Themes', 'af-companion'),
-      esc_html__('Free Themes', 'af-companion'),
-      'manage_options',
-      esc_url('https://afthemes.com/products/category/free/')
-
-    );
-
-    add_submenu_page(
-      'af-companion',
-      esc_html__('Pro Themes', 'af-companion'),
-      esc_html__('Pro Themes', 'af-companion'),
+      esc_html__('Premium Themes', 'af-companion'),
+      esc_html__('Premium Themes', 'af-companion'),
       'manage_options',
       esc_url('https://afthemes.com/products/category/pro/')
 
@@ -157,7 +157,7 @@ fill="#000000" stroke="none">
     if (!empty($this->main->get_import_files()) && isset($_GET['import-mode']) && 'manual' === $_GET['import-mode']) {
       $predefined_themes = array();
     } ?>
-
+<?php AF_Admin_Header::render( 'af-companion' ); ?>
     <div class="aftc  wrap  about-wrap">
 
       <?php ob_start();
@@ -392,8 +392,9 @@ fill="#000000" stroke="none">
       );
 
       wp_enqueue_style('aftc-main-css', AFTC_URL . 'assets/css/main.css', array(), AFTC_VERSION);
+      
     }
-
+    wp_enqueue_style('aftc-monitor-css', AFTC_URL . 'assets/css/monitor.css', array(), AFTC_VERSION);
     wp_enqueue_style('aftc-notice-css', AFTC_URL . 'assets/css/notice.css', array(), AFTC_VERSION);
   }
 }
