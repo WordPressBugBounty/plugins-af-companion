@@ -78,7 +78,7 @@ if (!function_exists('aftc_get_demo_data_from_gitlab')) :
           }
 
           if (!empty($related_free_theme)) {
-            
+
             $freedemodataparse = $datajson['democontent'][$related_free_theme];
             $freecurrent_demo = $freedemodataparse['data'];
             foreach ($freedemodataparse['demodata'] as $demodata) {
@@ -234,7 +234,7 @@ if (!function_exists('af_companiion_display_starter_sites')) {
         $message = __('Import a Starter Site, Personalize, and Live it in 3 Easy Steps!', 'af-companion');
       }
     ?>
-      <div id="templatespare-plugin-install-activate" data-class=<?php echo $class; ?> current-theme="af-companion" install=<?php echo json_encode($install); ?> activate=<?php echo json_encode($activate); ?> data-plugin-page='af-companion' message='<?php echo $message; ?>' ispro=''></div>
+      <div id="templatespare-plugin-install-activate" data-class=<?php echo $class; ?> current-theme="af-templatespare" install=<?php echo json_encode($install); ?> activate=<?php echo json_encode($activate); ?> data-plugin-page='af-companion' message='<?php echo $message; ?>' ispro=''></div>
 <?php
     }
   }

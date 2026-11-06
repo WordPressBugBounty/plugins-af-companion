@@ -32,7 +32,7 @@ class AF_Admin_Header {
             'af-db-cleaner'         => array( 'label' => __( 'Database Maintenance', 'af-companion' ), 'url' => admin_url( 'admin.php?page=af-db-cleaner' ) ),
             'af-growth'             => array( 'label' => __( 'Growth Tools', 'af-companion' ), 'url' => admin_url( 'admin.php?page=af-growth' ) ),
             'af-status'             => array( 'label' => __( 'System Status', 'af-companion' ), 'url' => admin_url( 'admin.php?page=af-status' ) ),
-            'af-recommended-themes' => array( 'label' => __( 'Recommended Free Themes', 'af-companion' ), 'url' => admin_url( 'admin.php?page=af-recommended-themes' ) ),
+            'af-recommended-themes' => array( 'label' => __( 'Free Themes', 'af-companion' ), 'url' => admin_url( 'admin.php?page=af-recommended-themes' ) ),
         );
         ?>
         <div class="af-app-header-wrapper">
@@ -47,11 +47,11 @@ class AF_Admin_Header {
                 </div>
 
                 <div class="af-app-actions">
-                    <a href="https://afthemes.com/support/" target="_blank" rel="noopener noreferrer" class="button button-secondary af-app-btn-support">
+                    <a href="https://afthemes.com/supports/" target="_blank" rel="noopener noreferrer" class="button button-secondary af-app-btn-support">
                         <?php esc_html_e( 'Support', 'af-companion' ); ?>
                     </a>
                     <a href="https://afthemes.com/all-themes-plan/" target="_blank" rel="noopener noreferrer" class="button button-primary af-app-btn-pro">
-                        <?php esc_html_e( 'Explore Pro', 'af-companion' ); ?>
+                        <?php esc_html_e( 'Pro Themes & Plugins', 'af-companion' ); ?>
                     </a>
                 </div>
             </div>

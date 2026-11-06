@@ -1,40 +1,121 @@
-=== AF Companion – WordPress Performance, Maintenance & Site Health ===
+=== AF Companion – AI Alt Text, Performance, Site Health & Maintenance ===
 Contributors: afthemes
-Tags: performance, database, accessibility, broken-links, seo
+Tags: ai, alt-text, performance, database, seo
 Requires at least: 6.0
 Tested up to: 7.1
-Stable tag: 3.0.0
+Stable tag: 3.1.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Optimize WordPress performance, clean your database, audit image alt text, monitor content and links, and check site health.
+Generate context-aware AI alt text, optimize WordPress performance, clean databases, monitor content and broken links, and manage site health.
 
 == Description ==
 
-= WordPress Performance, Maintenance, Content Audits & Site Health =
+= AI Alt Text Generator, WordPress Performance & Website Maintenance =
 
-**AF Companion** brings essential WordPress performance, maintenance, and website monitoring tools together in one dashboard. Optimize common WordPress settings, maintain your database, review website content, find missing image alternative text, monitor links, and check important server and WordPress health indicators.
+**AF Companion** brings AI-powered image alt text generation, WordPress performance optimization, database maintenance, content monitoring, and website health tools together in one dashboard.
 
-Whether you manage a blog, business website, online magazine, or publishing platform, AF Companion helps you take care of routine website maintenance without relying on a collection of separate utility plugins.
+Generate descriptive image alternative text with AI using your connected WordPress AI provider. Choose an available AI model, customize your instructions, and use **Context AI** to analyze individual images with relevant website and content context.
+
+Beyond AI image alt text, AF Companion helps you maintain your WordPress website with performance controls, database cleanup, content monitoring, link monitoring, and server diagnostics.
 
 **Key features include:**
 
-* **Performance Optimization:** Control selected WordPress features and frontend optimizations, including Emojis, oEmbeds, XML-RPC, HTML minification, asynchronous JavaScript loading, Google Fonts display, and other asset settings.
-* **Database Maintenance:** Review database overhead and clean up selected revisions, expired transients, spam comments, and orphaned post metadata with dry-run scanning and batched deletion.
-* **Content Monitor:** Monitor website content and identify content that may need attention as part of your regular maintenance workflow.
-* **Alt Text Manager:** Audit your media library for images with missing alternative text and update image alt text.
-* **Link Monitor:** Check website link health and identify links that may need review.
-* **Website Diagnostics:** Check important WordPress and server components, including REST API availability, loopback requests, PHP configuration, scheduled tasks, and database information.
-* **SEO and Analytics Integrations:** Configure supported analytics, tracking, social metadata, schema, and webmaster verification settings.
-* **Legacy Demo Import:** Existing demo and manual import tools remain available for supported AF themes setup workflows.
+* **AI Alt Text Generator:** Generate descriptive, context-aware image alt text using AI models available through compatible WordPress AI Connectors.
+* **Context AI:** Analyze an individual image and generate relevant alternative text using context such as your website name and the post or page associated with the image.
+* **Custom AI Prompts:** Customize image analysis and alt text generation instructions from the AI Settings page.
+* **AI Model Selection:** Choose an available model through your connected WordPress AI provider, including a model capable of image analysis.
+* **Image Alt Text Audit:** Find media library images with missing alternative text and update their descriptions.
+* **Performance Optimization:** Configure selected WordPress core features, frontend assets, and loading behavior.
+* **Database Maintenance:** Review database overhead and clean selected revisions, expired transients, spam comments, and orphaned metadata.
+* **Content Monitor:** Monitor website content and identify items that may need attention.
+* **Link Monitor:** Review website link health and identify links that may need attention.
+* **Website Health & Diagnostics:** Check important WordPress and server components.
+* **SEO and Analytics Integrations:** Configure supported analytics, structured data, social metadata, and webmaster verification settings.
 
-Manage these tools from the **AF Companion** dashboard in your WordPress administration area.
+Whether you manage a blog, business website, online magazine, or publishing platform, AF Companion helps you handle essential website maintenance from your WordPress dashboard.
 
 **Documentation:** https://docs.afthemes.com/
 
 **Support:** https://afthemes.com/support/
 
-**AF themes:** https://afthemes.com/
+**AF Themes:** https://afthemes.com/
+
+== AI Alt Text Generator ==
+
+= Generate Context-Aware AI Alt Text for WordPress Images =
+
+Writing descriptive alternative text for every image can take time, especially on content-heavy websites with large media libraries.
+
+AF Companion includes an AI-powered Alt Text Manager that analyzes images and helps generate relevant alternative text based on the image itself and its surrounding website context.
+
+Instead of relying only on generic image descriptions, use the **Context AI** action to generate alt text that better reflects how an image is used on your website.
+
+**AI-powered features**
+
+* **AI Image Analysis:** Use a compatible AI model to analyze an individual image and generate a descriptive alternative text suggestion.
+* **Context AI Button:** Start AI image analysis directly from an individual image in the media management interface.
+* **Website Context:** Use your website name and other available site information to help guide the generated description.
+* **Linked Post Context:** Consider the post or page associated with an image when generating relevant alternative text.
+* **Custom AI Prompts:** Configure your own instructions from the dedicated AI Settings page to guide the output.
+* **AI Model Selection:** Select an available model through your connected WordPress AI provider.
+* **Native WordPress AI Integration:** Use compatible WordPress AI Connectors instead of configuring a separate AI provider API key inside AF Companion.
+
+**How Context AI works**
+
+1. Open your WordPress media on Alt Text Manager admin menu and select an image.
+2. Use the **Context AI** button available for the individual image.
+3. AF Companion analyzes the image and available website context, such as the website name and linked post or page.
+4. The connected AI model generates a relevant alternative text suggestion.
+5. Review the generated description and use it as appropriate for the image.
+
+**Customize your AI instructions**
+
+Open the **AI Settings** page to customize the prompt used for AI image analysis and alt text generation. Adapt the instructions to your website's subject, editorial style, terminology, and preferred description format.
+
+**Choose your AI model**
+
+AF Companion uses available models through compatible WordPress AI Connectors. Select a model supported by your connected provider. Image analysis requires a model that supports image input.
+
+AI provider availability and model options depend on your WordPress AI Connector configuration.
+
+== Image Alt Text Manager ==
+
+= Audit and Improve Image Alternative Text =
+
+Alongside AI generation, the Alt Text Manager helps you review existing media library images and identify missing alternative text.
+
+Features include:
+
+* Audit media library images for missing alternative text.
+* Identify images that may need descriptive alt text.
+* Update image alternative text from the management interface.
+* Use AI-assisted image analysis to generate relevant descriptions.
+* Customize AI generation instructions.
+* Review AI-generated suggestions before using them.
+
+**Accessibility and image SEO**
+
+Alternative text helps people using screen readers understand meaningful images. It can also provide search engines with additional information about image content.
+
+Write descriptions that communicate the purpose or meaningful content of an image. Avoid adding unrelated keywords or repeating the same description across different images.
+
+Decorative images generally do not need descriptive alternative text. AI-generated descriptions should always be reviewed for accuracy and relevance before publication.
+
+An attachment's alt text and an image's rendered markup are not always the same. Images inserted through custom HTML, page builders, or other plugins may require separate review.
+
+== WordPress AI Connector Setup ==
+
+AI-powered image analysis requires a compatible WordPress AI Connector and an available model that supports image input.
+
+1. Configure an AI provider using the available WordPress AI Connector.
+2. Make sure the provider has an available image-capable model.
+3. Open AF Companion's **AI Settings** page.
+4. Select an available AI model.
+5. Customize the AI prompt to match your website and content requirements.
+6. Open an image in the Alt Text Manager and use **Context AI** to generate an alt text suggestion.
+
+The available providers and models depend on the connectors installed and configured on your WordPress website. AI provider usage may be subject to the provider's own pricing, limits, terms, and privacy policies.
 
 == Performance Optimization ==
 
@@ -84,20 +165,6 @@ Keep track of website content as part of your regular publishing and maintenance
 The Content Monitor module provides content monitoring tools to help you review existing content and identify items that may need attention.
 
 Use it as part of a regular editorial maintenance routine to help keep published pages and posts up to date.
-
-== Alt Text Manager ==
-
-Review image alternative text across your WordPress media library.
-
-The Alt Text Manager helps you:
-
-* Audit media library images for missing alternative text.
-* Identify images that may need descriptive alt text.
-* Update image alternative text from the management interface.
-
-Alternative text helps communicate the purpose or content of meaningful images to people using assistive technologies. Write descriptions that fit the image's context rather than adding keywords for search engines.
-
-An attachment's alt text and an image's rendered markup are not always the same. Images inserted through custom HTML, page builders, or other plugins may require separate review.
 
 == Link Monitor ==
 
@@ -168,7 +235,7 @@ These checks help identify configuration issues that may require attention from 
 
 == Legacy Demo Import Tools ==
 
-AF Companion retains its legacy demo and manual import functionality for supported AF themes workflows.
+AF Companion retains its legacy demo and manual import functionality for supported AF Themes workflows.
 
 The manual import interface supports the following files:
 
@@ -188,17 +255,65 @@ Customizer settings should be imported only when the export file was created usi
 4. Open **AF Companion** from your WordPress administration menu.
 5. Select the module you want to configure and review its available settings.
 
+To use AI-powered alt text generation:
+
+1. Configure a compatible AI provider through WordPress AI Connectors.
+2. Open the AF Companion AI Settings page.
+3. Select an available image-capable model.
+4. Customize your AI prompt.
+5. Open an image in the Alt Text Manager and select **Context AI**.
+
 Before enabling performance optimizations or running database maintenance, create a backup of your website.
 
 == Frequently Asked Questions ==
 
 = What is AF Companion? =
 
-AF Companion is a WordPress maintenance and optimization plugin. It includes performance controls, database maintenance, content monitoring, image alt text auditing, link monitoring, website diagnostics, and supported SEO and analytics integrations.
+AF Companion is a WordPress performance, maintenance, and site health plugin. It includes an AI alt text generator, media library auditing, database maintenance, content monitoring, link monitoring, performance optimization, website diagnostics, and supported SEO and analytics integrations.
 
-= Where can I find the AF Companion dashboard? =
+= Does AF Companion include an AI alt text generator? =
 
-After activating the plugin, open **AF Companion** from the WordPress administration menu. The dashboard provides access to its available modules and settings.
+Yes. AF Companion includes an AI-powered Alt Text Manager that analyzes individual images and generates descriptive alternative text suggestions. It can use available website and linked post or page context to help make descriptions more relevant.
+
+= What is Context AI? =
+
+Context AI is an individual image analysis action in the Alt Text Manager. It analyzes an image and uses available website context, such as your website name and linked post or page, to generate a relevant alternative text suggestion.
+
+= How do I generate AI alt text for an image? =
+
+Open the image in your WordPress Alt Text Manager and use the **Context AI** button. AF Companion sends the image and available context to your selected AI model and returns an alternative text suggestion for you to review.
+
+= Which AI models and providers are supported? =
+
+AF Companion uses models available through compatible WordPress AI Connectors. The available providers and models depend on the connectors configured on your website. Choose a model that supports image input for AI image analysis.
+
+= Do I need to add a separate API key in AF Companion? =
+
+AF Companion uses compatible WordPress AI Connectors for provider access. Configure your AI provider through the available WordPress connector settings rather than entering a separate provider API key in the AF Companion AI Settings page.
+
+= Can I customize the AI prompt? =
+
+Yes. Open the AF Companion **AI Settings** page to customize the prompt used for image analysis and alt text generation. You can adapt the instructions to your website's subject, content, and preferred writing style.
+
+= Does Context AI use the content of my website? =
+
+Context AI can use available contextual information, including your website name and the post or page associated with an image, to help generate a relevant description. The image and selected context are processed by the connected AI provider.
+
+= Does AI automatically generate alt text for every image? =
+
+The Context AI feature provides an on-demand action for individual images. It does not mean that every image is automatically processed. Use the feature when you want an AI-generated suggestion for a particular image.
+
+= Should I review AI-generated alt text? =
+
+Yes. AI-generated descriptions are suggestions and may occasionally miss details or interpret an image incorrectly. Review each description before using it. Ensure the final alternative text accurately reflects the image and its purpose in the page.
+
+= Does AI-generated alt text improve image SEO? =
+
+Descriptive alternative text helps search engines understand meaningful image content and supports accessible website experiences. AI can help create relevant descriptions, but it does not guarantee higher search rankings or increased traffic.
+
+= Does the Alt Text Manager find images with missing alt text? =
+
+Yes. The Alt Text Manager audits your media library to identify images with missing alternative text and provides a way to update image alt text.
 
 = Can AF Companion help improve WordPress performance? =
 
@@ -213,10 +328,6 @@ Always back up your database before performing cleanup operations.
 = What does the Content Monitor do? =
 
 Content Monitor provides tools for monitoring website content and identifying content that may need attention as part of your regular publishing and maintenance workflow.
-
-= How does the Alt Text Manager help with accessibility? =
-
-The Alt Text Manager audits your media library to identify images with missing alternative text and provides a way to update image alt text. Meaningful images should have descriptions appropriate to their context, while decorative images generally do not need descriptive alternative text.
 
 = Can AF Companion check broken links? =
 
@@ -240,11 +351,11 @@ AF Companion provides WordPress optimization settings that may be used alongside
 
 = Does AF Companion still include demo import functionality? =
 
-Yes. Legacy demo and manual import tools remain available for supported AF themes workflows. The plugin's primary focus is now WordPress performance, maintenance, monitoring, and site health.
+Yes. Legacy demo and manual import tools remain available for supported AF Themes workflows. The plugin's primary focus is now AI-assisted image alt text, WordPress performance, maintenance, monitoring, and site health.
 
-= Is AF Companion suitable for websites that do not use AF themes? =
+= Is AF Companion suitable for websites that do not use AF Themes? =
 
-Many of AF Companion's performance, maintenance, monitoring, and diagnostic tools are intended for general WordPress websites. Legacy demo import functionality is intended for compatible AF themes workflows.
+Many of AF Companion's performance, maintenance, monitoring, AI alt text, and diagnostic tools are intended for general WordPress websites. Legacy demo import functionality is intended for compatible AF Themes workflows.
 
 = Where can I get help with AF Companion? =
 
@@ -256,13 +367,15 @@ For documentation and support, visit:
 == Screenshots ==
 
 1. **AF Companion Dashboard:** Overview of the plugin's modules and administration navigation.
-2. **Performance Optimization:** Controls for selected WordPress core features and frontend optimization settings.
-3. **Database Maintenance:** Database overhead scanning and available cleanup operations.
-4. **Content Monitor:** Content monitoring interface for reviewing website content.
-5. **Alt Text Manager:** Media library audit showing images with missing alternative text.
-6. **Link Monitor:** Link monitoring interface showing website link health information.
-7. **SEO and Analytics Integrations:** Settings for supported analytics, structured data, social metadata, and webmaster verification.
-8. **Website Health & Diagnostics:** WordPress and server diagnostic information.
+2. **AI Alt Text Manager:** Media library audit showing images with missing alternative text and available management actions.
+3. **AI Settings:** Select an available AI model through WordPress AI Connectors and customize the AI prompt.
+4. **Performance Optimization:** Controls for selected WordPress core features and frontend optimization settings.
+5. **Database Maintenance:** Database overhead scanning and available cleanup operations.
+6. **Content Monitor:** Content monitoring interface for reviewing website content.
+7. **Link Monitor:** Link monitoring interface showing website link health information.
+8. **SEO and Analytics Integrations:** Settings for supported analytics, structured data, social metadata, and webmaster verification.
+9. **Website Health & Diagnostics:** WordPress and server diagnostic information.
+10. **Recommended Free Themes for News, Magazines & Blogs:** Power your news, magazine, and blog sites with free WordPress themes engineered by AF themes.
 
 ## AF themes
 >The most flexible WordPress themes and plugins crafted for the future web.
@@ -385,6 +498,12 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 
 == Changelog ==
+
+## 3.1.0 - 07/11/2026
+* Introduced AI-powered image alt text generation through compatible WordPress AI Connectors.
+* Added Context AI actions for individual images to generate context-aware alternative text using image analysis and available website and linked content context.
+* Added AI model selection and customizable prompts through the new AI Settings page.
+* Added the Alt Text Manager for auditing media library images with missing alternative text.
 
 ## 3.0.0 - 05/11/2026
 

@@ -22,6 +22,7 @@ class AF_Companion_Booster {
         require_once AFTC_PATH . 'inc/class-aftc-alt-manager.php';        
         require_once AFTC_PATH . 'inc/class-aftc-db-cleaner.php';        
         require_once AFTC_PATH . 'inc/class-aftc-recommended-themes.php';        
+        require_once AFTC_PATH . 'inc/ai/class-aftc-ai-helper.php';        
 
         // Initialize them safely
         new AF_Admin_Header();
@@ -33,6 +34,7 @@ class AF_Companion_Booster {
         new AF_Link_Monitor();
         new AF_Database_Cleaner();
         new AF_Recommended_Themes();
+        // new AF_AI_Settings_Dashboard();
     }
 }
 

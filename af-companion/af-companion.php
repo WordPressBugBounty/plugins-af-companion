@@ -2,8 +2,8 @@
 /*
     Plugin Name: AF Companion
     Plugin URI: https://wordpress.org/plugins/af-companion/
-    Description: The all-in-one performance and growth suite for WordPress. Instantly deploy expert-designed starter sites, optimize site speed with the Speed Booster engine, and scale your audience with integrated growth and diagnostic tools.
-    Version: 3.0.0
+    Description: Generate context-aware AI alt text, optimize WordPress performance, clean databases, monitor content and broken links, and manage site health.
+    Version: 3.1.0
     Author: AF themes
     Author URI: https://www.afthemes.com
     License: GPL3
