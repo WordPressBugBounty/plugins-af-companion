@@ -299,7 +299,7 @@ class AF_AI_Settings_Dashboard {
 	}
 
 	public function register_settings_menu() {
-		$badge_status = 'Models';
+		$badge_status = 'Model';
 
 		$hook = add_submenu_page(
 			'af-companion',
@@ -312,7 +312,7 @@ class AF_AI_Settings_Dashboard {
 			'manage_options',
 			'af-ai-settings',
 			array( $this, 'render_settings_page' ),
-			1
+			0
 		);
 
 		if ( $hook ) {
@@ -500,6 +500,7 @@ class AF_AI_Settings_Dashboard {
 			wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'af-companion' ) );
 		}
 		?>
+		<?php AF_Admin_Header::render( 'af-ai-settings' ); ?>
 		<div class="wrap af-status-container">
 			<div class="af-status-header">
 				<div class="af-status-branding">

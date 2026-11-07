@@ -80,8 +80,8 @@ fill="#000000" stroke="none">
 
     add_submenu_page(
       'af-companion',
-      esc_html__('Import Website', 'af-companion'),
-      esc_html__('Import Website', 'af-companion'),
+      esc_html__('Import Demo Website', 'af-companion'),
+      esc_html__('Import Demo Site', 'af-companion'),
       'import',
       'af-companion',
       apply_filters('af-companion/plugin_page_display_callback_function', array($this, 'display_plugin_page'))
@@ -89,60 +89,55 @@ fill="#000000" stroke="none">
 
 
 
-    add_submenu_page(
-      'af-companion',
-      esc_html__('Documentation', 'af-companion'),
-      esc_html__('Documentation', 'af-companion'),
-      'manage_options',
-      esc_url('https://docs.afthemes.com/')
+   
 
-    );
-
-    // add_submenu_page(
-    //   'af-companion',
-    //   esc_html__('Free Themes', 'af-companion'),
-    //   esc_html__('Free Themes', 'af-companion'),
-    //   'manage_options',
-    //   esc_url('https://afthemes.com/products/category/free/')
-
-    // );
+    
 
     add_submenu_page(
       'af-companion',
       esc_html__('Premium Themes', 'af-companion'),
-      esc_html__('Premium Themes', 'af-companion'),
+      esc_html__('Pro Themes', 'af-companion'),
       'manage_options',
       esc_url('https://afthemes.com/products/category/pro/')
 
     );
 
-    add_submenu_page(
+    // add_submenu_page(
+    //   'af-companion',
+    //   esc_html__('Plugins', 'af-companion'),
+    //   esc_html__('Plugins', 'af-companion'),
+    //   'manage_options',
+    //   esc_url('https://afthemes.com/plugins/')
+
+    // );
+
+
+    // add_submenu_page(
+    //   'af-companion',
+    //   esc_html__('Videos', 'af-companion'),
+    //   esc_html__('Videos', 'af-companion'),
+    //   'manage_options',
+    //   esc_url('https://www.youtube.com/channel/UCCJKF25c3HZpfaELha-86Hw/')
+
+    // );
+
+     add_submenu_page(
       'af-companion',
-      esc_html__('Plugins', 'af-companion'),
-      esc_html__('Plugins', 'af-companion'),
+      esc_html__('Need help? Contact support team', 'af-companion'),
+      esc_html__('Support', 'af-companion'),
       'manage_options',
-      esc_url('https://afthemes.com/plugins/')
+      esc_url('https://afthemes.com/supports/')
 
     );
 
+    // add_submenu_page(
+    //   'af-companion',
+    //   esc_html__('Blog', 'af-companion'),
+    //   esc_html__('Blog', 'af-companion'),
+    //   'manage_options',
+    //   esc_url('https://afthemes.com/blog/')
 
-    add_submenu_page(
-      'af-companion',
-      esc_html__('Videos', 'af-companion'),
-      esc_html__('Videos', 'af-companion'),
-      'manage_options',
-      esc_url('https://www.youtube.com/channel/UCCJKF25c3HZpfaELha-86Hw/')
-
-    );
-
-    add_submenu_page(
-      'af-companion',
-      esc_html__('Blog', 'af-companion'),
-      esc_html__('Blog', 'af-companion'),
-      'manage_options',
-      esc_url('https://afthemes.com/blog/')
-
-    );
+    // );
 
     register_importer($this->plugin_page_setup['menu_slug'], $this->plugin_page_setup['page_title'], $this->plugin_page_setup['menu_title'], apply_filters('af-companion/plugin_page_display_callback_function', array($this, 'display_plugin_page')));
   }

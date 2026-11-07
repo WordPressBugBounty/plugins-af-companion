@@ -2,8 +2,8 @@
 /*
     Plugin Name: AF Companion
     Plugin URI: https://wordpress.org/plugins/af-companion/
-    Description: Optimize WordPress content for search and AI discovery with AI SEO metadata, GEO insights, schema markup, social sharing, AI alt text, performance tools, database cleanup, and site health monitoring.
-    Version: 3.2.0
+    Description: Supercharge your website for ChatGPT Search, Perplexity & Google AI Overviews with AI SEO, GEO, Alt Text generation, schema, performance, and maintenance tools.
+    Version: 3.3.0
     Author: AF themes
     Author URI: https://www.afthemes.com
     License: GPL3
@@ -34,7 +34,7 @@ if (version_compare(phpversion(), '5.3.2', '<')) {
 } else {
 
   // Current version of the plugin.
-  define('AFTC_VERSION', '3.0.0');
+  define('AFTC_VERSION', '3.3.0');
 
   // Path/URL to root of this plugin, with trailing slash.
   define('AFTC_PATH', plugin_dir_path(__FILE__));
@@ -54,31 +54,35 @@ if (version_compare(phpversion(), '5.3.2', '<')) {
 }
 
 /**
- * Add Quick-Access Solution Links to the Plugin Dashboard
+ * Add High-Demand Quick-Access Links and Pro Highlights to the Plugin Dashboard
  */
 add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'af_companion_action_links');
 
 function af_companion_action_links($links)
 {
-  // 1. Link to the Build/Import section
-  $build_link = '<a href="' . admin_url('admin.php?page=af-companion') . '">' . esc_html__('Demo Import', 'af-companion') . '</a>';
+  // 1. Speed Booster (High Frequency Performance Feature)
+  $speed_link = '<a href="' . admin_url('admin.php?page=af-speed') . '" style="color: #0284c7; font-weight: 600;">' . esc_html__('Speed Booster', 'af-companion') . '</a>';
 
-  // 2. Link to the Speed Booster tab (assumes you handle these via tab parameters)
-  $speed_link = '<a href="' . admin_url('admin.php?page=af-speed') . '">' . esc_html__('Speed Booster', 'af-companion') . '</a>';
+  // 2. AI Settings (Core GEO / AIO Engine Configuration)
+  $ai_link = '<a href="' . admin_url('admin.php?page=af-ai-settings') . '" style="color: #6366f1; font-weight: 600;">' . esc_html__('AI Settings', 'af-companion') . '</a>';
 
-  // 3. Link to Growth Tools
-  $growth_link = '<a href="' . admin_url('admin.php?page=af-growth') . '">' . esc_html__('Growth Tools', 'af-companion') . '</a>';
+  // 3. Alt Text Manager (Accessibility & Image SEO)
+  $alt_link = '<a href="' . admin_url('admin.php?page=af-alt-manager') . '">' . esc_html__('Alt Text Manager', 'af-companion') . '</a>';
 
-  // 4. Link to System Status (the class we built earlier)
-  $status_link = '<a href="' . admin_url('admin.php?page=af-status') . '" style="font-weight: bold; color: #6366f1;">' . esc_html__('System Status', 'af-status') . '</a>';
+  // 4. Database Maintenance (Storage & Safety)
+  $db_link = '<a href="' . admin_url('admin.php?page=af-db-cleaner') . '">' . esc_html__('Database Cleaner', 'af-companion') . '</a>';
 
-  // Add them to the start of the links array
-  $new_links = array(
-    'build'  => $build_link,
-    'speed'  => $speed_link,
-    'growth' => $growth_link,
-    'status' => $status_link,
+  // 5. Upgrade / Pro Link (High-Contrast Emerald Highlight for Conversions)
+  $pro_link = '<a href="https://afthemes.com/all-themes-plan/" target="_blank" rel="noopener noreferrer" style="color: #10b981; font-weight: 700;">' . esc_html__('Go Pro 🚀', 'af-companion') . '</a>';
+
+  // Prepend high-demand module links right next to default Deactivate/Edit links
+  $custom_links = array(
+    'speed' => $speed_link,
+    'ai'    => $ai_link,
+    'alt'   => $alt_link,
+    'db'    => $db_link,
+    'pro'   => $pro_link,
   );
 
-  return array_merge($new_links, $links);
+  return array_merge($custom_links, $links);
 }

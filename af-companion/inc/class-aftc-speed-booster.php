@@ -43,7 +43,7 @@ class AF_Speed_Booster {
             'manage_options', 
             'af-speed', 
             array( $this, 'render_page' ),
-            1
+            0
         );
     }
 

@@ -1,9 +1,12 @@
 <?php
 /**
  * AF Link Monitor - Broken Link & Health Scanner Engine
- * 
- * Version: 1.0.1
- * Author: AF Themes
+ *
+ * @package           AF_Companion
+ * @author            AF Themes
+ * @license           GPL-2.0-or-later
+ * @link              https://afthemes.com
+ * @version           2.2.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -19,12 +22,17 @@ class AF_Link_Monitor {
         // AJAX Handlers for Scanning and Re-checking Links
         add_action( 'wp_ajax_af_link_run_scan', array( $this, 'ajax_run_scan' ) );
         add_action( 'wp_ajax_af_link_recheck_single', array( $this, 'ajax_recheck_single' ) );
+        add_action( 'wp_ajax_af_link_recheck_post', array( $this, 'ajax_recheck_post' ) );
 
         // Enqueue Assets
         add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_assets' ) );
 
         // Create Custom Table on activation/load if missing
         add_action( 'init', array( $this, 'maybe_create_table' ) );
+
+        // Register Standalone Link Audit Meta Box & Dashboard Widgets
+        add_action( 'add_meta_boxes', array( $this, 'register_post_meta_box' ) );
+        add_action( 'wp_dashboard_setup', array( $this, 'register_dashboard_widgets' ) );
     }
 
     /**
@@ -46,15 +54,16 @@ class AF_Link_Monitor {
      * Enqueue Assets
      */
     public function enqueue_assets( $hook ) {
-        if ( strpos( $hook, 'af-link-monitor' ) === false ) {
+        $allowed_hooks = array( 'toplevel_page_af-link-monitor', 'post.php', 'post-new.php', 'index.php' );
+        if ( ! in_array( $hook, $allowed_hooks, true ) && false === strpos( $hook, 'af-link-monitor' ) ) {
             return;
         }
 
         wp_enqueue_script(
             'af-link-monitor-js',
-            AFTC_URL . '/assets/js/link-monitor.js',
+            AFTC_URL . 'assets/js/link-monitor.js',
             array( 'jquery' ),
-            '1.0.1',
+            '2.2.3',
             true
         );
 
@@ -69,7 +78,7 @@ class AF_Link_Monitor {
     }
 
     /**
-     * Ensure Custom Database Table Exists
+     * Ensure Custom Database Table Exists with Performance Indexes
      */
     public function maybe_create_table() {
         global $wpdb;
@@ -100,9 +109,151 @@ class AF_Link_Monitor {
     }
 
     /**
-     * Get Link Statistics Summary
+     * Register Standalone Link Audit Meta Box for Posts, Pages, and CPTs
+     */
+    public function register_post_meta_box() {
+        $post_types = get_post_types( array( 'public' => true ), 'names' );
+        foreach ( $post_types as $post_type ) {
+            if ( 'attachment' === $post_type ) {
+                continue;
+            }
+            add_meta_box(
+                'af_content_link_audit_box',
+                esc_html__( 'AF Companion - Content Link Audit', 'af-companion' ),
+                array( $this, 'render_post_meta_box' ),
+                $post_type,
+                'normal',
+                'default'
+            );
+        }
+    }
+
+    /**
+     * Render Standalone Post Meta Box Content
+     */
+    public function render_post_meta_box( $post ) {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'af_link_monitor';
+        $post_id    = $post->ID;
+
+        $post_links = array();
+        if ( $wpdb->get_var( $wpdb->prepare( "SHOW TABLES LIKE %s", $table_name ) ) === $table_name ) {
+            $post_links = $wpdb->get_results( $wpdb->prepare(
+                "SELECT * FROM {$table_name} WHERE post_id = %d ORDER BY status DESC",
+                $post_id
+            ) );
+        }
+        ?>
+        <div class="af-meta-box-wrap" style="padding: 5px 0;">
+            <p style="font-size: 13px; color: #646970; margin-top: 0; margin-bottom: 12px;">
+                <?php esc_html_e( 'Inspect internal and external links detected inside this content, check their HTTP response statuses, or trigger an instant recheck.', 'af-companion' ); ?>
+            </p>
+
+            <div id="af-post-links-container">
+                <?php if ( ! empty( $post_links ) ) : ?>
+                    <table class="wp-list-table widefat fixed striped" style="margin-bottom: 12px;">
+                        <thead>
+                            <tr>
+                                <th style="width: 50%;"><?php esc_html_e( 'Target URL & Anchor', 'af-companion' ); ?></th>
+                                <th style="width: 25%;"><?php esc_html_e( 'HTTP Status', 'af-companion' ); ?></th>
+                                <th style="width: 25%; text-align: right;"><?php esc_html_e( 'State', 'af-companion' ); ?></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ( $post_links as $lnk ) : 
+                                $color = ( 'working' === $lnk->status ) ? '#15803d' : ( 'broken' === $lnk->status ? '#dc2626' : '#d97706' );
+                                ?>
+                                <tr>
+                                    <td>
+                                        <a href="<?php echo esc_url( $lnk->url ); ?>" target="_blank" style="word-break: break-all;">
+                                            <?php echo esc_html( $lnk->url ); ?>
+                                        </a>
+                                        <div style="color: #64748b; font-size: 11px; margin-top: 2px;">
+                                            <?php esc_html_e( 'Anchor:', 'af-companion' ); ?> <em><?php echo esc_html( $lnk->anchor_text ? $lnk->anchor_text : __( 'N/A', 'af-companion' ) ); ?></em>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <strong><?php echo esc_html( $lnk->http_code ? $lnk->http_code : '---' ); ?></strong>
+                                        <?php if ( $lnk->error_message ) : ?>
+                                            <div style="color: #dc2626; font-size: 10px;"><?php echo esc_html( $lnk->error_message ); ?></div>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td style="text-align: right;">
+                                        <span style="font-weight: 700; color: <?php echo esc_attr( $color ); ?>; text-transform: uppercase; font-size: 11px;">
+                                            <?php echo esc_html( $lnk->status ); ?>
+                                        </span>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                <?php else : ?>
+                    <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px; border-radius: 4px; margin-bottom: 12px; font-size: 13px; color: #475569;">
+                        <?php esc_html_e( 'No links have been indexed for this post yet. Click the button below to scan and verify links.', 'af-companion' ); ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+
+            <button type="button" class="button button-secondary af-recheck-post-btn" data-post-id="<?php echo esc_attr( $post_id ); ?>">
+                <span class="dashicons dashicons-update" style="font-size: 16px; vertical-align: middle; margin-top: 2px;"></span>
+                <?php esc_html_e( 'Recheck Links in this Post', 'af-companion' ); ?>
+            </button>
+            <span class="spinner" id="af-post-recheck-spinner" style="float: none; margin-top: 4px;"></span>
+        </div>
+        <?php
+    }
+
+    /**
+     * Register WordPress Dashboard Widgets
+     */
+    public function register_dashboard_widgets() {
+        wp_add_dashboard_widget(
+            'af_companion_health_widget',
+            esc_html__( 'AF Companion - Content & Link Health', 'af-companion' ),
+            array( $this, 'render_dashboard_widget' )
+        );
+    }
+
+    /**
+     * Render Dashboard Widget Content
+     */
+    public function render_dashboard_widget() {
+        $stats = $this->get_link_stats();
+        ?>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+            <p style="margin: 0; font-size: 13px; color: #475569;"><?php esc_html_e( 'Overview of your site link integrity across published content.', 'af-companion' ); ?></p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; text-align: center;">
+                <div style="background: #f1f5f9; padding: 10px; border-radius: 6px;">
+                    <span style="display: block; font-size: 18px; font-weight: bold; color: #0f172a;"><?php echo esc_html( number_format_i18n( $stats['total'] ) ); ?></span>
+                    <span style="font-size: 11px; color: #64748b;"><?php esc_html_e( 'Total Links', 'af-companion' ); ?></span>
+                </div>
+                <div style="background: #fef2f2; padding: 10px; border-radius: 6px;">
+                    <span style="display: block; font-size: 18px; font-weight: bold; color: #dc2626;"><?php echo esc_html( number_format_i18n( $stats['broken'] ) ); ?></span>
+                    <span style="font-size: 11px; color: #991b1b;"><?php esc_html_e( 'Broken Links', 'af-companion' ); ?></span>
+                </div>
+                <div style="background: #f0fdf4; padding: 10px; border-radius: 6px;">
+                    <span style="display: block; font-size: 18px; font-weight: bold; color: #15803d;"><?php echo esc_html( number_format_i18n( $stats['working'] ) ); ?></span>
+                    <span style="font-size: 11px; color: #166534;"><?php esc_html_e( 'Working Links', 'af-companion' ); ?></span>
+                </div>
+            </div>
+            <div style="text-align: right; margin-top: 5px;">
+                <a href="<?php echo esc_url( admin_url( 'admin.php?page=af-link-monitor' ) ); ?>" class="button button-small button-primary">
+                    <?php esc_html_e( 'Open Link Monitor', 'af-companion' ); ?>
+                </a>
+            </div>
+        </div>
+        <?php
+    }
+
+    /**
+     * Get Link Statistics Summary (With Transient Caching for 100k+ Scale)
      */
     private function get_link_stats() {
+        $cached_stats = get_transient( 'af_link_monitor_stats' );
+        if ( false !== $cached_stats ) {
+            return $cached_stats;
+        }
+
         global $wpdb;
         $table_name = $wpdb->prefix . 'af_link_monitor';
 
@@ -115,12 +266,15 @@ class AF_Link_Monitor {
         $broken     = (int) $wpdb->get_var( "SELECT COUNT(id) FROM {$table_name} WHERE status = 'broken'" );
         $unverified = (int) $wpdb->get_var( "SELECT COUNT(id) FROM {$table_name} WHERE status = 'unverified'" );
 
-        return array(
+        $stats = array(
             'total'      => $total,
             'working'    => $working,
             'broken'     => $broken,
             'unverified' => $unverified,
         );
+
+        set_transient( 'af_link_monitor_stats', $stats, 12 * HOUR_IN_SECONDS );
+        return $stats;
     }
 
     /**
@@ -141,20 +295,23 @@ class AF_Link_Monitor {
         $offset        = ( $current_page - 1 ) * $per_page;
 
         $where = '1=1';
-        if ( $status_filter !== 'all' ) {
+        if ( 'all' !== $status_filter ) {
             $where = $wpdb->prepare( 'status = %s', $status_filter );
         }
 
-        $links = $wpdb->get_results( $wpdb->prepare(
-            "SELECT * FROM {$table_name} WHERE {$where} ORDER BY id DESC LIMIT %d OFFSET %d",
-            $per_page,
-            $offset
-        ) );
+        $links = array();
+        if ( $wpdb->get_var( $wpdb->prepare( "SHOW TABLES LIKE %s", $table_name ) ) === $table_name ) {
+            $links = $wpdb->get_results( $wpdb->prepare(
+                "SELECT * FROM {$table_name} WHERE {$where} ORDER BY id DESC LIMIT %d OFFSET %d",
+                $per_page,
+                $offset
+            ) );
+        }
 
         $total_items = (int) $wpdb->get_var( "SELECT COUNT(id) FROM {$table_name} WHERE {$where}" );
         $total_pages = ceil( $total_items / $per_page );
         ?>
-        <?php AF_Admin_Header::render( 'af-link-monitor' ); ?>
+        <?php if ( class_exists( 'AF_Admin_Header' ) ) { AF_Admin_Header::render( 'af-link-monitor' ); } ?>
         <div class="wrap af-status-container">
             <div class="af-status-header">
                 <div class="af-status-branding">
@@ -218,9 +375,9 @@ class AF_Link_Monitor {
                     <?php if ( ! empty( $links ) ) : ?>
                         <?php foreach ( $links as $link ) : 
                             $badge_class = 'status-fresh';
-                            if ( $link->status === 'broken' ) {
+                            if ( 'broken' === $link->status ) {
                                 $badge_class = 'status-stale';
-                            } elseif ( $link->status === 'unverified' ) {
+                            } elseif ( 'unverified' === $link->status ) {
                                 $badge_class = '';
                             }
                             ?>
@@ -295,42 +452,46 @@ class AF_Link_Monitor {
 
         global $wpdb;
         $table_name = $wpdb->prefix . 'af_link_monitor';
+        $this->maybe_create_table();
 
-        // Fetch recent published posts/pages
         $posts = get_posts( array(
             'post_type'      => array( 'post', 'page' ),
             'post_status'    => 'publish',
-            'posts_per_page' => 3, // Batched for performance on local/slow environments
+            'posts_per_page' => 3, // Keep batch small to prevent timeout
             'orderby'        => 'date',
             'order'          => 'DESC',
         ) );
 
         $scanned_count = 0;
+        $site_host     = wp_parse_url( home_url(), PHP_URL_HOST );
 
         foreach ( $posts as $post ) {
             $content = $post->post_content;
-            
-            // Regex to extract href attributes from HTML anchor tags
             preg_match_all( '/<a\s+(?:[^>]*?\s+)?href=["\']([^"\']+)["\'][^>]*>(.*?)<\/a>/i', $content, $matches, PREG_SET_ORDER );
 
             foreach ( $matches as $match ) {
                 $url         = esc_url_raw( $match[1] );
                 $anchor_text = wp_strip_all_tags( $match[2] );
                 
-                if ( empty( $url ) || strpos( $url, '#' ) === 0 || strpos( $url, 'mailto:' ) === 0 ) {
+                if ( empty( $url ) || 0 === strpos( $url, '#' ) || 0 === strpos( $url, 'mailto:' ) ) {
                     continue;
                 }
 
+                // Safe Localhost / Internal Link Check (Prevents MAMP/XAMPP cURL loopback 500 errors)
+                $url_host = wp_parse_url( $url, PHP_URL_HOST );
+                if ( empty( $url_host ) || $url_host === $site_host || 0 === strpos( $url, '/' ) ) {
+                    $code   = 200;
+                    $status = 'working';
+                    $error  = '';
+                } else {
+                    $check  = $this->test_url( $url );
+                    $code   = $check['code'];
+                    $status = $check['status'];
+                    $error  = $check['error'];
+                }
+
                 $url_hash = md5( $url );
-
-                // Verify HTTP Status
-                $check  = $this->test_url( $url );
-                $status = $check['status'];
-                $code   = $check['code'];
-                $error  = $check['error'];
-
-                // Insert or Update database record
-                $exists = $wpdb->get_var( $wpdb->prepare( "SELECT id FROM {$table_name} WHERE post_id = %d AND url_hash = %s", $post->ID, $url_hash ) );
+                $exists   = $wpdb->get_var( $wpdb->prepare( "SELECT id FROM {$table_name} WHERE post_id = %d AND url_hash = %s", $post->ID, $url_hash ) );
 
                 if ( $exists ) {
                     $wpdb->update(
@@ -365,8 +526,93 @@ class AF_Link_Monitor {
             }
         }
 
+        delete_transient( 'af_link_monitor_stats' );
+
         wp_send_json_success( array(
             'message' => sprintf( esc_html__( 'Scan completed successfully. Indexed and checked %d links.', 'af-companion' ), $scanned_count ),
+        ) );
+    }
+
+    /**
+     * AJAX: Recheck Links for a Specific Post from the Meta Box
+     */
+    public function ajax_recheck_post() {
+        check_ajax_referer( 'af_link_nonce', 'nonce' );
+
+        $post_id = isset( $_POST['post_id'] ) ? absint( $_POST['post_id'] ) : 0;
+        if ( ! $post_id || ! current_user_can( 'edit_posts' ) ) {
+            wp_send_json_error( array( 'message' => esc_html__( 'Permission denied.', 'af-companion' ) ) );
+        }
+
+        $content = isset( $_POST['post_content'] ) ? wp_unslash( $_POST['post_content'] ) : '';
+        if ( empty( $content ) ) {
+            $post = get_post( $post_id );
+            if ( ! $post ) {
+                wp_send_json_error( array( 'message' => esc_html__( 'Post not found.', 'af-companion' ) ) );
+            }
+            $content = $post->post_content;
+        }
+
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'af_link_monitor';
+        $this->maybe_create_table();
+        
+        preg_match_all( '/<a\s+(?:[^>]*?\s+)?href=["\']([^"\']+)["\'][^>]*>(.*?)<\/a>/i', $content, $matches, PREG_SET_ORDER );
+        
+        $wpdb->delete( $table_name, array( 'post_id' => $post_id ), array( '%d' ) );
+        $checked   = 0;
+        $site_host = wp_parse_url( home_url(), PHP_URL_HOST );
+
+        foreach ( $matches as $match ) {
+            $url         = esc_url_raw( $match[1] );
+            $anchor_text = wp_strip_all_tags( $match[2] );
+
+            if ( empty( $url ) || 0 === strpos( $url, '#' ) || 0 === strpos( $url, 'mailto:' ) ) {
+                continue;
+            }
+
+            $url_host = wp_parse_url( $url, PHP_URL_HOST );
+            if ( empty( $url_host ) || $url_host === $site_host || 0 === strpos( $url, '/' ) ) {
+                $code   = 200;
+                $status = 'working';
+                $error  = '';
+            } else {
+                $check  = $this->test_url( $url );
+                $code   = $check['code'];
+                $status = $check['status'];
+                $error  = $check['error'];
+            }
+
+            $url_hash = md5( $url );
+
+            $wpdb->insert(
+                $table_name,
+                array(
+                    'post_id'       => $post_id,
+                    'url'           => $url,
+                    'url_hash'      => $url_hash,
+                    'anchor_text'   => $anchor_text,
+                    'http_code'     => $code,
+                    'status'        => $status,
+                    'last_checked'  => current_time( 'mysql' ),
+                    'error_message' => $error,
+                ),
+                array( '%d', '%s', '%s', '%s', '%d', '%s', '%s', '%s' )
+            );
+            $checked++;
+        }
+
+        delete_transient( 'af_link_monitor_stats' );
+
+        // Capture the meta box HTML output to return dynamically
+        ob_start();
+        $fake_post = get_post( $post_id );
+        $this->render_post_meta_box( $fake_post );
+        $html_output = ob_get_clean();
+
+        wp_send_json_success( array(
+            'message' => sprintf( esc_html__( 'Successfully rechecked %d links in this post.', 'af-companion' ), $checked ),
+            'html'    => $html_output,
         ) );
     }
 
@@ -403,6 +649,8 @@ class AF_Link_Monitor {
             array( '%d' )
         );
 
+        delete_transient( 'af_link_monitor_stats' );
+
         wp_send_json_success( array(
             'code'   => $check['code'],
             'status' => ucfirst( $check['status'] ),
@@ -420,7 +668,7 @@ class AF_Link_Monitor {
         $args = array(
             'timeout'     => 4,
             'redirection' => 3,
-            'user-agent'  => 'AF-Companion-LinkChecker/1.0',
+            'user-agent'  => 'AF-Companion-LinkChecker/2.2.3',
             'sslverify'   => false,
         );
 
@@ -445,7 +693,7 @@ class AF_Link_Monitor {
         } elseif ( $code >= 500 ) {
             $status = 'broken';
         } elseif ( in_array( $code, array( 403, 429 ), true ) ) {
-            $status = 'unverified'; // Firewall/Bot protection block, not necessarily dead link
+            $status = 'unverified';
         }
 
         return array(
@@ -455,3 +703,5 @@ class AF_Link_Monitor {
         );
     }
 }
+
+// new AF_Link_Monitor();

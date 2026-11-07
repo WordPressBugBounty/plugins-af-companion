@@ -25,7 +25,7 @@ class AF_System_Status {
             'manage_options', 
             'af-status', 
             array( $this, 'render_page' ),
-            3
+            5
         );
     }
 
