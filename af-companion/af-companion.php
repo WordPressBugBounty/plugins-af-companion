@@ -2,8 +2,8 @@
 /*
     Plugin Name: AF Companion
     Plugin URI: https://wordpress.org/plugins/af-companion/
-    Description: Generate context-aware AI alt text, optimize WordPress performance, clean databases, monitor content and broken links, and manage site health.
-    Version: 3.1.0
+    Description: Optimize WordPress content for search and AI discovery with AI SEO metadata, GEO insights, schema markup, social sharing, AI alt text, performance tools, database cleanup, and site health monitoring.
+    Version: 3.2.0
     Author: AF themes
     Author URI: https://www.afthemes.com
     License: GPL3

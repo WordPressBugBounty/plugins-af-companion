@@ -6,7 +6,7 @@
  * @author            AF Themes
  * @license           GPL-2.0-or-later
  * @link              https://afthemes.com
- * @version           4.4.0
+ * @version           4.6.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -31,6 +31,8 @@ class AF_AI_Helper {
 			'ai_model'           => '',
 			'ai_model_selection' => '',
 			'alt_prompt'         => 'Analyze this image and write a concise, WCAG-compliant alternative text description tailored specifically to the website context and parent article provided. Maximum 125 characters. Do not include phrases like "image of" or "photo of". Return only the descriptive alt text string.',
+			'seo_prompt'         => 'Act as an expert SEO copywriter. Analyze the post title and content provided. Generate a raw JSON object containing two keys: "title" (a click-worthy SEO title under 60 characters) and "description" (a compelling meta description between 145 and 155 characters). Return ONLY valid raw JSON without markdown backticks or commentary.',
+			'geo_prompt'         => 'Act as an advanced AIO (AI Optimization), GEO (Generative Engine Optimization), and Enterprise SEO expert. Analyze this article title and content. Return ONLY a valid JSON object with these exact keys: "title" (SEO title under 60 chars), "description" (meta description 145-155 chars), "social_title" (catchy social headline), "social_desc" (social summary), "keywords" (comma-separated list of 6-8 core entity nodes & concepts for LLM graph indexing), "info_gain" (a 2-sentence bulleted summary extracting unique facts/takeaways), and "faqs" (array of objects with "q" and "a" for top 2 questions). Do not use markdown blocks.',
 		);
 	}
 
@@ -175,7 +177,7 @@ class AF_AI_Helper {
 	}
 
 	/**
-	 * Dispatch generation request using the native WordPress AI Client SDK.
+	 * Dispatch multimodal image generation request using the native WordPress AI Client SDK.
 	 */
 	public static function generate( $prompt, $args = array() ) {
 		if ( ! current_user_can( 'upload_files' ) ) {
@@ -217,6 +219,52 @@ class AF_AI_Helper {
 		if ( function_exists( 'wp_ai_client_prompt' ) ) {
 			try {
 				$builder = wp_ai_client_prompt( $full_prompt )->with_file( $file_path );
+
+				if ( ! empty( $settings['ai_provider'] ) ) {
+					$builder = $builder->using_provider( $settings['ai_provider'] );
+
+					if ( ! empty( $settings['ai_model'] ) ) {
+						$builder = $builder->using_model_preference( $settings['ai_model'] );
+					}
+				}
+
+				$response = $builder->generate_text();
+
+				if ( ! empty( $response ) && ! is_wp_error( $response ) ) {
+					return sanitize_text_field( $response );
+				}
+			} catch ( \Throwable $e ) {
+				return new WP_Error( 'ai_sdk_error', $e->getMessage() );
+			}
+		}
+
+		return new WP_Error( 'ai_client_missing', __( 'The WordPress AI Client API (wp_ai_client_prompt) is not active.', 'af-companion' ) );
+	}
+
+	/**
+	 * Dispatch pure text generation request without requiring image files.
+	 */
+	public static function generate_text( $prompt, $args = array() ) {
+		if ( ! current_user_can( 'edit_posts' ) ) {
+			return new WP_Error( 'rest_forbidden', __( 'You do not have permission to perform AI generation.', 'af-companion' ) );
+		}
+
+		if ( ! self::is_connector_available() ) {
+			return new WP_Error(
+				'ai_not_configured',
+				sprintf(
+					/* translators: %s: Connectors setup page URL */
+					__( 'AI Connector not configured. Please set up your API keys in <a href="%s" target="_blank">Settings -> Connectors</a>.', 'af-companion' ),
+					esc_url( self::get_connector_setup_url() )
+				)
+			);
+		}
+
+		$settings = self::get_settings();
+
+		if ( function_exists( 'wp_ai_client_prompt' ) ) {
+			try {
+				$builder = wp_ai_client_prompt( sanitize_text_field( $prompt ) );
 
 				if ( ! empty( $settings['ai_provider'] ) ) {
 					$builder = $builder->using_provider( $settings['ai_provider'] );
@@ -326,6 +374,22 @@ class AF_AI_Settings_Dashboard {
 			'af-ai-settings-page',
 			'af_companion_ai_main_section'
 		);
+
+		add_settings_field(
+			'seo_prompt',
+			esc_html__( 'Default SEO Meta Prompt', 'af-companion' ),
+			array( $this, 'field_seo_prompt_callback' ),
+			'af-ai-settings-page',
+			'af_companion_ai_main_section'
+		);
+
+		add_settings_field(
+			'geo_prompt',
+			esc_html__( 'Default GEO & AIO Prompt', 'af-companion' ),
+			array( $this, 'field_geo_prompt_callback' ),
+			'af-ai-settings-page',
+			'af_companion_ai_main_section'
+		);
 	}
 
 	public function section_callback() {
@@ -357,11 +421,31 @@ class AF_AI_Settings_Dashboard {
 
 	public function field_prompt_callback() {
 		$settings = AF_AI_Helper::get_settings();
-		$prompt   = isset( $settings['alt_prompt'] ) ? $settings['alt_prompt'] : '';
+		$prompt   = isset( $settings['alt_prompt'] ) ? $settings['alt_prompt'] : AF_AI_Helper::get_default_settings()['alt_prompt'];
 		?>
 		<label for="alt_prompt_field" class="screen-reader-text"><?php esc_html_e( 'Default Alt Text Prompt', 'af-companion' ); ?></label>
 		<textarea id="alt_prompt_field" name="af_companion_ai_settings[alt_prompt]" rows="4" class="large-text" style="width: 100%; max-width: 600px; padding: 8px 12px; border-radius: 4px; border: 1px solid #cbd5e1;"><?php echo esc_textarea( $prompt ); ?></textarea>
-		<p class="description" style="margin-top: 6px;"><?php esc_html_e( 'Customize instructions sent to the AI when generating alt text.', 'af-companion' ); ?></p>
+		<p class="description" style="margin-top: 6px;"><?php esc_html_e( 'Customize instructions sent to the AI when generating alt text for images.', 'af-companion' ); ?></p>
+		<?php
+	}
+
+	public function field_seo_prompt_callback() {
+		$settings = AF_AI_Helper::get_settings();
+		$prompt   = isset( $settings['seo_prompt'] ) ? $settings['seo_prompt'] : AF_AI_Helper::get_default_settings()['seo_prompt'];
+		?>
+		<label for="seo_prompt_field" class="screen-reader-text"><?php esc_html_e( 'Default SEO Meta Prompt', 'af-companion' ); ?></label>
+		<textarea id="seo_prompt_field" name="af_companion_ai_settings[seo_prompt]" rows="4" class="large-text" style="width: 100%; max-width: 600px; padding: 8px 12px; border-radius: 4px; border: 1px solid #cbd5e1;"><?php echo esc_textarea( $prompt ); ?></textarea>
+		<p class="description" style="margin-top: 6px;"><?php esc_html_e( 'Customize instructions sent to the AI when generating SEO Meta titles and descriptions.', 'af-companion' ); ?></p>
+		<?php
+	}
+
+	public function field_geo_prompt_callback() {
+		$settings = AF_AI_Helper::get_settings();
+		$prompt   = isset( $settings['geo_prompt'] ) ? $settings['geo_prompt'] : AF_AI_Helper::get_default_settings()['geo_prompt'];
+		?>
+		<label for="geo_prompt_field" class="screen-reader-text"><?php esc_html_e( 'Default GEO & AIO Prompt', 'af-companion' ); ?></label>
+		<textarea id="geo_prompt_field" name="af_companion_ai_settings[geo_prompt]" rows="4" class="large-text" style="width: 100%; max-width: 600px; padding: 8px 12px; border-radius: 4px; border: 1px solid #cbd5e1;"><?php echo esc_textarea( $prompt ); ?></textarea>
+		<p class="description" style="margin-top: 6px;"><?php esc_html_e( 'Customize instructions sent to the AI when calculating entity graphs, info-gain takeaways, and FAQ schema pairs.', 'af-companion' ); ?></p>
 		<?php
 	}
 
@@ -398,6 +482,14 @@ class AF_AI_Settings_Dashboard {
 
 		if ( isset( $input['alt_prompt'] ) ) {
 			$output['alt_prompt'] = sanitize_textarea_field( wp_unslash( $input['alt_prompt'] ) );
+		}
+
+		if ( isset( $input['seo_prompt'] ) ) {
+			$output['seo_prompt'] = sanitize_textarea_field( wp_unslash( $input['seo_prompt'] ) );
+		}
+
+		if ( isset( $input['geo_prompt'] ) ) {
+			$output['geo_prompt'] = sanitize_textarea_field( wp_unslash( $input['geo_prompt'] ) );
 		}
 
 		return $output;
@@ -439,8 +531,26 @@ class AF_AI_Settings_Dashboard {
 			</form>
 
 			<div class="af-status-footer">
-				<p><?php printf( esc_html__( 'Powered by AF Themes &bull; Need help setting up API keys? Visit <a href="%s" target="_blank">Connectors Settings</a>', 'af-companion' ), esc_url( AF_AI_Helper::get_connector_setup_url() ) ); ?></p>
+				<p>
+					<?php
+					echo wp_kses(
+						sprintf(
+							/* translators: %s: Connectors settings URL */
+							__( 'Powered by AF Themes &bull; Need help setting up API keys? Visit <a href="%s" target="_blank">Connectors Settings</a>', 'af-companion' ),
+							esc_url( AF_AI_Helper::get_connector_setup_url() )
+						),
+						array(
+							'a' => array(
+								'href'   => array(),
+								'target' => array(),
+							),
+							'bull' => array()
+						)
+					);
+					?>
+				</p>
 			</div>
+
 		</div>
 		<?php
 	}

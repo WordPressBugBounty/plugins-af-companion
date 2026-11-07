@@ -23,6 +23,7 @@ class AF_Companion_Booster {
         require_once AFTC_PATH . 'inc/class-aftc-db-cleaner.php';        
         require_once AFTC_PATH . 'inc/class-aftc-recommended-themes.php';        
         require_once AFTC_PATH . 'inc/ai/class-aftc-ai-helper.php';        
+        require_once AFTC_PATH . 'inc/ai/class-aftc-ai-seo-meta.php';        
 
         // Initialize them safely
         new AF_Admin_Header();
