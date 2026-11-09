@@ -80,7 +80,7 @@ jQuery(document).ready(function($) {
         });
     });
 
-    // Recheck Links for a Specific Post (Editor Meta Box)
+    // Recheck Links for a Specific Post (Editor Meta Box Inner Swap)
     $(document).off('click.afRecheckPost').on('click.afRecheckPost', '.af-recheck-post-btn', function(e) {
         e.preventDefault();
         var $button = $(this);
@@ -89,7 +89,6 @@ jQuery(document).ready(function($) {
 
         if (!postId || $button.prop('disabled')) return;
 
-        // Extract live Gutenberg or Classic editor content buffer
         var liveContent = '';
         if (typeof wp !== 'undefined' && wp.data && wp.data.select('core/editor')) {
             liveContent = wp.data.select('core/editor').getEditedPostAttribute('content') || '';
@@ -115,13 +114,8 @@ jQuery(document).ready(function($) {
                 $button.prop('disabled', false);
                 $spinner.removeClass('is-active');
 
-                if (response.success) {
-                    // Dynamically update only the meta box inner contents without reloading the page
-                    if (response.data.html) {
-                        $('#af_content_link_audit_box .inside').html(response.data.html);
-                    } else {
-                        location.reload();
-                    }
+                if (response.success && response.data.html) {
+                    $('#af-link-audit-meta-box-inner').html(response.data.html);
                 } else {
                     alert(response.data.message || 'Error rechecking post links.');
                 }

@@ -1,503 +1,259 @@
-=== AF Companion – AI SEO, GEO, Alt Text, Performance & Site Health ===
+=== AF Companion - AI SEO, GEO, Alt Text, Performance & Site Health ===
 Contributors: afthemes
-Tags: ai seo, geo, ai alt text, schema markup, performance optimization
+Tags: seo, ai, ai alt text, alt text, structured data
 Requires at least: 6.0
 Tested up to: 7.1
-Stable tag: 3.3.0
+Stable tag: 3.3.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Supercharge your website for ChatGPT Search, Perplexity & Google AI Overviews with AI SEO, GEO, Alt Text generation, schema, performance, and maintenance tools.
+Improve your WordPress visibility with AI SEO, GEO, AI alt text, schema markup, social sharing, performance optimization, and website health tools.
 
 == Description ==
 
-= Next-Generation AI SEO, GEO, WordPress Performance & Website Optimization =
+= Get Found on Google. Prepare for AI Search. Keep Your WordPress Website Optimized. =
 
-**AF Companion** is an all-in-one WordPress optimization and maintenance toolkit engineered for modern search and AI discovery. While traditional plugins focus solely on blue links, AF Companion bridges the gap by optimizing your website for **Generative Engine Optimization (GEO)** and **AI Answer Engines (AIO)** like ChatGPT Search, Claude, Perplexity, and Google AI Overviews.
+**AF Companion** helps you improve how people discover, understand, and experience your WordPress website. From traditional search engine optimization (SEO) to Generative Engine Optimization (GEO) and AI-powered search, it brings essential content optimization, image accessibility, social sharing, performance, and website maintenance tools together in one place.
 
-Bring automated AI SEO metadata generation, semantic entity graph mapping, unique information-gain takeaways, dynamic FAQ schema, automated AI Alt Text, and robust site performance tools directly into your WordPress dashboard.
+Want better search visibility? Need help writing SEO titles and meta descriptions? Looking to prepare your content for ChatGPT, Perplexity, and Google AI Overviews? Tired of manually adding image alt text, checking broken links, or managing multiple optimization plugins?
 
-Create SEO titles and meta descriptions with AI, prepare content with semantic entities and key takeaways, review content structure, and manage Article and FAQ structured data. Configure Open Graph metadata for social sharing on Facebook, X, LinkedIn, and WhatsApp. AF Companion also includes an AI Alt Text Generator, WordPress performance controls, database maintenance, content and link monitoring, analytics integrations, and server diagnostics.
+AF Companion brings practical solutions to these everyday WordPress challenges.
 
-Use the modules you need and manage supported features from one central dashboard.
+**Improve your search visibility and AI discovery**
 
-**Key features**
+* **AI SEO Generator:** Create compelling, search-optimized SEO titles and meta descriptions for posts, pages, and custom post types. Spend less time writing metadata and more time creating content.
+* **Generative Engine Optimization (GEO):** Prepare your content for AI-powered search and answer engines with semantic entities, meaningful topic relationships, and concise article takeaways.
+* **AI Search Optimization (AIO):** Make important information easier to identify and understand with automatically generated key insights and better-organized content.
+* **Content Structure Insights:** Identify opportunities to improve readability, headings, content organization, and information structure for both visitors and search engines.
+* **Individual SEO Controls:** Manage SEO metadata, social sharing, structured data, and GEO settings independently for each post or page.
 
-* **AI SEO Meta Generator:** Generate search-optimized titles and meta descriptions for posts, pages, and supported custom post types to boost click-through rates.
-* **AI SEO & GEO Optimization:** Generate semantic entity information (`ai-entity-graph`) and article takeaways (`ai-summary-takeaways`) to make your core content crystal clear to both human readers and AI-powered answer engines.
-* **Content Structure Analysis:** Review word count, heading frequency, and list structure to assess content readability, scannability, and organization for AI extractors.
-* **SEO Controls in the Editor:** Enable or disable SEO metadata, social and Open Graph metadata, Schema JSON-LD, and AIO/GEO optimization independently for individual content items.
-* **Schema Markup:** Configure Article, TechArticle, NewsArticle, and FAQPage structured data to gain rich snippet eligibility in search engines.
-* **Automatic FAQ Schema:** Generate FAQ structured data automatically from key questions identified during AI content generation.
-* **Social Sharing & Open Graph:** Set custom social titles, descriptions, and preview images for Facebook, X, LinkedIn, and WhatsApp sharing.
-* **Social Image Fallback:** Use the featured image, a custom fallback image, or the site icon when a post has no featured image so shared links always look professional.
-* **AI Alt Text Generator (Context AI):** Analyze individual images and generate context-aware, WCAG-compliant alternative text using compatible WordPress AI Connectors, with seamless access right inside the Featured Image panel and Media Library popup modals.
-* **Image Alt Text Audit & List Table Insights:** Find media library images missing alternative text, review or update them, and track site-wide publishing readiness instantly using intuitive 4-tier color status indicators (Green, Blue, Orange, Red) in your post list table columns.
-* **Performance Optimization:** Configure selected WordPress core features, frontend assets, script loading, and asset delivery to keep your site blazing fast for visitors.
-* **Database Maintenance:** Review database overhead and clean selected revisions, expired transients, spam comments, and orphaned metadata with dry-run batch processing built to handle 100,000+ posts effortlessly.
-* **Content & Link Monitor:** Review website content and link health to catch dead pages using dedicated per-post link audit meta boxes, instant HTTP rechecks, and a native WordPress dashboard health widget.
-* **Content & SEO Admin Bar:** Access essential publishing, media accessibility, and optimization tools directly from the frontend or backend via a user-friendly, capability-restricted admin bar menu.
-* **Website Health & Diagnostics:** Check important WordPress and server components to ensure your hosting setup is running at peak condition.
-* **Analytics & Webmaster Integrations:** Configure supported analytics, tracking, verification, and publisher settings effortlessly.
+**Make your content easier for search engines to understand**
 
-AF Companion is designed for blogs, business websites, online magazines, news websites, and publishing platforms. It complements existing SEO plugins (Yoast SEO, Rank Math, All in One SEO, SEOPress) and provides additional optimization and maintenance tools without requiring you to replace your established SEO workflow.
+* **Schema Markup & Structured Data:** Add Article, TechArticle, NewsArticle, and FAQPage JSON-LD structured data to help search engines interpret your content.
+* **AI FAQ Schema Generator:** Identify important article questions and generate FAQ structured data from AI-generated content.
+* **SEO Plugin Compatibility:** Complement existing SEO workflows with support for Yoast SEO, Rank Math, All in One SEO, and SEOPress compatibility checks.
 
-**Important:** AI-generated content and optimization suggestions should always be reviewed before publication. GEO and AIO features help organize and describe your content; they cannot guarantee indexing, rankings, or citations in AI-generated answers.
+**Create better social sharing previews**
 
-**Support:** https://afthemes.com/support/
+* **Open Graph & Social Media Metadata:** Control how your website content appears when shared on Facebook, X (Twitter), LinkedIn, and WhatsApp.
+* **Social Title & Description:** Customize the information people see when sharing your posts.
+* **Social Sharing Images:** Use featured images, a custom fallback image, or your website icon to maintain consistent link previews.
+
+**Save time with AI image alt text**
+
+* **AI Alt Text Generator:** Generate descriptive alternative text for WordPress images without writing every description manually.
+* **Context AI:** Analyze images using their surrounding website and post context to produce more relevant descriptions.
+* **Media Library & Featured Image Integration:** Generate alt text directly from the WordPress Media Library, Featured Image panel, or Alt Text Manager.
+* **Image Accessibility Audit:** Find images with missing alternative text and identify content that needs attention.
+* **Alt Text Progress Indicators:** See image accessibility and optimization status directly in your WordPress post list.
+
+**Keep your WordPress website fast and efficient**
+
+* **WordPress Performance Optimization:** Disable unnecessary WordPress features and optimize selected frontend resources.
+* **Page Speed Improvements:** Configure HTML minification, asynchronous JavaScript, Google Fonts loading, and selected asset optimization.
+* **WordPress Cleanup:** Reduce unnecessary frontend resources and adjust Heartbeat API, autosave, and revision settings.
+* **Database Optimization:** Identify database overhead and clean revisions, expired transients, spam comments, and orphaned metadata.
+
+**Find website issues before they affect visitors**
+
+* **Broken Link Monitor:** Identify problematic internal and external links across your website.
+* **Post-Level Link Audits:** Review links directly from individual posts and pages, with instant link rechecks.
+* **Website Content Monitor:** Keep track of published content and identify items that need attention.
+* **WordPress Site Health:** Review important WordPress, PHP, database, and server configuration details.
+* **WordPress Admin Bar Tools:** Access useful publishing, SEO, image accessibility, and website maintenance tools from your frontend and dashboard.
+
+**Manage your website growth tools**
+
+* **Analytics Integration:** Configure Google Analytics 4, Google Tag Manager, Meta Pixel, and Microsoft Clarity.
+* **Webmaster Verification:** Manage Google Search Console, Bing Webmaster Tools, Yandex, and Pinterest verification.
+* **Publisher Tools:** Configure Google News metadata, AdSense Auto Ads, RSS attribution, and other supported publishing integrations.
+
+**Demo Import for AF Themes**
+
+[Starter Sites](https://afthemes.com/starter-sites/) [Support](https://afthemes.com/supports/) [AF Themes](https://afthemes.com/)
+
+Import demo content, widget settings, and Customizer settings for compatible AF Themes using XML, WIE, JSON, and DAT files.
+
+**One WordPress toolkit. Multiple everyday solutions.**
+
+Whether you manage a personal blog, business website, online magazine, news portal, or content publishing platform, AF Companion helps reduce repetitive work and keep important optimization tasks within reach.
+
+AF Companion complements dedicated SEO plugins rather than requiring you to replace your existing SEO workflow.
+
+**AI integration:** AI-powered generation uses compatible WordPress AI Connectors. Select an available AI model and customize supported prompts from AF Companion settings. Image analysis requires a model that supports image input. AI provider usage, availability, pricing, and privacy policies are determined by the connected service.
+
+**Please note:** AI-generated suggestions should be reviewed before publication. SEO, GEO, schema, and accessibility tools can help improve content quality and structure, but cannot guarantee search rankings, AI citations, or accessibility compliance.
+
+**Starter Sites:** https://afthemes.com/starter-sites/
+
+**Support:** https://afthemes.com/supports/
 
 **AF Themes:** https://afthemes.com/
 
-== AI SEO & Generative Engine Optimization (GEO) ==
-
-= Generate SEO Metadata and Prepare Content for Search and AI Discovery =
-
-Traditional search engine optimization is evolving rapidly. Discovery now happens through generative engines like Perplexity, ChatGPT Search, and Google AI Overviews. AF Companion equips your WordPress editor with dedicated GEO and AI tools:
-
-**AI SEO Meta Generator**
-
-* Generate SEO titles with AI.
-* Generate meta descriptions with AI.
-* Create metadata based on the content being edited.
-* Use the controls directly from the post editor meta box.
-* Enable or disable SEO metadata independently for individual content.
-
-**AIO & GEO content insights**
-
-* **Semantic Entities:** Generate key entities and semantic relationship information from article content. The generated entity data is intended to make important topics and relationships more explicit for LLM crawlers.
-* **Article Takeaways:** Generate concise, bulleted takeaways that highlight the main information and distinctive points in an article so answer engines skip intro fluff.
-* **Content Structure Analysis:** Calculate local content metrics, including word count, heading frequency, and list structure.
-* **Readability and Chunking Insights:** Review how content is organized into headings and lists, helping editors identify opportunities to make long-form content easier to scan and extract.
-* **Individual Content Controls:** Enable or disable AIO/GEO optimization for individual posts and pages.
-
-These tools support content preparation for traditional search and AI-powered answer experiences. They do not submit content directly to ChatGPT, Claude, Perplexity, or other AI services for indexing, and they cannot guarantee that an AI system will crawl, cite, or recommend a website.
-
-== SEO Metadata, Social & Schema Controls ==
-
-= Manage SEO, Open Graph and Structured Data Per Post =
-
-The AF Companion meta box provides separate controls for supported optimization features. Choose which metadata and structured data AF Companion should manage for each post, page, or supported custom post type.
-
-Available controls include:
-
-* **SEO Meta:** Enable or disable SEO title and meta description output.
-* **Social & OpenGraph:** Enable or disable social sharing metadata.
-* **Schema JSON-LD:** Enable or disable structured data output.
-* **AIO / GEO Optimization:** Enable or disable generated entity and article insight features.
-
-These controls allow you to manage AF Companion output at the content level. If another SEO plugin already generates SEO titles, descriptions, Open Graph tags, or schema, review both plugins' settings to avoid duplicate metadata.
-
-== Social Sharing & Open Graph ==
-
-= Social Media Metadata for Facebook, X, LinkedIn and WhatsApp =
-
-Control how supported content appears when shared on social platforms. AF Companion can generate and output social sharing metadata, including Open Graph titles, descriptions, and images.
-
-**Social sharing features**
-
-* Configure Open Graph title and description.
-* Set the social sharing image for supported content.
-* Add metadata for Facebook, X (Twitter), LinkedIn, and WhatsApp sharing previews.
-* Use a custom fallback social image when a post has no featured image.
-* Preview social sharing cards for supported platforms.
-
-**Social image fallback**
-
-When a featured image is unavailable, AF Companion uses the configured fallback hierarchy:
-
-1. Featured image.
-2. Custom fallback social image.
-3. WordPress site icon.
-
-This helps provide an image for social previews when content does not have a featured image. The final appearance of a shared link can still depend on the social platform's crawler, cache, and preview rules.
-
-== Schema Markup & Structured Data ==
-
-= Configure JSON-LD Article and FAQ Schema =
-
-Structured data helps search engines interpret the type and context of your content. AF Companion provides JSON-LD schema settings for supported article formats and FAQ content.
-
-Supported schema types include:
-
-* **Article:** For general editorial and blog content.
-* **TechArticle:** For technical articles, tutorials, and documentation-style content.
-* **NewsArticle:** For news and timely editorial content.
-* **FAQPage:** For pages containing frequently asked questions and answers.
-
-**AI-assisted FAQ schema**
-
-During AI content generation, AF Companion can identify key article questions and generate FAQ information for structured data. Review generated questions and answers for accuracy and make sure the visible page content supports the structured data.
-
-**SEO plugin compatibility**
-
-AF Companion includes compatibility checks for supported SEO plugins, including Yoast SEO, Rank Math, All in One SEO, and SEOPress. If another plugin already outputs schema, review the configuration to prevent duplicate structured data.
-
-== AI Alt Text Generator & Media Accessibility ==
-
-= Effortless, Context-Aware AI Alt Text for WordPress Images =
-
-Writing descriptive alternative text for every image can take time, especially on content-heavy websites with large media libraries. AF Companion includes an advanced AI-powered Alt Text Manager that analyzes images and helps generate relevant alternative text based on the image itself and its surrounding website context.
-
-**AI-powered features & workflow**
-
-* **AI Image Analysis:** Use a compatible AI model to analyze an individual image and generate a descriptive alternative text suggestion.
-* **Context AI Button:** Start AI image analysis directly from the WordPress post editor's Featured Image panel or Media Library popup modals (supporting both single and two-column layout specifications with native Backbone.js model synchronization).
-* **Website Context:** Use your website name and other available site information to help guide the generated description.
-* **Linked Post Context:** Consider the post or page associated with an image when generating relevant alternative text.
-* **Custom AI Prompts:** Configure your own instructions from the dedicated AI Settings page.
-* **AI Model Selection:** Select an available model through your connected WordPress AI provider.
-* **Native WordPress AI Integration:** Use compatible WordPress AI Connectors instead of configuring a separate AI provider API key inside AF Companion.
-
-**How Context AI works**
-
-1. Open the Alt Text Manager from the WordPress administration menu, or click the generator button directly inside your Featured Image panel or Media Library modal.
-2. Trigger the **Context AI** action.
-3. AF Companion analyzes the image and available website context, such as the website name and linked post or page.
-4. The connected AI model generates an alternative text suggestion.
-5. Review the generated description and use it as appropriate for the image.
-
-== Image Alt Text Manager & Content List Insights ==
-
-= Audit, Track and Improve Image Alternative Text and SEO Progress =
-
-Alongside AI generation, the Alt Text Manager and list table columns help you review existing media library images, track publication readiness, and identify missing alternative text at a glance.
-
-Features include:
-
-* Audit media library images for missing alternative text.
-* Identify images that may need descriptive alt text.
-* Update image alternative text from the management interface.
-* Use AI-assisted image analysis to generate relevant descriptions.
-* Customize AI generation instructions.
-* Review AI-generated suggestions before using them.
-* **List Table Progress Indicators:** View clear 4-tier color status badges (Green for fully optimized, Blue for SEO meta set, Orange for GEO graph active, and Red for unoptimized) directly inside your post and custom post type list tables (`edit.php`), complete with full WCAG accessibility labels and screen reader support.
-
-== WordPress AI Connector Setup ==
-
-AI-powered image analysis and AI SEO generation require a compatible WordPress AI Connector and an available model supported by the relevant feature.
-
-1. Configure an AI provider using an available WordPress AI Connector.
-2. Make sure the provider has an available model suitable for the feature you want to use.
-3. Open AF Companion's **AI Settings** page.
-4. Select an available AI model.
-5. Customize the AI instructions where supported.
-6. Open the relevant AF Companion module or post editor meta box and run the AI action.
-
-== WordPress Performance Optimization ==
-
-= Optimize WordPress Settings, Frontend Assets and Loading Behavior =
-
-Improve your WordPress site's configuration with controls for selected core features, frontend assets, and loading behavior.
-
-Available optimization settings include:
-
-* Disable WordPress Emojis when they are not needed.
-* Disable oEmbeds.
-* Disable XML-RPC when your website and integrations do not require it.
-* Remove selected header metadata, including RSD, WLW, and WordPress version information.
-* Minify HTML output.
-* Load JavaScript asynchronously.
-* Configure Google Fonts display using `font-display: swap`.
-* Remove query strings from selected static assets.
-* Disable Dashicons for visitors who are not logged in.
-* Control WordPress Heartbeat API frequency.
-* Adjust the editor autosave interval.
-* Limit the number of stored post revisions.
-* Remove selected block library CSS when it is not needed.
-* Enable lazy loading for video iframes.
-
-== WordPress Database Cleanup & Maintenance ==
-
-= Clean Database Overhead and Review WordPress Data =
-
-Keep your WordPress database manageable with tools for reviewing and cleaning selected data.
-
-Database maintenance features include:
-
-* Scan database overhead before performing cleanup.
-* Preview eligible cleanup operations using dry-run scanning.
-* Remove selected post revisions.
-* Clean expired transients.
-* Remove spam comments.
-* Remove orphaned post metadata.
-* Process deletion tasks in batches to help reduce the risk of long-running database operations on high-traffic sites with 100,000+ posts.
-* Inspect database information and autoloaded options.
-* Convert supported MyISAM database tables to InnoDB.
-
-== Content Monitor ==
-
-= Monitor WordPress Content =
-
-Keep track of website content as part of your regular publishing and maintenance workflow. The Content Monitor module provides content monitoring tools to help you review existing content and identify items that may need attention.
-
-== Broken Link Monitor & Post-Level Auditing ==
-
-= Review Website Link Health at Scale and per Post =
-
-Keep an eye on links across your website with the advanced Link Monitor module. Designed for enterprise scalability, it features:
-
-* **Dedicated Post Link Audit Meta Box:** Inspect internal and external links contained within any post, page, or custom post type right from the editor.
-* **Instant Link Rechecks:** Trigger immediate HTTP health status rechecks for individual posts or sitewide records via fast AJAX actions.
-* **Enterprise Scale Handling (100k+ Posts):** Benefit from custom database tables (`{prefix}af_link_monitor`) with direct indexing, batched scanning routines to prevent server timeouts on massive content libraries, and transient query caching (`set_transient`).
-* **Dashboard Widget Support:** Monitor site-wide link integrity (total, working, and broken links) instantly from your main WordPress dashboard widget.
-
-== Content & SEO Admin Bar Menu ==
-
-= Seamless Frontend & Backend Navigation =
-
-Access your essential publishing and optimization tools instantly from anywhere on your site. AF Companion includes a native, user-friendly **Content & SEO** menu in the WordPress admin bar for logged-in users.
-
-* **Role-Based Permission Checks:** Automatically verifies user capabilities (`manage_options`, `upload_files`, `edit_posts`) so administrative tools, performance settings, link monitors, and content optimization options appear only for authorized users.
-* **Outcome-Focused Navigation:** Clean, natural wording helps editors and team members quickly access performance optimization, AI alt text tools, growth insights, broken link checks, and content audits without technical clutter.
-
-== Analytics, Tracking & Webmaster Tools ==
-
-Configure supported tracking and verification integrations from the AF Companion dashboard.
-
-**Analytics and tracking**
-
-* Google Analytics 4 (GA4).
-* Google Tag Manager.
-* Meta Pixel.
-* Microsoft Clarity.
-
-**Webmaster verification**
-
-* Google Search Console.
-* Bing Webmaster Tools.
-* Yandex.
-* Pinterest.
-
-**Publisher tools**
-
-* Google News keywords and related publisher metadata.
-* Copyright attribution URL settings.
-* RSS feed content attribution footer.
-* AdSense Auto Ads integration.
-* Mailchimp API settings.
-
-== Website Health & Diagnostics ==
-
-Review important parts of your WordPress installation and hosting environment.
-
-Available diagnostic checks include:
-
-* WordPress REST API accessibility.
-* Loopback request availability.
-* PHP memory and execution limits.
-* PHP extension availability.
-* WP-Cron monitoring.
-* Database information and autoloaded options.
-* Imagick and GD image library availability.
-* MyISAM and InnoDB database table information.
-
-== Demo Import Tools ==
-
-AF Companion retains its demo and manual import functionality for supported AF Themes workflows:
-
-* **XML:** Import WordPress demo content.
-* **WIE or JSON:** Import widget settings.
-* **DAT:** Import Customizer settings.
-
 == Installation ==
 
-1. In your WordPress dashboard, go to **Plugins > Add New**.
+1. Go to **Plugins > Add New** in your WordPress dashboard.
 2. Search for **AF Companion**.
 3. Install and activate the plugin.
 4. Open **AF Companion** from your WordPress administration menu.
-5. Select the module you want to configure and review its available settings.
+5. Explore the available modules and enable the tools you need.
 
-**To use AI SEO and GEO features**
-
-1. Configure a compatible AI provider through WordPress AI Connectors.
-2. Open a post, page, or supported custom post type in the editor.
-3. Locate the AF Companion meta box.
-4. Enable the optimization features you want to use.
-5. Use the available AI generation actions and review the generated metadata and content insights.
-6. Review social metadata and schema settings before publishing.
-
-**To use AI-powered alt text generation**
+**Getting started with AI SEO and GEO**
 
 1. Configure a compatible AI provider through WordPress AI Connectors.
-2. Open the AF Companion AI Settings page.
-3. Select an available image-capable model.
-4. Customize your AI prompt.
-5. Open an image in the Alt Text Manager, Media Library popup modal, or Featured Image panel, and select **Context AI**.
+2. Open a post, page, or supported custom post type.
+3. Find the AF Companion meta box in the editor.
+4. Enable the SEO, Social, Schema, or AIO/GEO options you want to use.
+5. Generate your SEO metadata and content insights.
+6. Review the results before publishing.
+
+**Getting started with AI Alt Text**
+
+1. Configure a compatible AI provider through WordPress AI Connectors.
+2. Open AF Companion's AI Settings page.
+3. Select an available image-capable AI model.
+4. Customize your AI prompt if needed.
+5. Open an image from the Media Library, Featured Image panel, or Alt Text Manager.
+6. Select **Context AI** to generate an alternative text suggestion.
+
+Create a website backup before performing database maintenance or changing performance settings.
 
 == Frequently Asked Questions ==
 
 = What is AF Companion? =
 
-AF Companion is a WordPress SEO, AI optimization, performance, and website maintenance plugin. It includes AI SEO metadata generation, AIO/GEO content insights, schema markup, social sharing metadata, an AI alt text generator, performance optimization, database cleanup, content and link monitoring, analytics integrations, and website diagnostics.
+AF Companion is an all-in-one WordPress optimization toolkit that helps improve SEO, AI search readiness, image accessibility, social sharing, website performance, and maintenance. It brings multiple useful tools together in one WordPress dashboard.
 
-= Does AF Companion include an AI SEO generator? =
+= Can AF Companion help improve my Google search visibility? =
 
-Yes. AF Companion can generate SEO titles and meta descriptions with AI for posts, pages, and supported custom post types. The generation controls are available from the post editor meta box.
+AF Companion helps you create SEO titles and meta descriptions, organize content, add structured data, and improve image descriptions. These improvements support your overall SEO strategy, although search rankings depend on many factors beyond a single plugin.
 
 = What is GEO (Generative Engine Optimization)? =
 
-GEO refers to preparing and structuring website content so that AI-powered search and answer experiences (like ChatGPT Search, Perplexity, and Google AI Overviews) can better interpret its topics and information. AF Companion provides semantic entity information, article takeaways, and content structure insights to support this work.
+GEO is the practice of preparing website content for AI-powered search and answer engines. AF Companion helps make your content easier to interpret through semantic entities, article takeaways, and content structure insights.
 
-= What is AIO (AI Optimization)? =
+= Does AF Companion support ChatGPT Search, Perplexity, and Google AI Overviews? =
 
-AIO refers to optimizing content for AI-powered discovery and answer experiences. AF Companion's AIO/GEO features help identify semantic entities, summarize key takeaways, and review content structure.
+AF Companion provides GEO and AIO content optimization tools intended to help AI-powered search experiences understand your website content. It does not submit content directly to these services or guarantee that they will crawl, cite, or recommend your website.
 
-= Does AF Companion submit my content to ChatGPT, Claude, or Perplexity for indexing? =
+= What is the difference between SEO, AIO, and GEO? =
 
-No. AF Companion generates optimization information within WordPress. It does not submit content directly to those services for indexing or guarantee that they will crawl, cite, or recommend your website.
+SEO focuses on improving visibility in traditional search engines. AIO refers to optimizing content for AI-powered discovery, while GEO focuses on making information easier for generative search and answer engines to understand and reference.
 
-= Can I control SEO, social, schema, and GEO features individually? =
+= Does AF Companion generate SEO titles and meta descriptions automatically? =
 
-Yes. The AF Companion post editor meta box includes separate controls for SEO Meta, Social & OpenGraph, Schema JSON-LD, and AIO/GEO Optimization. You can enable or disable the supported features for individual content.
-
-= Which content types are supported by AI SEO generation? =
-
-AI SEO title and meta description generation is available for posts, pages, and supported custom post types.
-
-= Does AF Companion generate schema markup? =
-
-Yes. AF Companion supports JSON-LD structured data for Article, TechArticle, NewsArticle, and FAQPage content types.
-
-= Can AF Companion generate FAQ schema automatically? =
-
-AF Companion can identify key questions during AI content generation and generate FAQPage structured data. Review the questions and answers and ensure they are supported by visible page content before publishing.
-
-= Does AF Companion support Open Graph and social sharing metadata? =
-
-Yes. AF Companion supports social sharing metadata, including Open Graph titles, descriptions, and images for Facebook, X, LinkedIn, and WhatsApp.
-
-= What happens if a post does not have a featured image? =
-
-AF Companion uses the configured social image fallback hierarchy: the featured image first, then a custom fallback social image, and finally the WordPress site icon.
+Yes. Use the AI SEO Generator to create SEO titles and meta descriptions for posts, pages, and supported custom post types. You can review and edit the generated suggestions before publishing.
 
 = Can I use AF Companion with Yoast SEO or Rank Math? =
 
-AF Companion includes compatibility checks for supported SEO plugins, including Yoast SEO, Rank Math, All in One SEO, and SEOPress. Review the output settings to avoid duplicate SEO metadata, Open Graph tags, or structured data.
+Yes. AF Companion includes compatibility checks for Yoast SEO, Rank Math, All in One SEO, and SEOPress. You can use its additional optimization and maintenance tools alongside your existing SEO workflow. Review overlapping metadata and schema settings to avoid duplicate output.
 
-= Does AF Companion replace a dedicated SEO plugin? =
+= Can I disable individual SEO and GEO features? =
 
-AF Companion provides AI SEO generation, selected metadata, social sharing, and structured data features alongside performance and maintenance tools. It can complement an existing SEO workflow.
+Yes. The post editor includes separate controls for SEO Meta, Social & OpenGraph, Schema JSON-LD, and AIO/GEO Optimization. You can choose which supported features AF Companion manages for individual content.
 
-= Does AF Companion include an AI alt text generator? =
+= Does AF Companion generate schema markup? =
 
-Yes. AF Companion includes an AI-powered Alt Text Manager that analyzes individual images and generates descriptive alternative text suggestions using site and post context.
+Yes. It supports Article, TechArticle, NewsArticle, and FAQPage JSON-LD structured data to help search engines understand your content.
+
+= Can it generate FAQ schema using AI? =
+
+Yes. AF Companion can identify relevant questions during AI content generation and create FAQPage structured data. Review the generated questions and answers and ensure they are supported by visible content.
+
+= How does social sharing optimization work? =
+
+AF Companion lets you configure social titles, descriptions, and images for Facebook, X, LinkedIn, and WhatsApp. It also provides a fallback image option when a post does not have a featured image.
+
+= What happens when a post has no featured image? =
+
+AF Companion uses the featured image first, followed by your custom fallback social image and then your WordPress site icon.
+
+= Does AF Companion include an AI image alt text generator? =
+
+Yes. The AI Alt Text Manager analyzes individual images and generates descriptive alternative text suggestions using compatible WordPress AI Connectors.
 
 = What is Context AI? =
 
-Context AI is an individual image analysis action in the Alt Text Manager, Media Library modal, and Featured Image panel. It analyzes an image and uses available website context to generate a relevant alternative text suggestion.
+Context AI analyzes an individual image and uses available website information, such as your website name and linked post or page, to generate a more relevant image description.
 
-= How do I generate AI alt text for an image? =
+= Where can I use the Context AI button? =
 
-Open the image in your WordPress Alt Text Manager, Media Library modal, or post Featured Image panel and use the **Context AI** button. AF Companion sends the image and available context to your selected AI model and returns an alternative text suggestion.
+You can access Context AI through the AF Companion Alt Text Manager, WordPress Media Library popup, and Featured Image panel in the post editor.
 
-= Which AI models and providers are supported? =
+= Can I customize the AI-generated alt text instructions? =
 
-AF Companion uses models available through compatible WordPress AI Connectors.
+Yes. Visit the AF Companion AI Settings page to customize your prompts and select an available AI model through your connected WordPress AI provider.
 
-= Do I need to add a separate API key in AF Companion? =
+= Which AI providers and models are supported? =
 
-AF Companion uses compatible WordPress AI Connectors for provider access. Configure your AI provider through the available WordPress connector settings.
+AF Companion uses compatible WordPress AI Connectors. Available providers and models depend on the connectors installed and configured on your website. Image analysis requires a model that supports image input.
 
-= Can I customize the AI prompt? =
+= Do I need to enter a separate AI API key in AF Companion? =
 
-Yes. Open the AF Companion **AI Settings** page to customize prompts for Alt Text, SEO, and GEO generation.
+AF Companion uses compatible WordPress AI Connectors for AI provider access. Configure your provider through the available WordPress connector settings.
 
-= Does AI automatically generate alt text for every image? =
+= Does AF Companion automatically generate alt text for every image? =
 
-The Context AI feature provides an on-demand action for individual images. It does not automatically process every media item without user interaction.
+Context AI provides an on-demand generation action for individual images. You can choose which images to analyze and review the generated descriptions before using them.
 
-= Should I review AI-generated content and alt text? =
+= How can I find images with missing alt text? =
 
-Yes. AI-generated suggestions should always be reviewed for accuracy before publication.
+Open the Alt Text Manager to review images that need alternative text. You can also use the optimization status indicators available in supported post list tables to identify content that needs attention.
 
-= Can AF Companion help improve WordPress performance? =
+= Can AF Companion improve my WordPress website speed? =
 
-Yes. AF Companion includes settings for selected WordPress core features, frontend assets, JavaScript loading, HTML output, Heartbeat API frequency, editor autosave, post revisions, and video iframe lazy loading.
+AF Companion includes performance settings for selected WordPress core features, frontend resources, HTML output, JavaScript loading, Google Fonts, Heartbeat API, autosave, and post revisions. Results depend on your theme, plugins, hosting, and website configuration.
 
-= Does AF Companion include database cleanup tools? =
+= Does AF Companion include WordPress database cleanup? =
 
-Yes. You can review database overhead and clean selected post revisions, expired transients, spam comments, and orphaned post metadata with dry-run scanning and batched deletion.
+Yes. It helps identify database overhead and clean selected post revisions, expired transients, spam comments, and orphaned metadata. It also provides dry-run scanning and batched cleanup operations. Always create a backup before database maintenance.
 
-= What does the Content Monitor do? =
+= Can I find broken links on my WordPress website? =
 
-Content Monitor provides tools for monitoring website content and identifying items that may need attention.
+Yes. Link Monitor helps identify problematic internal and external links. You can review individual post links, recheck their status, and monitor overall website link health from the dashboard.
 
-= Can AF Companion check broken links? =
+= Can I monitor content that needs updating? =
 
-AF Companion includes a Link Monitor module for reviewing website link health, complete with individual post meta boxes and sitewide reporting.
+Yes. Content Monitor helps you review published content and identify items that may need attention as part of your regular website maintenance.
 
-= Which analytics services are supported? =
+= Does AF Companion include website health monitoring? =
 
-Supported integrations include Google Analytics 4, Google Tag Manager, Meta Pixel, and Microsoft Clarity.
+Yes. It provides checks for important WordPress and server components, including REST API availability, loopback requests, WP-Cron, PHP configuration, database information, and image processing libraries.
 
-= Can I use AF Companion with a caching plugin? =
+= Which analytics and webmaster tools are supported? =
 
-AF Companion provides optimization settings that may be used alongside a caching plugin. Review overlapping features like minification or script optimization.
+Supported integrations include Google Analytics 4, Google Tag Manager, Meta Pixel, Microsoft Clarity, Google Search Console, Bing Webmaster Tools, Yandex, and Pinterest.
 
-= Does AF Companion still include demo import functionality? =
+= Can I use AF Companion with caching and optimization plugins? =
 
-Yes. Demo and manual import tools remain available for supported AF Themes workflows.
+Yes, but some performance features may overlap with caching, minification, or JavaScript optimization plugins. Review your settings and test changes individually to avoid conflicts.
 
-= Is AF Companion suitable for websites that do not use AF Themes? =
+= Does AF Companion still include demo import tools? =
 
-Yes. Many of AF Companion's SEO, performance, maintenance, monitoring, AI alt text, and diagnostic tools are designed for general WordPress websites.
+Yes. Demo and manual import functionality remains available for compatible AF Themes workflows. You can import XML content, WIE or JSON widget settings, and DAT Customizer settings.
+
+= Do I need an AF Themes theme to use AF Companion? =
+
+No. Many SEO, AI alt text, performance, database maintenance, link monitoring, and website health tools are designed for general WordPress websites. Demo import functionality is intended for compatible AF Themes.
 
 = Where can I get help with AF Companion? =
 
-For documentation and support, visit:
-
-- Documentation: https://docs.afthemes.com/
-- Support: https://afthemes.com/support/
+Visit the AF Themes support center at https://afthemes.com/supports/ or explore the documentation at https://docs.afthemes.com/.
 
 == Screenshots ==
 
-1. **AF Companion Dashboard:** Overview of the plugin's modules and administration navigation.
-2. **AI SEO & GEO Generator:** Generate SEO titles, meta descriptions, semantic entities, and article takeaways.
-3. **AI Alt Text Manager:** Media library audit showing images with missing alternative text and available management actions.
-4. **AI Settings:** Select an available AI model through WordPress AI Connectors and customize AI prompts.
-5. **Performance Optimization:** Controls for selected WordPress core features and frontend optimization settings.
-6. **Database Maintenance:** Database overhead scanning and available cleanup operations.
-7. **Content Monitor:** Content monitoring interface for reviewing website content.
-8. **Link Monitor:** Link monitoring interface showing website link health information.
-9. **Analytics & Integrations:** Settings for supported analytics, tracking, and webmaster verification.
-10. **Website Health & Diagnostics:** WordPress and server diagnostic information.
-11. **Recommended Free Themes for News, Magazines & Blogs:** Power your news, magazine, and blog sites with free WordPress themes engineered by AF Themes.
-
-== AF Themes ==
-
-The most flexible WordPress themes and plugins crafted for the future web.
-
-== Get More from AF Themes ==
-
-Explore free and premium WordPress themes and plugins from AF Themes:
-
-**Free themes:** https://afthemes.com/products/category/free/
-
-**Premium themes:** https://afthemes.com/products/category/pro/
-
-**Plugins:** https://profiles.wordpress.org/afthemes/#content-plugins
-
-**AF Themes:** https://afthemes.com/
-
-== License ==
-
-AF Companion uses 'One Click Demo Import' plugin script
-https://github.com/proteusthemes/one-click-demo-import
-(C) 2016 ProteusThemes.com
-Licensed under the GNU General Public License v2.0,
-https://www.gnu.org/licenses/gpl-2.0.html
-
-AF Companion uses 'Wordpress Importer' plugin script
-https://github.com/humanmade/WordPress-Importer
-(C) 2016 @humanmade
-Licensed under the GNU General Public License v2.0,
-https://www.gnu.org/licenses/gpl-2.0.html
-
-== Copyright ==
-
-AF Companion, Copyright 2026 AF themes
-
-AF Companion is distributed under the terms of the GNU GPL
+1. AF Companion Dashboard: Access website optimization, SEO, performance, monitoring, and maintenance tools from one place.
+2. AI SEO, GEO, Social & Schema Controls: Generate SEO titles, meta descriptions, social sharing, fallback images, semantic entities, and article takeaways.
+3. AI Alt Text Manager: Find images with missing alternative text and improve image accessibility.
+4. Context AI: Generate context-aware image descriptions directly from WordPress image interfaces.
+5. AI Settings: Select compatible AI models and customize generation prompts.
+6. Performance Optimization: Improve selected WordPress settings and frontend resource delivery.
+7. Database Maintenance: Review database overhead and perform selected cleanup operations.
+8. Content Monitor: Review published content that needs attention.
+9. Link Monitor: Identify broken links and review website link health.
+10. Analytics & Integrations: Configure analytics, tracking, and webmaster verification.
+11. Website Health & Diagnostics: Review WordPress and server configuration.
+12. Demo Import Tools: Import demo content and settings for supported AF Themes.
 
 == Changelog ==
 

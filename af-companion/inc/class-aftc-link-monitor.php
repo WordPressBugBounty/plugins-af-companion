@@ -6,7 +6,7 @@
  * @author            AF Themes
  * @license           GPL-2.0-or-later
  * @link              https://afthemes.com
- * @version           2.2.3
+ * @version           2.2.4
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -63,7 +63,7 @@ class AF_Link_Monitor {
             'af-link-monitor-js',
             AFTC_URL . 'assets/js/link-monitor.js',
             array( 'jquery' ),
-            '2.2.3',
+            '2.2.4',
             true
         );
 
@@ -129,12 +129,20 @@ class AF_Link_Monitor {
     }
 
     /**
-     * Render Standalone Post Meta Box Content
+     * Render Standalone Post Meta Box Wrapper
      */
     public function render_post_meta_box( $post ) {
+        echo '<div id="af-link-audit-meta-box-inner">';
+        $this->render_post_meta_box_inner( $post->ID );
+        echo '</div>';
+    }
+
+    /**
+     * Render Inner Meta Box Content Body
+     */
+    public function render_post_meta_box_inner( $post_id ) {
         global $wpdb;
         $table_name = $wpdb->prefix . 'af_link_monitor';
-        $post_id    = $post->ID;
 
         $post_links = array();
         if ( $wpdb->get_var( $wpdb->prepare( "SHOW TABLES LIKE %s", $table_name ) ) === $table_name ) {
@@ -457,7 +465,7 @@ class AF_Link_Monitor {
         $posts = get_posts( array(
             'post_type'      => array( 'post', 'page' ),
             'post_status'    => 'publish',
-            'posts_per_page' => 3, // Keep batch small to prevent timeout
+            'posts_per_page' => 3,
             'orderby'        => 'date',
             'order'          => 'DESC',
         ) );
@@ -477,7 +485,6 @@ class AF_Link_Monitor {
                     continue;
                 }
 
-                // Safe Localhost / Internal Link Check (Prevents MAMP/XAMPP cURL loopback 500 errors)
                 $url_host = wp_parse_url( $url, PHP_URL_HOST );
                 if ( empty( $url_host ) || $url_host === $site_host || 0 === strpos( $url, '/' ) ) {
                     $code   = 200;
@@ -604,10 +611,9 @@ class AF_Link_Monitor {
 
         delete_transient( 'af_link_monitor_stats' );
 
-        // Capture the meta box HTML output to return dynamically
+        // Capture inner meta box HTML output
         ob_start();
-        $fake_post = get_post( $post_id );
-        $this->render_post_meta_box( $fake_post );
+        $this->render_post_meta_box_inner( $post_id );
         $html_output = ob_get_clean();
 
         wp_send_json_success( array(
@@ -658,7 +664,7 @@ class AF_Link_Monitor {
     }
 
     /**
-     * Helper: Test URL Connection Status
+     * Helper: Test URL Connection Status (Shields 429 Rate Limits)
      */
     private function test_url( $url ) {
         if ( ! wp_http_validate_url( $url ) ) {
@@ -668,12 +674,12 @@ class AF_Link_Monitor {
         $args = array(
             'timeout'     => 4,
             'redirection' => 3,
-            'user-agent'  => 'AF-Companion-LinkChecker/2.2.3',
+            'user-agent'  => 'AF-Companion-LinkChecker/2.2.4',
             'sslverify'   => false,
         );
 
         $response = wp_remote_head( $url, $args );
-        if ( is_wp_error( $response ) || wp_remote_retrieve_response_code( $response ) === 405 ) {
+        if ( is_wp_error( $response ) || 405 === wp_remote_retrieve_response_code( $response ) ) {
             $response = wp_remote_get( $url, $args );
         }
 
@@ -693,7 +699,7 @@ class AF_Link_Monitor {
         } elseif ( $code >= 500 ) {
             $status = 'broken';
         } elseif ( in_array( $code, array( 403, 429 ), true ) ) {
-            $status = 'unverified';
+            $status = 'unverified'; // 429 Too Many Requests safely categorized as unverified
         }
 
         return array(

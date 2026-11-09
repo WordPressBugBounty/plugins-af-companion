@@ -3,7 +3,7 @@
     Plugin Name: AF Companion
     Plugin URI: https://wordpress.org/plugins/af-companion/
     Description: Supercharge your website for ChatGPT Search, Perplexity & Google AI Overviews with AI SEO, GEO, Alt Text generation, schema, performance, and maintenance tools.
-    Version: 3.3.0
+    Version: 3.3.1
     Author: AF themes
     Author URI: https://www.afthemes.com
     License: GPL3
